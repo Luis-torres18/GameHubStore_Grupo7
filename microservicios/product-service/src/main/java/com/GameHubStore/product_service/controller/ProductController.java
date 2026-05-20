@@ -18,30 +18,35 @@ import java.util.List;
 public class ProductController {
 
     public final ProductService productService;
+
     // Listar todos los productos
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<ProductResponse> getAllProducts(){
         return this.productService.getAllProducts();
     }
+
     // Listar un producto por ID
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public List<ProductResponse> getProductById(@PathVariable Long id){
         return Collections.singletonList(this.productService.getProductById(id));
     }
+
     // Listar productos por marca
     @GetMapping("/marca/{marca}")
     @ResponseStatus(HttpStatus.OK)
     public List<ProductResponse> getProductByMarca(@PathVariable String marca){
         return this.productService.getProductByMarca(marca);
     }
+
     // Agregar un producto
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void addProduct(@RequestBody ProductRequest productRequest){
         this.productService.addProduct(productRequest);
     }
+
     // Actualizar precio de un producto
     @PutMapping("/{id}/precio")
     @ResponseStatus(HttpStatus.OK)
@@ -50,6 +55,7 @@ public class ProductController {
             @RequestParam Double precio){
         return productService.updatePrecio(id, precio);
     }
+
     // Desactivar un producto
     @PatchMapping("/{id}/desactivar")
     @ResponseStatus(HttpStatus.OK)

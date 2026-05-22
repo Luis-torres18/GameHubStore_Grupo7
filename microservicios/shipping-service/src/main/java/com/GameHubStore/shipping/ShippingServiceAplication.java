@@ -1,13 +1,13 @@
-package com.GameHubStore.payment.service;
+package com.GameHubStore.shipping;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application {
+public class ShippingServiceAplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(ShippingServiceAplication.class, args);
 	}
 
 }

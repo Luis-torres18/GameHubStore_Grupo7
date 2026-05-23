@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/reviews") // Es buena práctica usar plural en los endpoints REST
+@RequestMapping("/api/reviews")
 @RequiredArgsConstructor
 public class ReviewController {
 
@@ -52,20 +52,20 @@ public class ReviewController {
     public ReviewResponse updateReview(
             @PathVariable Long id,
             @RequestBody @Valid UpdateReviewRequest request) {
-        return reviewService.updateReview(id, request); // Nombre de DTO corregido
+        return reviewService.updateReview(id, request);
     }
 
     // Moderate review (admin)
     @PatchMapping("/{id}/moderate")
     @ResponseStatus(HttpStatus.OK)
     public ReviewResponse moderateReview(@PathVariable Long id) {
-        return reviewService.moderateReview(id); // Llamada estática corregida
+        return reviewService.moderateReview(id);
     }
 
     // Delete review
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteReview(@PathVariable Long id) {
-        reviewService.deleteReview(id); // Llamada estática corregida
+        reviewService.deleteReview(id);
     }
 }

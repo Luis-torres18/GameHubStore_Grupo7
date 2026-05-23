@@ -28,10 +28,7 @@ public class WarrantyServiceImpl implements WarrantyService {
 
     private final WarrantyRepository warrantyRepository;
 
-    // In production, Feign clients would be injected here:
-    // OrderClient orderClient   -> validate order belongs to user and contains product
-    // ProductClient productClient -> validate product exists
-    // UserClient userClient     -> validate user exists and is active
+
 
     @Override
     public WarrantyResponse createWarranty(WarrantyRequest request) {

@@ -25,13 +25,13 @@ public class PromotionServiceImpl implements PromotionService {
 
     @Override
     public PromotionResponse createPromotion(PromotionRequest request) {
-        log.info("[promotion-service] Creating promotion with code: {}", request.getCode());
+        log.info("[promotion-service] Creando promocion con codigo: {}", request.getCode());
 
         if (promotionRepository.existsByCode(request.getCode().toUpperCase())) {
-            throw new InvalidPromotion("A promotion already exists with code: " + request.getCode());
+            throw new InvalidPromotion("Una promocion ya existe actualmente con el codigo: " + request.getCode());
         }
         if (request.getEndDate().isBefore(request.getStartDate())) {
-            throw new InvalidPromotion("End date cannot be before start date");
+            throw new InvalidPromotion("Fecha de inicio no puede ser anterior a fecha de inicio");
         }
 
         Promotion promotion = Promotion.builder()
@@ -49,13 +49,13 @@ public class PromotionServiceImpl implements PromotionService {
                 .build();
 
         Promotion saved = promotionRepository.save(promotion);
-        log.info("[promotion-service] Promotion created with ID: {}", saved.getId());
+        log.info("[promotion-service] Promocion creada con ID: {}", saved.getId());
         return toResponse(saved);
     }
 
     @Override
     public List<PromotionResponse> getActivePromotions() {
-        log.info("[promotion-service] Listing active promotions");
+        log.info("[promotion-service] Mostrando promociones activas");
         LocalDate today = LocalDate.now();
         return promotionRepository
                 .findByStatusTrueAndStartDateLessThanEqualAndEndDateGreaterThanEqual(today, today)
@@ -66,7 +66,7 @@ public class PromotionServiceImpl implements PromotionService {
 
     @Override
     public List<PromotionResponse> getAllPromotions() {
-        log.info("[promotion-service] Listing all promotions (historical)");
+        log.info("[promotion-service] Mostrando todas las promociones (historial)");
         return promotionRepository.findAllByOrderByStartDateDesc()
                 .stream()
                 .map(this::toResponse)
@@ -75,28 +75,28 @@ public class PromotionServiceImpl implements PromotionService {
 
     @Override
     public PromotionResponse getPromotionById(Long id) {
-        log.info("[promotion-service] Searching promotion by ID: {}", id);
+        log.info("[promotion-service] Buscando promocion por ID: {}", id);
         Promotion promotion = promotionRepository.findById(id)
-                .orElseThrow(() -> new PromotionNotFoundException("Promotion not found with ID: " + id));
+                .orElseThrow(() -> new PromotionNotFoundException("Promocion no encontrada con ID: " + id));
         return toResponse(promotion);
     }
 
     @Override
     public PromotionResponse getPromotionByCode(String code) {
-        log.info("[promotion-service] Searching promotion by code: {}", code);
+        log.info("[promotion-service] Buscando promocion por codigo: {}", code);
         Promotion promotion = promotionRepository.findByCode(code.toUpperCase())
-                .orElseThrow(() -> new PromotionNotFoundException("Promotion not found with code: " + code));
+                .orElseThrow(() -> new PromotionNotFoundException("Promocion no encontrada con el codigo: " + code));
         return toResponse(promotion);
     }
 
     @Override
     public PromotionResponse updatePromotion(Long id, PromotionRequest request) {
-        log.info("[promotion-service] Updating promotion ID: {}", id);
+        log.info("[promotion-service] Actualizando promocion con ID: {}", id);
         Promotion promotion = promotionRepository.findById(id)
-                .orElseThrow(() -> new PromotionNotFoundException("Promotion not found with ID: " + id));
+                .orElseThrow(() -> new PromotionNotFoundException("Promocion no encontrada con ID: " + id));
 
         if (request.getEndDate().isBefore(request.getStartDate())) {
-            throw new InvalidPromotion("End date cannot be before start date");
+            throw new InvalidPromotion("Fecha de termino no puede ser anterior a fecha de inicio");
         }
 
         promotion.setType(request.getType().toUpperCase());
@@ -109,49 +109,49 @@ public class PromotionServiceImpl implements PromotionService {
         promotion.setCategoryId(request.getCategoryId());
 
         Promotion updated = promotionRepository.save(promotion);
-        log.info("[promotion-service] Promotion updated ID: {}", updated.getId());
+        log.info("[promotion-service] Promocion actualizada de ID: {}", updated.getId());
         return toResponse(updated);
     }
 
     @Override
     public PromotionResponse desactivatePromotion(Long id) {
-        log.info("[promotion-service] Deactivating promotion ID: {}", id);
+        log.info("[promotion-service] Desactivando promocion de ID: {}", id);
         Promotion promotion = promotionRepository.findById(id)
-                .orElseThrow(() -> new PromotionNotFoundException("Promotion not found with ID: " + id));
+                .orElseThrow(() -> new PromotionNotFoundException("Promocion no encontrada con el ID: " + id));
 
         if (!promotion.getStatus()) {
-            throw new InvalidPromotion("Promotion is already inactive");
+            throw new InvalidPromotion("Promocion esta actualmente desactivada");
         }
         promotion.setStatus(false);
         Promotion saved = promotionRepository.save(promotion);
-        log.info("[promotion-service] Promotion deactivated ID: {}", saved.getId());
+        log.info("[promotion-service] Promocion desactivada con ID: {}", saved.getId());
         return toResponse(saved);
     }
 
     @Override
     public PromotionResponse applyPromotion(ApplyPromotionRequest request) {
-        log.info("[promotion-service] Applying coupon: {} for amount: {}", request.getCode(), request.getOrderAmount());
+        log.info("[promotion-service] aplicando cupon: {} por la cantidad de: {}", request.getCode(), request.getOrderAmount());
 
         Promotion promotion = promotionRepository.findByCode(request.getCode().toUpperCase())
-                .orElseThrow(() -> new PromotionNotFoundException("Coupon not found: " + request.getCode()));
+                .orElseThrow(() -> new PromotionNotFoundException("Cupon no encontrado: " + request.getCode()));
 
         LocalDate today = LocalDate.now();
 
         // Business Logic Validations
         if (!promotion.getStatus()) {
-            throw new InvalidPromotion("Coupon is inactive");
+            throw new InvalidPromotion("Cupon inactivo");
         }
         if (today.isBefore(promotion.getStartDate()) || today.isAfter(promotion.getEndDate())) {
-            throw new InvalidPromotion("Coupon is expired or not yet valid");
+            throw new InvalidPromotion("Cupon expirado o no activado aun");
         }
         // Validate Max Uses
         if (promotion.getCurrentUses() >= promotion.getMaxUses()) {
-            throw new InvalidPromotion("Coupon has reached its maximum usage limit");
+            throw new InvalidPromotion("El cupon alcanzo el maximo de usos");
         }
         // Validate Min Amount
         if (request.getOrderAmount() < promotion.getMinAmount()) {
             throw new InvalidPromotion(
-                    "Order amount (" + request.getOrderAmount() + ") does not meet the minimum required (" + promotion.getMinAmount() + ")");
+                    "Cantidad de orden (" + request.getOrderAmount() + ") no coincide con el minimo requerido (" + promotion.getMinAmount() + ")");
         }
 
         double discount = "PORCENTAJE".equalsIgnoreCase(promotion.getType())
@@ -159,12 +159,12 @@ public class PromotionServiceImpl implements PromotionService {
                 : promotion.getValue();
 
         if (discount >= request.getOrderAmount()) {
-            throw new InvalidPromotion("Discount cannot be equal to or greater than the order total");
+            throw new InvalidPromotion("Descuento no puede ser igual o mayor a el total de la orden");
         }
 
         promotion.setCurrentUses(promotion.getCurrentUses() + 1);
         Promotion saved = promotionRepository.save(promotion);
-        log.info("[promotion-service] Coupon {} applied. Current uses: {}", saved.getCode(), saved.getCurrentUses());
+        log.info("[promotion-service] Cupon {} aplicado. usos actuales: {}", saved.getCode(), saved.getCurrentUses());
         return toResponse(saved);
     }
 

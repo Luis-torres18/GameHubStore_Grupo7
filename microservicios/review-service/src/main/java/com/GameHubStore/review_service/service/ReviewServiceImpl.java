@@ -25,12 +25,12 @@ public class ReviewServiceImpl implements ReviewService {
 
     @Override
     public ReviewResponse createReview(ReviewRequest request) {
-        log.info("[review-service] Creating review for product ID: {}", request.getProductId());
+        log.info("[review-service] Creando reseña para el producto con ID: {}", request.getProductId());
 
-        // Validar si ya existe una reseña de este usuario para esta orden y producto
+
         if (reviewRepository.existsByUserIdAndProductIdAndOrderId(
                 request.getUserId(), request.getProductId(), request.getOrderId())) {
-            throw new ReviewInvalidException("User already reviewed this product for this order.");
+            throw new ReviewInvalidException("El Usuario ya reseñó este producto con la orden actual.");
         }
 
         Review review = Review.builder()
@@ -39,7 +39,7 @@ public class ReviewServiceImpl implements ReviewService {
                 .orderId(request.getOrderId())
                 .score(request.getScore())
                 .comment(request.getComment())
-                .status(true) // Activa por defecto
+                .status(true)
                 .date(LocalDateTime.now())
                 .build();
 
@@ -62,18 +62,18 @@ public class ReviewServiceImpl implements ReviewService {
     @Override
     public ReviewResponse getReviewById(Long id) {
         Review review = reviewRepository.findById(id)
-                .orElseThrow(() -> new ReviewNotFoundException("Review not found with ID: " + id));
+                .orElseThrow(() -> new ReviewNotFoundException("Reseña no encontrada con el ID: " + id));
         return toResponse(review);
     }
 
     @Override
     public ReviewResponse updateReview(Long id, UpdateReviewRequest request) {
         Review review = reviewRepository.findById(id)
-                .orElseThrow(() -> new ReviewNotFoundException("Review not found with ID: " + id));
+                .orElseThrow(() -> new ReviewNotFoundException("Reseña no encontrada con el ID: " + id));
 
         review.setScore(request.getScore());
         review.setComment(request.getComment());
-        review.setDate(LocalDateTime.now()); // Opcional: actualizar fecha de modificación
+        review.setDate(LocalDateTime.now());
 
         Review updated = reviewRepository.save(review);
         return toResponse(updated);
@@ -82,9 +82,9 @@ public class ReviewServiceImpl implements ReviewService {
     @Override
     public ReviewResponse moderateReview(Long id) {
         Review review = reviewRepository.findById(id)
-                .orElseThrow(() -> new ReviewNotFoundException("Review not found with ID: " + id));
+                .orElseThrow(() -> new ReviewNotFoundException("Reseña no encontrada con el ID: " + id));
 
-        // Cambia el estado (ej. de visible a oculta)
+
         review.setStatus(!review.getStatus());
         Review moderated = reviewRepository.save(review);
         return toResponse(moderated);
@@ -93,7 +93,7 @@ public class ReviewServiceImpl implements ReviewService {
     @Override
     public void deleteReview(Long id) {
         if (!reviewRepository.existsById(id)) {
-            throw new ReviewNotFoundException("Review not found with ID: " + id);
+            throw new ReviewNotFoundException("Reseña no encontrada con el ID: " + id);
         }
         reviewRepository.deleteById(id);
     }

@@ -20,61 +20,61 @@ public class PromotionController {
 
     private final PromotionService promotionService;
 
-    // Crear promoción
+    // Create promotion
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public PromotionResponse crearPromocion(@RequestBody @Valid PromotionRequest request) {
-        return promotionService.crearPromocion(request);
+    public PromotionResponse createPromotion(@RequestBody @Valid PromotionRequest request) {
+        return promotionService.createPromotion(request);
     }
 
-    // Listar promociones vigentes
-    @GetMapping("/vigentes")
+    // Get active promotions
+    @GetMapping("/active")
     @ResponseStatus(HttpStatus.OK)
-    public List<PromotionResponse> listarVigentes() {
-        return promotionService.listarVigentes();
+    public List<PromotionResponse> getActivePromotions() {
+        return promotionService.getActivePromotions();
     }
 
-    // Listar todas (históricas + activas)
+    // Get all promotions (historical + active)
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public List<PromotionResponse> listarTodas() {
-        return promotionService.listarTodas();
+    public List<PromotionResponse> getAllPromotions() {
+        return promotionService.getAllPromotions();
     }
 
-    // Buscar por ID
+    // Get promotion by ID
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public List<PromotionResponse> buscarPorId(@PathVariable Long id) {
-        return Collections.singletonList(promotionService.buscarPorId(id));
+    public PromotionResponse getPromotionById(@PathVariable Long id) {
+        return promotionService.getPromotionById(id);
     }
 
-    // Buscar por código
-    @GetMapping("/codigo/{codigo}")
+    // Get promotion by code
+    @GetMapping("/code/{code}")
     @ResponseStatus(HttpStatus.OK)
-    public PromotionResponse buscarPorCodigo(@PathVariable String codigo) {
-        return promotionService.buscarPorCodigo(codigo);
+    public PromotionResponse getPromotionByCode(@PathVariable String code) {
+        return promotionService.getPromotionByCode(code);
     }
 
-    // Actualizar condiciones y fechas
+    // Update conditions and dates
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public PromotionResponse actualizarPromocion(
+    public PromotionResponse updatePromotion(
             @PathVariable Long id,
             @RequestBody @Valid PromotionRequest request) {
-        return promotionService.actualizarPromocion(id, request);
+        return promotionService.updatePromotion(id, request);
     }
 
-    // Desactivar promoción
-    @PatchMapping("/{id}/desactivar")
+    // Deactivate promotion
+    @PatchMapping("/{id}/desactivate")
     @ResponseStatus(HttpStatus.OK)
-    public PromotionResponse desactivarPromocion(@PathVariable Long id) {
-        return promotionService.desactivarPromocion(id);
+    public PromotionResponse desactivatePromotion(@PathVariable Long id) {
+        return promotionService.desactivatePromotion(id);
     }
 
-    // Aplicar cupón (consumido por order-service)
-    @PostMapping("/aplicar")
+    // Apply coupon (consumed by order-service)
+    @PostMapping("/apply")
     @ResponseStatus(HttpStatus.OK)
-    public PromotionResponse aplicarCupon(@RequestBody @Valid ApplyPromotionRequest request) {
-        return promotionService.aplicarCupon(request);
+    public PromotionResponse applyPromotion(@RequestBody @Valid ApplyPromotionRequest request) {
+        return promotionService.applyPromotion(request);
     }
 }

@@ -8,20 +8,19 @@ import java.util.List;
 
 public interface PromotionService {
 
-    PromotionResponse crearPromocion(PromotionRequest request);
+    PromotionResponse createPromotion(PromotionRequest request);
 
-    List<PromotionResponse> listarVigentes();
+    List<PromotionResponse> getActivePromotions();
 
-    List<PromotionResponse> listarTodas();
+    List<PromotionResponse> getAllPromotions();
 
-    PromotionResponse buscarPorId(Long id);
+    PromotionResponse getPromotionById(Long id);
 
-    PromotionResponse buscarPorCodigo(String codigo);
+    PromotionResponse getPromotionByCode(String code);
 
-    PromotionResponse actualizarPromocion(Long id, PromotionRequest request);
+    PromotionResponse updatePromotion(Long id, PromotionRequest request);
 
-    PromotionResponse desactivarPromocion(Long id);
+    PromotionResponse desactivatePromotion(Long id);
 
-    // Endpoint que consume order-service: valida y registra uso del cupón //falta aun apply promotion
-    PromotionResponse aplicarCupon(ApplyPromotionRequest request);
+    PromotionResponse applyPromotion(ApplyPromotionRequest request);
 }

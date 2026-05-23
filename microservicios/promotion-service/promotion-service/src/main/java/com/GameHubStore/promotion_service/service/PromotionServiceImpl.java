@@ -24,7 +24,7 @@ public class PromotionServiceImpl implements PromotionService {
     private final PromotionRepository promotionRepository;
 
     @Override
-    public PromotionResponse crearPromocion(PromotionRequest request) {
+    public PromotionResponse createPromotion(PromotionRequest request) {
         log.info("[promotion-service] Creating promotion with code: {}", request.getCodigo());
 
         if (promotionRepository.existsByCodigo(request.getCodigo().toUpperCase())) {
@@ -54,7 +54,7 @@ public class PromotionServiceImpl implements PromotionService {
     }
 
     @Override
-    public List<PromotionResponse> listarVigentes() {
+    public List<PromotionResponse> getActivePromotions() {
         log.info("[promotion-service] Listing active promotions");
         LocalDate today = LocalDate.now();
         return promotionRepository
@@ -65,7 +65,7 @@ public class PromotionServiceImpl implements PromotionService {
     }
 
     @Override
-    public List<PromotionResponse> listarTodas() {
+    public List<PromotionResponse> getAllPromotions() {
         log.info("[promotion-service] Listing all promotions (historical)");
         return promotionRepository.findAllByOrderByFechaInicioDesc()
                 .stream()
@@ -74,7 +74,7 @@ public class PromotionServiceImpl implements PromotionService {
     }
 
     @Override
-    public PromotionResponse buscarPorId(Long id) {
+    public PromotionResponse getPromotionById(Long id) {
         log.info("[promotion-service] Searching promotion by ID: {}", id);
         Promotion promotion = promotionRepository.findById(id)
                 .orElseThrow(() -> new PromotionNotFoundException("Promotion not found with ID: " + id));
@@ -82,7 +82,7 @@ public class PromotionServiceImpl implements PromotionService {
     }
 
     @Override
-    public PromotionResponse buscarPorCodigo(String codigo) {
+    public PromotionResponse getPromotionByCode(String codigo) {
         log.info("[promotion-service] Searching promotion by code: {}", codigo);
         Promotion promotion = promotionRepository.findByCodigo(codigo.toUpperCase())
                 .orElseThrow(() -> new PromotionNotFoundException("Promotion not found with code: " + codigo));
@@ -90,7 +90,7 @@ public class PromotionServiceImpl implements PromotionService {
     }
 
     @Override
-    public PromotionResponse actualizarPromocion(Long id, PromotionRequest request) {
+    public PromotionResponse updatePromotion(Long id, PromotionRequest request) {
         log.info("[promotion-service] Updating promotion ID: {}", id);
         Promotion promotion = promotionRepository.findById(id)
                 .orElseThrow(() -> new PromotionNotFoundException("Promotion not found with ID: " + id));
@@ -114,7 +114,7 @@ public class PromotionServiceImpl implements PromotionService {
     }
 
     @Override
-    public PromotionResponse desactivarPromocion(Long id) {
+    public PromotionResponse desactivatePromotion(Long id) {
         log.info("[promotion-service] Deactivating promotion ID: {}", id);
         Promotion promotion = promotionRepository.findById(id)
                 .orElseThrow(() -> new PromotionNotFoundException("Promotion not found with ID: " + id));
@@ -129,7 +129,7 @@ public class PromotionServiceImpl implements PromotionService {
     }
 
     @Override
-    public PromotionResponse aplicarCupon(ApplyPromotionRequest request) {
+    public PromotionResponse applyPromotion(ApplyPromotionRequest request) {
         log.info("[promotion-service] Applying coupon: {} for amount: {}", request.getCodigo(), request.getMontoOrden());
 
         Promotion promotion = promotionRepository.findByCodigo(request.getCodigo().toUpperCase())

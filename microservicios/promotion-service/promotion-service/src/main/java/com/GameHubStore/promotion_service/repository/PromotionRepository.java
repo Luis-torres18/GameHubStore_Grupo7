@@ -12,16 +12,20 @@ import java.util.Optional;
 @Repository
 public interface PromotionRepository extends JpaRepository<Promotion, Long> {
 
-    Optional<Promotion> findByCodigo(String codigo);
+    // Find promotion by unique code
+    Optional<Promotion> findByCode(String code);
 
-    boolean existsByCodigo(String codigo);
+    // Check if a promotion exists by code
+    boolean existsByCode(String code);
 
-    // Promociones activas cuya fecha es vigente
-    List<Promotion> findByEstadoTrueAndFechaInicioLessThanEqualAndFechaFinGreaterThanEqual(
-            LocalDate hoy1, LocalDate hoy2);
+    // Find active promotions within date range
+    // Maps to: status = true AND startDate <= ? AND endDate >= ?
+    List<Promotion> findByStatusTrueAndStartDateLessThanEqualAndEndDateGreaterThanEqual(
+            LocalDate today1, LocalDate today2);
 
-    // Historial: todas sin filtro de estado
-    List<Promotion> findAllByOrderByFechaInicioDesc();
+    // List all history ordered by start date (newest first)
+    List<Promotion> findAllByOrderByStartDateDesc();
 
-    List<Promotion> findByEstado(Boolean estado);
+    // Filter by status (active or inactive)
+    List<Promotion> findByStatus(Boolean status);
 }

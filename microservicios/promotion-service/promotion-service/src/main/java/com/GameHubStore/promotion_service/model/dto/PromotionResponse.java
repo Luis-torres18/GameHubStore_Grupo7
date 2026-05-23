@@ -11,16 +11,16 @@ import java.time.LocalDate;
 public class PromotionResponse {
 
     private Long id;
-    private String codigo;
-    private String tipo;
-    private Double valor;
-    private LocalDate fechaInicio;
-    private LocalDate fechaFin;
-    private Double montoMinimo;
-    private Integer usosMaximos;
-    private Integer usosActuales;
-    private Long productoId;
-    private Long categoriaId;
-    private Boolean estado;
-    private Boolean vigente;
+    private String code;
+    private String type;
+    private Double value;
+    private LocalDate startDate;
+    private LocalDate endDate;
+    private Double minAmount;
+    private Integer maxUses;
+    private Integer currentUses;
+    private Long productId;
+    private Long categoryId;
+    private Boolean status;
+    private Boolean isValid;
 }

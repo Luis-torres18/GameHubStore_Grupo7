@@ -25,27 +25,27 @@ public class PromotionServiceImpl implements PromotionService {
 
     @Override
     public PromotionResponse createPromotion(PromotionRequest request) {
-        log.info("[promotion-service] Creating promotion with code: {}", request.getCodigo());
+        log.info("[promotion-service] Creating promotion with code: {}", request.getCode());
 
-        if (promotionRepository.existsByCodigo(request.getCodigo().toUpperCase())) {
-            throw new InvalidPromotion("A promotion already exists with code: " + request.getCodigo());
+        if (promotionRepository.existsByCode(request.getCode().toUpperCase())) {
+            throw new InvalidPromotion("A promotion already exists with code: " + request.getCode());
         }
-        if (request.getFechaFin().isBefore(request.getFechaInicio())) {
+        if (request.getEndDate().isBefore(request.getStartDate())) {
             throw new InvalidPromotion("End date cannot be before start date");
         }
 
         Promotion promotion = Promotion.builder()
-                .codigo(request.getCodigo().toUpperCase())
-                .tipo(request.getTipo().toUpperCase())
-                .valor(request.getValor())
-                .fechaInicio(request.getFechaInicio())
-                .fechaFin(request.getFechaFin())
-                .montoMinimo(request.getMontoMinimo())
-                .usosMaximos(request.getUsosMaximos())
-                .usosActuales(0)
-                .productoId(request.getProductoId())
-                .categoriaId(request.getCategoriaId())
-                .estado(request.getEstado() != null ? request.getEstado() : true)
+                .code(request.getCode().toUpperCase())
+                .type(request.getType().toUpperCase())
+                .value(request.getValue())
+                .startDate(request.getStartDate())
+                .endDate(request.getEndDate())
+                .minAmount(request.getMinAmount())
+                .maxUses(request.getMaxUses())
+                .currentUses(0)
+                .productId(request.getProductId())
+                .categoryId(request.getCategoryId())
+                .status(request.getStatus() != null ? request.getStatus() : true)
                 .build();
 
         Promotion saved = promotionRepository.save(promotion);
@@ -58,7 +58,7 @@ public class PromotionServiceImpl implements PromotionService {
         log.info("[promotion-service] Listing active promotions");
         LocalDate today = LocalDate.now();
         return promotionRepository
-                .findByEstadoTrueAndFechaInicioLessThanEqualAndFechaFinGreaterThanEqual(today, today)
+                .findByStatusTrueAndStartDateLessThanEqualAndEndDateGreaterThanEqual(today, today)
                 .stream()
                 .map(this::toResponse)
                 .collect(Collectors.toList());
@@ -67,7 +67,7 @@ public class PromotionServiceImpl implements PromotionService {
     @Override
     public List<PromotionResponse> getAllPromotions() {
         log.info("[promotion-service] Listing all promotions (historical)");
-        return promotionRepository.findAllByOrderByFechaInicioDesc()
+        return promotionRepository.findAllByOrderByStartDateDesc()
                 .stream()
                 .map(this::toResponse)
                 .collect(Collectors.toList());
@@ -82,10 +82,10 @@ public class PromotionServiceImpl implements PromotionService {
     }
 
     @Override
-    public PromotionResponse getPromotionByCode(String codigo) {
-        log.info("[promotion-service] Searching promotion by code: {}", codigo);
-        Promotion promotion = promotionRepository.findByCodigo(codigo.toUpperCase())
-                .orElseThrow(() -> new PromotionNotFoundException("Promotion not found with code: " + codigo));
+    public PromotionResponse getPromotionByCode(String code) {
+        log.info("[promotion-service] Searching promotion by code: {}", code);
+        Promotion promotion = promotionRepository.findByCode(code.toUpperCase())
+                .orElseThrow(() -> new PromotionNotFoundException("Promotion not found with code: " + code));
         return toResponse(promotion);
     }
 
@@ -95,18 +95,18 @@ public class PromotionServiceImpl implements PromotionService {
         Promotion promotion = promotionRepository.findById(id)
                 .orElseThrow(() -> new PromotionNotFoundException("Promotion not found with ID: " + id));
 
-        if (request.getFechaFin().isBefore(request.getFechaInicio())) {
+        if (request.getEndDate().isBefore(request.getStartDate())) {
             throw new InvalidPromotion("End date cannot be before start date");
         }
 
-        promotion.setTipo(request.getTipo().toUpperCase());
-        promotion.setValor(request.getValor());
-        promotion.setFechaInicio(request.getFechaInicio());
-        promotion.setFechaFin(request.getFechaFin());
-        promotion.setMontoMinimo(request.getMontoMinimo());
-        promotion.setUsosMaximos(request.getUsosMaximos());
-        promotion.setProductoId(request.getProductoId());
-        promotion.setCategoriaId(request.getCategoriaId());
+        promotion.setType(request.getType().toUpperCase());
+        promotion.setValue(request.getValue());
+        promotion.setStartDate(request.getStartDate());
+        promotion.setEndDate(request.getEndDate());
+        promotion.setMinAmount(request.getMinAmount());
+        promotion.setMaxUses(request.getMaxUses());
+        promotion.setProductId(request.getProductId());
+        promotion.setCategoryId(request.getCategoryId());
 
         Promotion updated = promotionRepository.save(promotion);
         log.info("[promotion-service] Promotion updated ID: {}", updated.getId());
@@ -119,10 +119,10 @@ public class PromotionServiceImpl implements PromotionService {
         Promotion promotion = promotionRepository.findById(id)
                 .orElseThrow(() -> new PromotionNotFoundException("Promotion not found with ID: " + id));
 
-        if (!promotion.getEstado()) {
+        if (!promotion.getStatus()) {
             throw new InvalidPromotion("Promotion is already inactive");
         }
-        promotion.setEstado(false);
+        promotion.setStatus(false);
         Promotion saved = promotionRepository.save(promotion);
         log.info("[promotion-service] Promotion deactivated ID: {}", saved.getId());
         return toResponse(saved);
@@ -130,63 +130,65 @@ public class PromotionServiceImpl implements PromotionService {
 
     @Override
     public PromotionResponse applyPromotion(ApplyPromotionRequest request) {
-        log.info("[promotion-service] Applying coupon: {} for amount: {}", request.getCodigo(), request.getMontoOrden());
+        log.info("[promotion-service] Applying coupon: {} for amount: {}", request.getCode(), request.getOrderAmount());
 
-        Promotion promotion = promotionRepository.findByCodigo(request.getCodigo().toUpperCase())
-                .orElseThrow(() -> new PromotionNotFoundException("Coupon not found: " + request.getCodigo()));
+        Promotion promotion = promotionRepository.findByCode(request.getCode().toUpperCase())
+                .orElseThrow(() -> new PromotionNotFoundException("Coupon not found: " + request.getCode()));
 
         LocalDate today = LocalDate.now();
 
-        if (!promotion.getEstado()) {
+        // Business Logic Validations
+        if (!promotion.getStatus()) {
             throw new InvalidPromotion("Coupon is inactive");
         }
-        if (today.isBefore(promotion.getFechaInicio()) || today.isAfter(promotion.getFechaFin())) {
+        if (today.isBefore(promotion.getStartDate()) || today.isAfter(promotion.getEndDate())) {
             throw new InvalidPromotion("Coupon is expired or not yet valid");
         }
-        if (promotion.getUsosActuales() >= promotion.getUsosMaximos()) {
+        // Validate Max Uses
+        if (promotion.getCurrentUses() >= promotion.getMaxUses()) {
             throw new InvalidPromotion("Coupon has reached its maximum usage limit");
         }
-        if (request.getMontoOrden() < promotion.getMontoMinimo()) {
+        // Validate Min Amount
+        if (request.getOrderAmount() < promotion.getMinAmount()) {
             throw new InvalidPromotion(
-                    "Order amount (" + request.getMontoOrden() + ") does not meet the minimum required (" + promotion.getMontoMinimo() + ")");
+                    "Order amount (" + request.getOrderAmount() + ") does not meet the minimum required (" + promotion.getMinAmount() + ")");
         }
 
-        double discount = "PORCENTAJE".equals(promotion.getTipo())
-                ? request.getMontoOrden() * (promotion.getValor() / 100)
-                : promotion.getValor();
+        double discount = "PORCENTAJE".equalsIgnoreCase(promotion.getType())
+                ? request.getOrderAmount() * (promotion.getValue() / 100)
+                : promotion.getValue();
 
-        if (discount >= request.getMontoOrden()) {
+        if (discount >= request.getOrderAmount()) {
             throw new InvalidPromotion("Discount cannot be equal to or greater than the order total");
         }
 
-        promotion.setUsosActuales(promotion.getUsosActuales() + 1);
+        promotion.setCurrentUses(promotion.getCurrentUses() + 1);
         Promotion saved = promotionRepository.save(promotion);
-        log.info("[promotion-service] Coupon {} applied. Current uses: {}", saved.getCodigo(), saved.getUsosActuales());
+        log.info("[promotion-service] Coupon {} applied. Current uses: {}", saved.getCode(), saved.getCurrentUses());
         return toResponse(saved);
     }
 
-    // ─── Mapper ────────────────────────────────────────────────────────────────
     private PromotionResponse toResponse(Promotion p) {
         LocalDate today = LocalDate.now();
-        boolean vigente = p.getEstado()
-                && !today.isBefore(p.getFechaInicio())
-                && !today.isAfter(p.getFechaFin())
-                && p.getUsosActuales() < p.getUsosMaximos();
+        boolean isValid = p.getStatus()
+                && !today.isBefore(p.getStartDate())
+                && !today.isAfter(p.getEndDate())
+                && p.getCurrentUses() < p.getMaxUses();
 
         return PromotionResponse.builder()
                 .id(p.getId())
-                .codigo(p.getCodigo())
-                .tipo(p.getTipo())
-                .valor(p.getValor())
-                .fechaInicio(p.getFechaInicio())
-                .fechaFin(p.getFechaFin())
-                .montoMinimo(p.getMontoMinimo())
-                .usosMaximos(p.getUsosMaximos())
-                .usosActuales(p.getUsosActuales())
-                .productoId(p.getProductoId())
-                .categoriaId(p.getCategoriaId())
-                .estado(p.getEstado())
-                .vigente(vigente)
+                .code(p.getCode())
+                .type(p.getType())
+                .value(p.getValue())
+                .startDate(p.getStartDate())
+                .endDate(p.getEndDate())
+                .minAmount(p.getMinAmount())
+                .maxUses(p.getMaxUses())
+                .currentUses(p.getCurrentUses())
+                .productId(p.getProductId())
+                .categoryId(p.getCategoryId())
+                .status(p.getStatus())
+                .isValid(isValid)
                 .build();
     }
 }

@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "reviews")
-@Data // ¡Esta anotación de Lombok es la que soluciona los errores de getProductId(), etc!
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -16,11 +16,24 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private Long userId;
+
+    @Column(nullable = false)
     private Long productId;
+
+    @Column(nullable = false)
     private Long orderId;
+
+    @Column(nullable = false)
     private Integer score;
+
+    @Column(length = 1000)
     private String comment;
+
+    @Column(nullable = false, length = 20)
     private Boolean status;
+
+    @Column(nullable = false)
     private LocalDateTime date;
 }

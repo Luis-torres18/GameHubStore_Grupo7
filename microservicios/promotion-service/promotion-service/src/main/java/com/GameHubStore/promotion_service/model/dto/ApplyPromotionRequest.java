@@ -12,9 +12,9 @@ import lombok.*;
 public class ApplyPromotionRequest {
 
     @NotBlank(message = "El código del cupón es obligatorio")
-    private String codigo;
+    private String code;
 
     @NotNull(message = "El monto de la orden es obligatorio")
     @Positive(message = "El monto de la orden debe ser mayor que cero")
-    private Double montoOrden;
+    private Double orderAmount;
 }

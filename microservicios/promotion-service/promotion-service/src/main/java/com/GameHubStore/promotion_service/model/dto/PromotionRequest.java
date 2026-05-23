@@ -13,33 +13,33 @@ import java.time.LocalDate;
 public class PromotionRequest {
 
     @NotBlank(message = "El código de la promoción es obligatorio")
-    private String codigo;
+    private String code;
 
     @NotBlank(message = "El tipo de promoción es obligatorio (PORCENTAJE | MONTO_FIJO)")
-    private String tipo;
+    private String type;
 
     @NotNull(message = "El valor del descuento es obligatorio")
     @Positive(message = "El valor del descuento debe ser mayor que cero")
-    private Double valor;
+    private Double value;
 
     @NotNull(message = "La fecha de inicio es obligatoria")
-    private LocalDate fechaInicio;
+    private LocalDate startDate;
 
     @NotNull(message = "La fecha de fin es obligatoria")
-    private LocalDate fechaFin;
+    private LocalDate endDate;
 
     @NotNull(message = "El monto mínimo es obligatorio")
     @PositiveOrZero(message = "El monto mínimo no puede ser negativo")
-    private Double montoMinimo;
+    private Double minAmount;
 
     @NotNull(message = "Los usos máximos son obligatorios")
     @Positive(message = "Los usos máximos deben ser mayor que cero")
-    private Integer usosMaximos;
+    private Integer maxUses;
 
-    // Opcionales: aplica a un producto o categoría específica
-    private Long productoId;
-    private Long categoriaId;
+
+    private Long productId;
+    private Long categoryId;
 
     @Builder.Default
-    private Boolean estado = true;
+    private Boolean status = true;
 }

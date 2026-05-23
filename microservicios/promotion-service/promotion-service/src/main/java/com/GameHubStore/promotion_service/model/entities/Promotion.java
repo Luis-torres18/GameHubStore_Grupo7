@@ -18,34 +18,34 @@ public class Promotion {
     private Long id;
 
     @Column(nullable = false, unique = true, length = 50)
-    private String codigo;
+    private String code;
 
-    // PORCENTAJE | MONTO_FIJO
+
     @Column(nullable = false, length = 20)
-    private String tipo;
+    private String type;
 
     @Column(nullable = false)
-    private Double valor;
+    private Double value;
 
     @Column(nullable = false)
-    private LocalDate fechaInicio;
+    private LocalDate startDate;
 
     @Column(nullable = false)
-    private LocalDate fechaFin;
+    private LocalDate endDate;
 
     @Column(nullable = false)
-    private Double montoMinimo;
+    private Double minAmount;
 
     @Column(nullable = false)
-    private Integer usosMaximos;
+    private Integer maxUses;
 
     @Column(nullable = false)
-    private Integer usosActuales;
+    private Integer currentUses;
 
-    // Referencia opcional a producto o categoría específica (null = aplica a todo)
-    private Long productoId;
-    private Long categoriaId;
+
+    private Long productId;
+    private Long categoryId;
 
     @Column(nullable = false)
-    private Boolean estado;
+    private Boolean status;
 }

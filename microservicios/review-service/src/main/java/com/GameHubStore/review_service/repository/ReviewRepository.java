@@ -9,6 +9,8 @@ import java.util.List;
 @Repository
 public interface ReviewRepository extends JpaRepository<Review, Long> {
 
+    List<Review> findByProductId(Long productId);
+    List<Review> findByUserId(Long userId);
     // List reviews by product, ordered by newest first
     List<Review> findByProductIdOrderByDateDesc(Long productId);
 

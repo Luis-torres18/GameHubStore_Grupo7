@@ -1,10 +1,9 @@
 package com.GameHubStore.review_service.service;
 
-import com.GameHubStore.review_service.exception.ReviewInvalidException;
 import com.GameHubStore.review_service.exception.ReviewNotFoundException;
 import com.GameHubStore.review_service.model.dto.ReviewRequest;
-import com.GameHubStore.review_service.model.dto.UpdateReviewRequest;
 import com.GameHubStore.review_service.model.dto.ReviewResponse;
+import com.GameHubStore.review_service.model.dto.UpdateReviewRequest;
 import com.GameHubStore.review_service.model.entities.Review;
 import com.GameHubStore.review_service.repository.ReviewRepository;
 import lombok.RequiredArgsConstructor;
@@ -25,13 +24,7 @@ public class ReviewServiceImpl implements ReviewService {
 
     @Override
     public ReviewResponse createReview(ReviewRequest request) {
-        log.info("[review-service] Creando reseña para el producto con ID: {}", request.getProductId());
-
-
-        if (reviewRepository.existsByUserIdAndProductIdAndOrderId(
-                request.getUserId(), request.getProductId(), request.getOrderId())) {
-            throw new ReviewInvalidException("El Usuario ya reseñó este producto con la orden actual.");
-        }
+        log.info("[review-service] Creating new review for product: {}", request.getProductId());
 
         Review review = Review.builder()
                 .userId(request.getUserId())
@@ -39,76 +32,87 @@ public class ReviewServiceImpl implements ReviewService {
                 .orderId(request.getOrderId())
                 .score(request.getScore())
                 .comment(request.getComment())
-                .status(true)
+                .status(true) // By default active
                 .date(LocalDateTime.now())
                 .build();
 
         Review saved = reviewRepository.save(review);
+        log.info("[review-service] Review created with ID: {}", saved.getId());
         return toResponse(saved);
     }
 
     @Override
     public List<ReviewResponse> getReviewsByProduct(Long productId) {
-        return reviewRepository.findByProductIdOrderByDateDesc(productId)
-                .stream().map(this::toResponse).collect(Collectors.toList());
+        log.info("[review-service] Listing reviews for product: {}", productId);
+        return reviewRepository.findByProductId(productId)
+                .stream()
+                .map(this::toResponse)
+                .collect(Collectors.toList());
     }
 
     @Override
     public List<ReviewResponse> getReviewsByUser(Long userId) {
-        return reviewRepository.findByUserIdOrderByDateDesc(userId)
-                .stream().map(this::toResponse).collect(Collectors.toList());
+        log.info("[review-service] Listing reviews by user: {}", userId);
+        return reviewRepository.findByUserId(userId)
+                .stream()
+                .map(this::toResponse)
+                .collect(Collectors.toList());
     }
 
     @Override
     public ReviewResponse getReviewById(Long id) {
+        log.info("[review-service] Searching review by ID: {}", id);
         Review review = reviewRepository.findById(id)
-                .orElseThrow(() -> new ReviewNotFoundException("Reseña no encontrada con el ID: " + id));
+                .orElseThrow(() -> new ReviewNotFoundException("Review not found with ID: " + id));
         return toResponse(review);
     }
 
     @Override
     public ReviewResponse updateReview(Long id, UpdateReviewRequest request) {
+        log.info("[review-service] Updating review ID: {}", id);
         Review review = reviewRepository.findById(id)
-                .orElseThrow(() -> new ReviewNotFoundException("Reseña no encontrada con el ID: " + id));
+                .orElseThrow(() -> new ReviewNotFoundException("Review not found with ID: " + id));
 
         review.setScore(request.getScore());
         review.setComment(request.getComment());
-        review.setDate(LocalDateTime.now());
 
         Review updated = reviewRepository.save(review);
+        log.info("[review-service] Review updated ID: {}", updated.getId());
         return toResponse(updated);
     }
 
     @Override
     public ReviewResponse moderateReview(Long id) {
+        log.info("[review-service] Moderating (hiding) review ID: {}", id);
         Review review = reviewRepository.findById(id)
-                .orElseThrow(() -> new ReviewNotFoundException("Reseña no encontrada con el ID: " + id));
+                .orElseThrow(() -> new ReviewNotFoundException("Review not found with ID: " + id));
 
-
-        review.setStatus(!review.getStatus());
-        Review moderated = reviewRepository.save(review);
-        return toResponse(moderated);
+        review.setStatus(false); // Disable review
+        Review saved = reviewRepository.save(review);
+        log.info("[review-service] Review moderated (status set to false) ID: {}", saved.getId());
+        return toResponse(saved);
     }
 
     @Override
     public void deleteReview(Long id) {
+        log.info("[review-service] Deleting review ID: {}", id);
         if (!reviewRepository.existsById(id)) {
-            throw new ReviewNotFoundException("Reseña no encontrada con el ID: " + id);
+            throw new ReviewNotFoundException("Cannot delete. Review not found with ID: " + id);
         }
         reviewRepository.deleteById(id);
+        log.info("[review-service] Review deleted ID: {}", id);
     }
 
-    // --- Mapper ---
-    private ReviewResponse toResponse(Review review) {
+    private ReviewResponse toResponse(Review r) {
         return ReviewResponse.builder()
-                .id(review.getId())
-                .userId(review.getUserId())
-                .productId(review.getProductId())
-                .orderId(review.getOrderId())
-                .score(review.getScore())
-                .comment(review.getComment())
-                .status(review.getStatus())
-                .date(review.getDate())
+                .id(r.getId())
+                .userId(r.getUserId())
+                .productId(r.getProductId())
+                .orderId(r.getOrderId())
+                .score(r.getScore())
+                .comment(r.getComment())
+                .status(r.getStatus())
+                .date(r.getDate())
                 .build();
     }
 }

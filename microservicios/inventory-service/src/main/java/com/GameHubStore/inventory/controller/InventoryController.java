@@ -17,7 +17,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/inventory")
 @RequiredArgsConstructor
-public class InventoryController {
+public class InventoryController{
 
     private static final Logger log = LoggerFactory.getLogger(InventoryController.class);
 

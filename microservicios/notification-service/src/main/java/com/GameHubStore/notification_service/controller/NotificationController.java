@@ -29,6 +29,9 @@ public class NotificationController {
         return notificationService.createNotification(request);
     }
 
+
+
+
     @GetMapping("/user/{userId}")
     @ResponseStatus(HttpStatus.OK)
     public List<NotificationResponse> listByUser(@PathVariable Long userId) {
@@ -64,11 +67,7 @@ public class NotificationController {
     }
 
 
-    @PatchMapping("/{id}/archive")
-    @ResponseStatus(HttpStatus.OK)
-    public NotificationResponse archiveNotification(@PathVariable Long id) {
-        return notificationService.archiveNotification(id);
-    }
+
 
 
     @DeleteMapping("/{id}")

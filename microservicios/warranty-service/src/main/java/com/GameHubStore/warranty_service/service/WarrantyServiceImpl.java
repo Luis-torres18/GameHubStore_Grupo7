@@ -28,6 +28,13 @@ public class WarrantyServiceImpl implements WarrantyService {
 
     private final WarrantyRepository warrantyRepository;
 
+    @Override
+    public List<WarrantyResponse> findAll() {
+        return warrantyRepository.findAll()
+                .stream()
+                .map(this::toResponse) // Asumiendo que tienes este método de mapeo
+                .collect(Collectors.toList());
+    }
 
 
     @Override

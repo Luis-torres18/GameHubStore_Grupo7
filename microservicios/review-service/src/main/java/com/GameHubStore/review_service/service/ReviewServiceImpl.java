@@ -23,6 +23,13 @@ public class ReviewServiceImpl implements ReviewService {
     private final ReviewRepository reviewRepository;
 
     @Override
+    public List<ReviewResponse> findAll() {
+        return reviewRepository.findAll()
+                .stream()
+                .map(this::toResponse) // Asumiendo que tienes este método de mapeo
+                .collect(Collectors.toList());
+    }
+    @Override
     public ReviewResponse createReview(ReviewRequest request) {
         log.info("[review-service] Creating new review for product: {}", request.getProductId());
 
@@ -94,13 +101,15 @@ public class ReviewServiceImpl implements ReviewService {
     }
 
     @Override
-    public void deleteReview(Long id) {
+    public String deleteReview(Long id) {
         log.info("[review-service] Deleting review ID: {}", id);
         if (!reviewRepository.existsById(id)) {
             throw new ReviewNotFoundException("Cannot delete. Review not found with ID: " + id);
         }
         reviewRepository.deleteById(id);
         log.info("[review-service] Review deleted ID: {}", id);
+
+        return "Reseña con id: "+ id + " eliminada" ;
     }
 
     private ReviewResponse toResponse(Review r) {

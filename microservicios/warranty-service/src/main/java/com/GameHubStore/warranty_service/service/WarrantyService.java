@@ -22,4 +22,6 @@ public interface WarrantyService {
     WarrantyResponse updateWarranty(Long id, UpdateWarrantyRequest request);
 
     WarrantyResponse closeWarranty(Long id, CloseWarrantyRequest request);
+
+    List<WarrantyResponse> findAll();
 }

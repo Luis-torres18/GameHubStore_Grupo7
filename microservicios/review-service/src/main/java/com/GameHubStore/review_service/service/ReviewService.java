@@ -20,5 +20,7 @@ public interface ReviewService {
 
     ReviewResponse moderateReview(Long id);
 
-    void deleteReview(Long id);
+    List<ReviewResponse> findAll();
+
+    String deleteReview(Long id);
 }

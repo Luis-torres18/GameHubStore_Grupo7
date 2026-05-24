@@ -27,6 +27,12 @@ public class WarrantyController {
         return warrantyService.createWarranty(request);
     }
 
+    // List all warranties
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    public List<WarrantyResponse> findAllWarranties() {
+        return warrantyService.findAll();
+    }
     // List warranties by user
     @GetMapping("/user/{userId}")
     @ResponseStatus(HttpStatus.OK)

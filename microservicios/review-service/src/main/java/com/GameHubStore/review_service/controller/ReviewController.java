@@ -4,9 +4,11 @@ import com.GameHubStore.review_service.model.dto.ReviewRequest;
 import com.GameHubStore.review_service.model.dto.UpdateReviewRequest;
 import com.GameHubStore.review_service.model.dto.ReviewResponse;
 import com.GameHubStore.review_service.service.ReviewService;
+import feign.Response;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,6 +27,11 @@ public class ReviewController {
         return reviewService.createReview(request);
     }
 
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    public List<ReviewResponse> findAllReviews() {
+        return reviewService.findAll();
+    }
     // Get reviews by product
     @GetMapping("/product/{productId}")
     @ResponseStatus(HttpStatus.OK)
@@ -65,7 +72,8 @@ public class ReviewController {
     // Delete review
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteReview(@PathVariable Long id) {
-        reviewService.deleteReview(id);
+    public ResponseEntity<String> deleteReview(@PathVariable Long id) {
+        String message  = reviewService.deleteReview(id);
+        return ResponseEntity.ok(message);
     }
 }

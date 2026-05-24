@@ -13,7 +13,7 @@ public class PromotionResponse {
     private Long id;
     private String code;
     private String type;
-    private Double value;
+    private Double discountAmount;
     private LocalDate startDate;
     private LocalDate endDate;
     private Double minAmount;
@@ -21,6 +21,6 @@ public class PromotionResponse {
     private Integer currentUses;
     private Long productId;
     private Long categoryId;
-    private Boolean status;
+    private Boolean isActive;
     private Boolean isValid;
 }

@@ -1,6 +1,5 @@
 package com.GameHubStore.promotion_service.service;
 
-import com.GameHubStore.promotion_service.model.dto.ApplyPromotionRequest;
 import com.GameHubStore.promotion_service.model.dto.PromotionRequest;
 import com.GameHubStore.promotion_service.model.dto.PromotionResponse;
 
@@ -22,5 +21,4 @@ public interface PromotionService {
 
     PromotionResponse desactivatePromotion(Long id);
 
-    PromotionResponse applyPromotion(ApplyPromotionRequest request);
 }

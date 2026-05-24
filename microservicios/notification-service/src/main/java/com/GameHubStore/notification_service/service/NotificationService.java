@@ -9,12 +9,12 @@ public interface NotificationService {
 
 
     NotificationResponse createNotification(NotificationRequest request);
-
+    List<NotificationResponse> findAll();
 
     List<NotificationResponse> listByUser(Long userId);
 
 
-    List<NotificationResponse> listUnreadByUser(Long userId);
+
 
 
     NotificationResponse findById(Long id);
@@ -23,11 +23,10 @@ public interface NotificationService {
     NotificationResponse markAsRead(Long id);
 
 
-    NotificationResponse archiveNotification(Long id);
 
 
     void deleteNotification(Long id);
 
 
-    long countUnread(Long userId);
+
 }

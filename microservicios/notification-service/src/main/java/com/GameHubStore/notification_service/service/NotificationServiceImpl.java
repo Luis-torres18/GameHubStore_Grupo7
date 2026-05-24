@@ -52,7 +52,13 @@ public class NotificationServiceImpl implements NotificationService {
 
         return toResponse(saved);
     }
-
+    @Override
+    public List<NotificationResponse> findAll() {
+        return notificationRepository.findAll()
+                .stream()
+                .map(this::toResponse) // Asumiendo que tienes este método de mapeo
+                .collect(Collectors.toList());
+    }
 
 
     @Override
@@ -64,14 +70,8 @@ public class NotificationServiceImpl implements NotificationService {
                 .collect(Collectors.toList());
     }
 
-    @Override
-    public List<NotificationResponse> listUnreadByUser(Long userId) {
-        log.info("[notification-service] Listing unread notifications for userId={}", userId);
-        return notificationRepository.findByUserIdAndRead(userId, false)
-                .stream()
-                .map(this::toResponse)
-                .collect(Collectors.toList());
-    }
+
+
 
     @Override
     public NotificationResponse findById(Long id) {
@@ -80,12 +80,7 @@ public class NotificationServiceImpl implements NotificationService {
         return toResponse(notification);
     }
 
-    @Override
-    public long countUnread(Long userId) {
-        long total = notificationRepository.countByUserIdAndReadFalse(userId);
-        log.info("[notification-service] User {} has {} unread notification(s)", userId, total);
-        return total;
-    }
+
 
 
 
@@ -108,24 +103,7 @@ public class NotificationServiceImpl implements NotificationService {
         return toResponse(saved);
     }
 
-    @Override
-    @Transactional
-    public NotificationResponse archiveNotification(Long id) {
-        log.info("[notification-service] Archiving notification id={}", id);
-        Notification notification = getOrThrow(id);
 
-
-        if ("ARCHIVADA".equals(notification.getStatus())) {
-            log.warn("[notification-service] Notification id={} is already archived – ignoring", id);
-            throw new NotificationInvalidException(
-                    "La notificación ya está archivada");
-        }
-
-        notification.setStatus("ARCHIVADA");
-        Notification saved = notificationRepository.save(notification);
-        log.info("[notification-service] Notification id={} archived", saved.getId());
-        return toResponse(saved);
-    }
 
 
 

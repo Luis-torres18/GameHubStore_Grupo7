@@ -6,7 +6,7 @@ import lombok.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "promociones")
+@Table(name = "promotion")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -25,7 +25,7 @@ public class Promotion {
     private String type;
 
     @Column(nullable = false)
-    private Double value;
+    private Double discountAmount;
 
     @Column(nullable = false)
     private LocalDate startDate;
@@ -47,5 +47,5 @@ public class Promotion {
     private Long categoryId;
 
     @Column(nullable = false)
-    private Boolean status;
+    private Boolean isActive;
 }

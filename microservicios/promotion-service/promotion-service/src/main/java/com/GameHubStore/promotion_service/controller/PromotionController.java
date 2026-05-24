@@ -1,7 +1,6 @@
 package com.GameHubStore.promotion_service.controller;
 
 
-import com.GameHubStore.promotion_service.model.dto.ApplyPromotionRequest;
 import com.GameHubStore.promotion_service.model.dto.PromotionRequest;
 import com.GameHubStore.promotion_service.model.dto.PromotionResponse;
 import com.GameHubStore.promotion_service.service.PromotionService;
@@ -10,7 +9,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -71,10 +69,5 @@ public class PromotionController {
         return promotionService.desactivatePromotion(id);
     }
 
-    // Apply coupon (consumed by order-service)
-    @PostMapping("/apply")
-    @ResponseStatus(HttpStatus.OK)
-    public PromotionResponse applyPromotion(@RequestBody @Valid ApplyPromotionRequest request) {
-        return promotionService.applyPromotion(request);
-    }
+
 }

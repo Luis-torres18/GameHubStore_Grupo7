@@ -15,7 +15,7 @@ public interface WarrantyRepository extends JpaRepository<Warranty, Long> {
 
     List<Warranty> findByStatus(String status);
 
-    List<Warranty> findByOrderId(Long orderId);
+
 
     boolean existsByOrderIdAndProductId(Long orderId, Long productId);
 }

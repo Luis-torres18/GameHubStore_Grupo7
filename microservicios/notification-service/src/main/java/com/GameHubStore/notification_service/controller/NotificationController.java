@@ -29,7 +29,12 @@ public class NotificationController {
         return notificationService.createNotification(request);
     }
 
-
+    // List all warranties
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    public List<NotificationResponse> findAllWarranties() {
+        return notificationService.findAll();
+    }
 
 
     @GetMapping("/user/{userId}")
@@ -39,18 +44,9 @@ public class NotificationController {
     }
 
 
-    @GetMapping("/user/{userId}/unread")
-    @ResponseStatus(HttpStatus.OK)
-    public List<NotificationResponse> listUnread(@PathVariable Long userId) {
-        return notificationService.listUnreadByUser(userId);
-    }
 
 
-    @GetMapping("/user/{userId}/countUnread")
-    @ResponseStatus(HttpStatus.OK)
-    public Map<String, Long> countUnread(@PathVariable Long userId) {
-        return Map.of("noLeidas", notificationService.countUnread(userId));
-    }
+
 
 
     @GetMapping("/{id}")
@@ -65,9 +61,6 @@ public class NotificationController {
     public NotificationResponse markAsRead(@PathVariable Long id) {
         return notificationService.markAsRead(id);
     }
-
-
-
 
 
     @DeleteMapping("/{id}")

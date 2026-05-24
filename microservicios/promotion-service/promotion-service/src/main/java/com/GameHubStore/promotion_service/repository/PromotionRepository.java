@@ -19,11 +19,10 @@ public interface PromotionRepository extends JpaRepository<Promotion, Long> {
     boolean existsByCode(String code);
 
 
-    List<Promotion> findByStatusTrueAndStartDateLessThanEqualAndEndDateGreaterThanEqual(
+    List<Promotion> findByIsActiveTrueAndStartDateLessThanEqualAndEndDateGreaterThanEqual(
             LocalDate today1, LocalDate today2);
 
     List<Promotion> findAllByOrderByStartDateDesc();
 
 
-    List<Promotion> findByStatus(Boolean status);
 }

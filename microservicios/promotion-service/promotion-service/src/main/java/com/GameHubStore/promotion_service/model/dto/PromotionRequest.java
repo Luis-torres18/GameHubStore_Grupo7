@@ -20,7 +20,7 @@ public class PromotionRequest {
 
     @NotNull(message = "El valor del descuento es obligatorio")
     @Positive(message = "El valor del descuento debe ser mayor que cero")
-    private Double value;
+    private Double discountAmount;
 
     @NotNull(message = "La fecha de inicio es obligatoria")
     private LocalDate startDate;
@@ -41,5 +41,5 @@ public class PromotionRequest {
     private Long categoryId;
 
     @Builder.Default
-    private Boolean status = true;
+    private Boolean isActive = true;
 }

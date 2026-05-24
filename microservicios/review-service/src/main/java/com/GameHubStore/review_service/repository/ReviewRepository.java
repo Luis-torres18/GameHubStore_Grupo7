@@ -11,12 +11,5 @@ public interface ReviewRepository extends JpaRepository<Review, Long> {
 
     List<Review> findByProductId(Long productId);
     List<Review> findByUserId(Long userId);
-    // List reviews by product, ordered by newest first
-    List<Review> findByProductIdOrderByDateDesc(Long productId);
 
-    // List reviews by user, ordered by newest first
-    List<Review> findByUserIdOrderByDateDesc(Long userId);
-
-    // Business rule: Check if a user already reviewed this product from this specific order
-    boolean existsByUserIdAndProductIdAndOrderId(Long userId, Long productId, Long orderId);
 }

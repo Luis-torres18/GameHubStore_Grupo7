@@ -6,6 +6,7 @@ import lombok.Data;
 
 @Data
 public class OrderRequest {
+
     @NotNull(message = "El ID del usuario es obligatorio")
     private Long userId;
 

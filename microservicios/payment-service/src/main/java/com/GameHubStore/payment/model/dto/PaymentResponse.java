@@ -1,24 +1,19 @@
 package com.GameHubStore.payment.model.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.math.BigDecimal;
+import lombok.*;
 import java.time.LocalDateTime;
 
 @Data
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class PaymentResponse {
 
     private Long id;
-    private Long orderId;
-    private BigDecimal amount;
-    private String method;
-    private String status;
-    private String transactionCode;
-    private LocalDateTime date;
+    private Long ordenId;
+    private Double monto;
+    private String metodo;
+    private String estado;
+    private String codigoTransaccion;
+    private LocalDateTime fecha;
 }

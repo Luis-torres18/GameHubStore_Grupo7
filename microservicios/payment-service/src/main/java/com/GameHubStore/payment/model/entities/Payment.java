@@ -2,8 +2,6 @@ package com.GameHubStore.payment.model.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
@@ -20,20 +18,20 @@ public class Payment {
     private Long id;
 
     @Column(nullable = false)
-    private Long orderId;
+    private Long ordenId;
 
     @Column(nullable = false)
-    private BigDecimal amount;
+    private Double monto;
 
     @Column(nullable = false)
-    private String method;
+    private String metodo;
 
     @Column(nullable = false)
-    private String status;
+    private String estado;
 
-    @Column(unique = true)
-    private String transactionCode;
+    @Column(unique = true, nullable = false)
+    private String codigoTransaccion;
 
     @Column(nullable = false)
-    private LocalDateTime date;
+    private LocalDateTime fecha;
 }

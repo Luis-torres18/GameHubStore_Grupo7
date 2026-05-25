@@ -3,26 +3,21 @@ package com.GameHubStore.payment.model.dto;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.math.BigDecimal;
 
 @Data
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
 public class PaymentRequest {
 
-    @NotNull
-    private Long orderId;
+    @NotNull(message = "El ID de la orden es obligatorio")
+    private Long ordenId;
 
-    @NotNull
-    @Positive
-    private BigDecimal amount;
+    @NotNull(message = "El monto es obligatorio")
+    @Positive(message = "El monto debe ser mayor a cero")
+    private Double monto;
 
-    @NotBlank
-    private String method;
+    @NotBlank(message = "El método de pago es obligatorio")
+    private String metodo;
+
+    @NotBlank(message = "El código de transacción es obligatorio")
+    private String codigoTransaccion;
 }

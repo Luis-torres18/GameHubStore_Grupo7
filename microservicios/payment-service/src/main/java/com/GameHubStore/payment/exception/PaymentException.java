@@ -2,31 +2,50 @@ package com.GameHubStore.payment.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.context.request.WebRequest;
 
 import java.time.LocalDateTime;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.stream.Collectors;
 
-@RestControllerAdvice
+@ControllerAdvice
 public class PaymentException {
 
     @ExceptionHandler(PaymentNotFoundException.class)
-    public ResponseEntity<Map<String, Object>> handlePaymentNotFoundException(PaymentNotFoundException ex) {
-        Map<String, Object> body = new HashMap<>();
-        body.put("timestamp", LocalDateTime.now());
-        body.put("message", ex.getMessage());
-        body.put("status", HttpStatus.NOT_FOUND.value());
-        return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
+    public ResponseEntity<ErrorDetails> handleNotFound(
+            PaymentNotFoundException ex, WebRequest request) {
+        return new ResponseEntity<>(
+                new ErrorDetails(LocalDateTime.now(), ex.getMessage(), request.getDescription(false)),
+                HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler(PaymentValidationException.class)
-    public ResponseEntity<Map<String, Object>> handlePaymentValidationException(PaymentValidationException ex) {
-        Map<String, Object> body = new HashMap<>();
-        body.put("timestamp", LocalDateTime.now());
-        body.put("message", ex.getMessage());
-        body.put("status", HttpStatus.BAD_REQUEST.value());
-        return new ResponseEntity<>(body, HttpStatus.BAD_REQUEST);
+    public ResponseEntity<ErrorDetails> handleValidation(
+            PaymentValidationException ex, WebRequest request) {
+        return new ResponseEntity<>(
+                new ErrorDetails(LocalDateTime.now(), ex.getMessage(), request.getDescription(false)),
+                HttpStatus.UNPROCESSABLE_ENTITY);
+    }
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<ErrorDetails> handleMethodValidation(
+            MethodArgumentNotValidException ex, WebRequest request) {
+        String mensaje = ex.getBindingResult().getFieldErrors().stream()
+                .map(e -> e.getField() + ": " + e.getDefaultMessage())
+                .collect(Collectors.joining(", "));
+        return new ResponseEntity<>(
+                new ErrorDetails(LocalDateTime.now(), mensaje, request.getDescription(false)),
+                HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<ErrorDetails> handleGlobal(
+            Exception ex, WebRequest request) {
+        ex.printStackTrace();
+        return new ResponseEntity<>(
+                new ErrorDetails(LocalDateTime.now(), "Error interno del servidor", request.getDescription(false)),
+                HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }

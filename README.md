@@ -17,9 +17,17 @@ validaciones, manejo de excepciones y logs estructurados.
 ```
 GameHub_Store/
 ├── auth-service/ || Puerto: 8080
-├── user-service/ || Puerto: 8080
-├── category-service/ || Puerto: 8080
-├── product-service/ || Puerto: 8080
+├── user-service/ || Puerto: 8081
+├── product-service/ || Puerto: 8082
+├── category-service/ || Puerto: 8083
+├── inventory-service/ || Puerto: 8084
+├── order-service/ || Puerto: 8085
+├── payment-service/ || Puerto: 8086
+├── shipping-service/ || Puerto: 8087
+├── promotion-service/ || Puerto: 8088
+├── review-service/ || Puerto: 8089
+├── warranty-service/ || Puerto: 8090
+├── notification-service/ || Puerto: 8091
 └── README.md
 ```
 

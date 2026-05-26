@@ -1,7 +1,7 @@
 ```
 PROYECTO: Game_Hub_Store - Evaluacion Parcial 2
-ASIGNATURA: FULL STACK I_002D
-INTEGRANTES: Benjamin Leiva, Emily Pacheco y Luis Torres
+ASIGNATURA: FULL STACK I_002D/001D
+INTEGRANTES: Benjamin Leiva(001D), Emily Pacheco(002D) y Luis Torres(002D).
 ```
 ```
 1. Descripción del Proyecto

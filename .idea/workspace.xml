@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="Se a comprobado la funcionalidad del crud generall, se agregaron funciones para listar todo en cada microservicio y corregidos algunos errores" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Exception" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="update_benja" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;BenLeivaa&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Luis-torres18/GameHubStore_Grupo7.git&quot;,
+    &quot;accountId&quot;: &quot;5c16f476-85af-43c3-b5c7-3357370e665e&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0300261745927262" />
+      <entry key="MS500" value="1.886576199817493" />
+      <entry key="S2" value="4.426363289112405" />
+      <entry key="S5" value="8.822952860078846" />
+      <entry key="S10" value="13.954420558959828" />
+      <entry key="S30" value="21.13274991570858" />
+      <entry key="S60" value="23.904353755921488" />
+      <entry key="M2" value="25.910879241344297" />
+      <entry key="M5" value="29.436825288763124" />
+      <entry key="M10" value="34.63045365472766" />
+      <entry key="M15" value="40.63815567373612" />
+      <entry key="M30" value="60.91794684922746" />
+      <entry key="H1" value="96.64661373357737" />
+      <entry key="H2" value="156.98854602045972" />
+      <entry key="H4" value="237.43657669051083" />
+      <entry key="D1" value="382.2165629204909" />
+      <entry key="W1" value="420.1612140404729" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="3.201158806707E-312" />
+      <entry key="S5" value="5.112902942141694E-125" />
+      <entry key="S10" value="1.3928281647345607E-62" />
+      <entry key="S30" value="6.025673189348708E-21" />
+      <entry key="S60" value="1.5631113710530374E-10" />
+      <entry key="M2" value="2.6494286092251517E-5" />
+      <entry key="M5" value="0.04406029772338438" />
+      <entry key="M10" value="0.6967032566701753" />
+      <entry key="M15" value="2.0424855638452675" />
+      <entry key="M30" value="7.022756525253602" />
+      <entry key="H1" value="14.496803150434527" />
+      <entry key="H2" value="22.832211899393155" />
+      <entry key="H4" value="30.65854175741733" />
+      <entry key="D1" value="41.871328939376205" />
+      <entry key="W1" value="44.52910891660347" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.9884577556672095" />
+      <entry key="MS500" value="1.8725397110276734" />
+      <entry key="S2" value="4.418635933572025" />
+      <entry key="S5" value="8.817104040485203" />
+      <entry key="S10" value="13.949880191489672" />
+      <entry key="S30" value="21.12998203561143" />
+      <entry key="S60" value="23.89974390979682" />
+      <entry key="M2" value="25.901370832779975" />
+      <entry key="M5" value="29.461714451110844" />
+      <entry key="M10" value="35.303696307518976" />
+      <entry key="M15" value="42.65552436905368" />
+      <entry key="M30" value="67.91502201209394" />
+      <entry key="H1" value="111.1218906680452" />
+      <entry key="H2" value="179.80511736787062" />
+      <entry key="H4" value="268.0846933101277" />
+      <entry key="D1" value="424.08542399822124" />
+      <entry key="W1" value="464.6899433061947" />
+    </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3E61vYHcYW163cQlDksFBrsPa7V" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.NotificationServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.OrderServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.PromotionServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ReviewServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.WarrantyServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/moa/IdeaProjects/GameHubStore_Grupo7/microservicios/notification-service/src/main/java/com/GameHubStore/notification_service/service&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\notification-service\src\main\java\com\GameHubStore\notification_service\service" />
+      <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\notification-service\src\main\java\com\GameHubStore\notification_service\exception" />
+      <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\notification-service\src\main\java\com\GameHubStore\notification_service\model\entities" />
+      <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\notification-service\src\main\java\com\GameHubStore\notification_service\model\dto" />
+      <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\notification-service\src\main\java\com\GameHubStore\notification_service" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="Application" value="STOPPED" />
+              <entry key="NotificationServiceApplication" value="STOPPED" />
+              <entry key="OrderServiceApplication" value="STOPPED" />
+              <entry key="PromotionServiceApplication" value="STOPPED" />
+              <entry key="ReviewServiceApplication" value="STOPPED" />
+              <entry key="WarrantyServiceApplication" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="inventory.service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.inventory.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NotificationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="notification-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.notification_service.NotificationServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="order.service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.order.OrderServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="payment.service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.payment.PaymentServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="product-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.product_service.ProductServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PromotionServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="promotion-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.promotion_service.PromotionServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReviewServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="review-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.review_service.ReviewServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShippingServiceAplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="shipping.service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.shipping.ShippingServiceAplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WarrantyServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="warranty-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.warranty_service.WarrantyServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.24374.151" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="" />
+      <created>1779484435928</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1779484435928</updated>
+      <workItem from="1779484442602" duration="1250000" />
+      <workItem from="1779485710218" duration="1050000" />
+      <workItem from="1779487107042" duration="15153000" />
+      <workItem from="1779577537222" duration="9000" />
+      <workItem from="1779577563073" duration="1568000" />
+      <workItem from="1779579149308" duration="11767000" />
+      <workItem from="1779642015844" duration="6397000" />
+      <workItem from="1779648448786" duration="122000" />
+      <workItem from="1779654175148" duration="10452000" />
+      <workItem from="1779760925793" duration="89000" />
+    </task>
+    <task id="LOCAL-00001" summary="Se realizo la creacion de el micro servicio de promocion con sus respectivos, controller, repository,service, funciones etc">
+      <option name="closed" value="true" />
+      <created>1779493387987</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1779493387987</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Se realizo la creacion de el micro servicio de Review con sus respectivos, controller, repository,service, funciones etc ademas de cambiar las funciones de Promotion a ingles para mantener solo un  idioma y no dos como habia planteado anteriormente">
+      <option name="closed" value="true" />
+      <created>1779496547832</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1779496547832</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Se realizo la creacion de el micro servicio de Warranty con sus respectivos, controller, repository,service, funciones etc ademas de cambiar algunas funciones a ingles para mantener solo un  idioma y no dos como habia planteado anteriormente">
+      <option name="closed" value="true" />
+      <created>1779501537631</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1779501537631</updated>
+    </task>
+    <task id="LOCAL-00004" summary="corregidos algunos errores textuales">
+      <option name="closed" value="true" />
+      <created>1779502470595</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1779502470595</updated>
+    </task>
+    <task id="LOCAL-00005" summary="creado ultimo microservicio de proyecto notification">
+      <option name="closed" value="true" />
+      <created>1779584210273</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1779584210273</updated>
+    </task>
+    <task id="LOCAL-00006" summary="corregidos algunos errores">
+      <option name="closed" value="true" />
+      <created>1779584398205</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1779584398205</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Se a comprobado la funcionalidad del crud de review y notification ademas de agregar ciertas funcionalidades para que presente mensaje en el body al eliminar una reseña en postman">
+      <option name="closed" value="true" />
+      <created>1779592944246</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1779592944246</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Se a comprobado la funcionalidad del crud generall, se agregaron funciones para listar todo en cada microservicio y corregidos algunos errores">
+      <option name="closed" value="true" />
+      <created>1779648374325</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1779648374325</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Se realizo la creacion de el micro servicio de promocion con sus respectivos, controller, repository,service, funciones etc" />
+    <MESSAGE value="Se realizo la creacion de el micro servicio de Review con sus respectivos, controller, repository,service, funciones etc ademas de cambiar las funciones de Promotion a ingles para mantener solo un  idioma y no dos como habia planteado anteriormente" />
+    <MESSAGE value="Se realizo la creacion de el micro servicio de Warranty con sus respectivos, controller, repository,service, funciones etc ademas de cambiar algunas funciones a ingles para mantener solo un  idioma y no dos como habia planteado anteriormente" />
+    <MESSAGE value="corregidos algunos errores textuales" />
+    <MESSAGE value="creado ultimo microservicio de proyecto notification" />
+    <MESSAGE value="corregidos algunos errores" />
+    <MESSAGE value="Se a comprobado la funcionalidad del crud de review y notification ademas de agregar ciertas funcionalidades para que presente mensaje en el body al eliminar una reseña en postman" />
+    <MESSAGE value="Se a comprobado la funcionalidad del crud generall, se agregaron funciones para listar todo en cada microservicio y corregidos algunos errores" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se a comprobado la funcionalidad del crud generall, se agregaron funciones para listar todo en cada microservicio y corregidos algunos errores" />
+  </component>
+</project>

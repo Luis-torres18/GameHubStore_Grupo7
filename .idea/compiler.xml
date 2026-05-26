@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="microservicios" target="25" />
+      <module name="notification-service" target="25" />
+      <module name="order.service" target="25" />
+      <module name="payment.service" target="25" />
+      <module name="product-service" target="25" />
+      <module name="promotion-service" target="25" />
+      <module name="review-service" target="25" />
+      <module name="shipping.service" target="25" />
+      <module name="warranty-service" target="25" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

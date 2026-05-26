@@ -21,7 +21,7 @@ GameHub_Store/
 └── README.md
 ```
 
-4. Pasos para Ejecutar
+3. Pasos para Ejecutar
 
   - Requisitos previos
   - Java 25
@@ -30,8 +30,8 @@ GameHub_Store/
   
   1. Clonar el repositorio
   - Para clonar el repositorio requerimos los siguientes dos comandos en el mismo orden:
-  - 1. git clone https://github.com/usuario/GameHub_Store.git
-  - 2. cd GameHub_Store
+  - git clone https://github.com/usuario/GameHub_Store.git
+  - cd GameHub_Store
   
   2. Ejecutar cada microservicio
   - Desde el IntelliJ, debes abrir cada proyecto y ejecutar la clase principal

@@ -9,7 +9,12 @@ import java.util.List;
 @Repository
 public interface ShippingRepository extends JpaRepository<Shipping, Long> {
 
-    List<Shipping> findByOrderId(Long orderId);
+    // Listar por orden
+    List<Shipping> findByOrdenId(Long ordenId);
 
-    List<Shipping> findByEstado(String status);
+    // Listar por estado
+    List<Shipping> findByEstado(String estado);
+
+    // Regla: tracking único
+    boolean existsByTracking(String tracking);
 }

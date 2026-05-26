@@ -14,11 +14,12 @@ import java.time.LocalDateTime;
 public class ShippingResponse {
 
     private Long id;
-    private Long orderId;
-    private Long userId;
+    private Long ordenId;
+    private Long usuarioId;
     private String direccion;
     private String transportista;
     private String tracking;
-    private String status;
+    private String estado;
     private LocalDateTime fechaEnvio;
+    private LocalDateTime fechaEntrega;
 }

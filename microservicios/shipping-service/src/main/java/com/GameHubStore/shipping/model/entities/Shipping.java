@@ -19,7 +19,7 @@ public class Shipping {
     private Long id;
 
     @Column(nullable = false)
-    private Long orderId;
+    private Long ordenId;
 
     @Column(nullable = false)
     private Long usuarioId;
@@ -30,6 +30,7 @@ public class Shipping {
     @Column(nullable = false)
     private String transportista;
 
+    // Regla: tracking único cuando exista
     @Column(unique = true)
     private String tracking;
 
@@ -38,4 +39,7 @@ public class Shipping {
 
     @Column(nullable = false)
     private LocalDateTime fechaEnvio;
+
+    // Necesario para regla: no cambiar a entregado sin fecha de entrega
+    private LocalDateTime fechaEntrega;
 }

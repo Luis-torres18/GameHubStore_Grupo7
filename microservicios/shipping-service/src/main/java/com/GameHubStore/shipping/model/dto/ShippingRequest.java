@@ -14,14 +14,19 @@ import lombok.NoArgsConstructor;
 public class ShippingRequest {
 
     @NotNull(message = "El ID de la orden es obligatorio")
-    private Long orderId;
+    private Long ordenId;
 
     @NotNull(message = "El ID del usuario es obligatorio")
     private Long usuarioId;
 
-    @NotBlank(message = "La dirección de envío es obligatoria")
+    @NotBlank(message = "La dirección es obligatoria")
     private String direccion;
 
-    @NotBlank(message = "La empresa transportista es obligatoria")
+    @NotBlank(message = "El transportista es obligatorio")
     private String transportista;
+
+    // Regla: solo despachar órdenes pagadas
+    // El estado de la orden debe ser PAID para poder crear el despacho
+    @NotBlank(message = "El estado de la orden es obligatorio")
+    private String estadoOrden;
 }

@@ -30,8 +30,8 @@ GameHub_Store/
   
   1. Clonar el repositorio
   - Para clonar el repositorio requerimos los siguientes dos comandos en el mismo orden:
-  - git clone https://github.com/usuario/GameHub_Store.git
-  - cd GameHub_Store
+  - git https://github.com/Luis-torres18/GameHubStore_Grupo7.git
+  - cd GameHubStore_Grupo7
   
   2. Ejecutar cada microservicio
   - Desde el IntelliJ, debes abrir cada proyecto y ejecutar la clase principal

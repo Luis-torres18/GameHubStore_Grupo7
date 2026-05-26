@@ -1,6 +1,8 @@
+```
 PROYECTO: Game_Hub_Store - Evaluacion Parcial 2
 ASIGNATURA: FULL STACK I_002D
 INTEGRANTES: Benjamin Leiva, Emily Pacheco y Luis Torres
+```
 
 1. Descripción del Proyecto
 GameHub Store es una tienda gamer online construida con arquitectura de microservicios 

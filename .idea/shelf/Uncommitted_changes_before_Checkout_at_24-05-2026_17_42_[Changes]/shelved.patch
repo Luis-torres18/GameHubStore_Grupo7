@@ -1,0 +1,133 @@
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/microservicios/pom.xml\" />\r\n        <option value=\"$PROJECT_DIR$/microservicios/product-service/pom.xml\" />\r\n        <option value=\"$PROJECT_DIR$/microservicios/order-service/pom.xml\" />\r\n        <option value=\"$PROJECT_DIR$/microservicios/payment-service/pom.xml\" />\r\n        <option value=\"$PROJECT_DIR$/microservicios/shipping-service/pom.xml\" />\r\n        <option value=\"$PROJECT_DIR$/microservicios/notification-service/pom.xml\" />\r\n        <option value=\"$PROJECT_DIR$/microservicios/promotion-service/promotion-service/pom.xml\" />\r\n        <option value=\"$PROJECT_DIR$/microservicios/review-service/pom.xml\" />\r\n        <option value=\"$PROJECT_DIR$/microservicios/warranty-service/pom.xml\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_25\" default=\"true\" project-jdk-name=\"ms-25\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 2bcda8c86195d44c6bd399fe96a69fc74807c154)
++++ b/.idea/misc.xml	(date 1779654255901)
+@@ -13,6 +13,7 @@
+         <option value="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/pom.xml" />
+         <option value="$PROJECT_DIR$/microservicios/review-service/pom.xml" />
+         <option value="$PROJECT_DIR$/microservicios/warranty-service/pom.xml" />
++        <option value="$PROJECT_DIR$/microservicios/inventory-service/pom.xml" />
+       </list>
+     </option>
+   </component>
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CompilerConfiguration\">\r\n    <annotationProcessing>\r\n      <profile default=\"true\" name=\"Default\" enabled=\"true\" />\r\n      <profile name=\"Maven default annotation processors profile\" enabled=\"true\">\r\n        <sourceOutputDir name=\"target/generated-sources/annotations\" />\r\n        <sourceTestOutputDir name=\"target/generated-test-sources/test-annotations\" />\r\n        <outputRelativeToContentRoot value=\"true\" />\r\n        <module name=\"microservicios\" />\r\n      </profile>\r\n      <profile name=\"Annotation profile for warranty-service\" enabled=\"true\">\r\n        <sourceOutputDir name=\"target/generated-sources/annotations\" />\r\n        <sourceTestOutputDir name=\"target/generated-test-sources/test-annotations\" />\r\n        <outputRelativeToContentRoot value=\"true\" />\r\n        <processorPath useClasspath=\"false\">\r\n          <entry name=\"$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar\" />\r\n        </processorPath>\r\n        <module name=\"payment.service\" />\r\n        <module name=\"review-service\" />\r\n        <module name=\"promotion-service\" />\r\n        <module name=\"product-service\" />\r\n        <module name=\"order.service\" />\r\n        <module name=\"inventory.service\" />\r\n        <module name=\"warranty-service\" />\r\n        <module name=\"notification-service\" />\r\n        <module name=\"shipping.service\" />\r\n      </profile>\r\n    </annotationProcessing>\r\n    <bytecodeTargetLevel>\r\n      <module name=\"inventory.service (1)\" target=\"25\" />\r\n      <module name=\"inventory.service (2)\" target=\"25\" />\r\n    </bytecodeTargetLevel>\r\n  </component>\r\n  <component name=\"JavacSettings\">\r\n    <option name=\"ADDITIONAL_OPTIONS_OVERRIDE\">\r\n      <module name=\"inventory.service\" options=\"-parameters\" />\r\n      <module name=\"inventory.service (1)\" options=\"-parameters\" />\r\n      <module name=\"inventory.service (2)\" options=\"-parameters\" />\r\n      <module name=\"microservicios\" options=\"-parameters\" />\r\n      <module name=\"notification-service\" options=\"-parameters\" />\r\n      <module name=\"order.service\" options=\"-parameters\" />\r\n      <module name=\"payment.service\" options=\"-parameters\" />\r\n      <module name=\"product-service\" options=\"-parameters\" />\r\n      <module name=\"promotion-service\" options=\"-parameters\" />\r\n      <module name=\"review-service\" options=\"-parameters\" />\r\n      <module name=\"shipping.service\" options=\"-parameters\" />\r\n      <module name=\"warranty-service\" options=\"-parameters\" />\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+--- a/.idea/compiler.xml	(revision 2bcda8c86195d44c6bd399fe96a69fc74807c154)
++++ b/.idea/compiler.xml	(date 1779654282969)
+@@ -9,22 +9,31 @@
+         <outputRelativeToContentRoot value="true" />
+         <module name="microservicios" />
+       </profile>
++      <profile name="Annotation profile for inventory.service" enabled="true">
++        <sourceOutputDir name="target/generated-sources/annotations" />
++        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
++        <outputRelativeToContentRoot value="true" />
++        <processorPath useClasspath="false">
++          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
++        </processorPath>
++        <module name="inventory.service" />
++      </profile>
+       <profile name="Annotation profile for warranty-service" enabled="true">
+         <sourceOutputDir name="target/generated-sources/annotations" />
+         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+         <outputRelativeToContentRoot value="true" />
+         <processorPath useClasspath="false">
+           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
++          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+         </processorPath>
+         <module name="payment.service" />
+         <module name="review-service" />
+         <module name="promotion-service" />
+         <module name="product-service" />
+         <module name="order.service" />
+-        <module name="inventory.service" />
+         <module name="warranty-service" />
+-        <module name="notification-service" />
+         <module name="shipping.service" />
++        <module name="notification-service" />
+       </profile>
+     </annotationProcessing>
+     <bytecodeTargetLevel>
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectModuleManager\">\r\n    <modules>\r\n      <module fileurl=\"file://$PROJECT_DIR$/.idea/GameHubStore_Grupo7.iml\" filepath=\"$PROJECT_DIR$/.idea/GameHubStore_Grupo7.iml\" />\r\n      <module fileurl=\"file://$PROJECT_DIR$/microservicios/promotion-service/promotion-service/promotion-service.iml\" filepath=\"$PROJECT_DIR$/microservicios/promotion-service/promotion-service/promotion-service.iml\" />\r\n    </modules>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+--- a/.idea/modules.xml	(revision 2bcda8c86195d44c6bd399fe96a69fc74807c154)
++++ b/.idea/modules.xml	(date 1779654255895)
+@@ -3,6 +3,7 @@
+   <component name="ProjectModuleManager">
+     <modules>
+       <module fileurl="file://$PROJECT_DIR$/.idea/GameHubStore_Grupo7.iml" filepath="$PROJECT_DIR$/.idea/GameHubStore_Grupo7.iml" />
++      <module fileurl="file://$PROJECT_DIR$/microservicios/order-service/order.service.iml" filepath="$PROJECT_DIR$/microservicios/order-service/order.service.iml" />
+       <module fileurl="file://$PROJECT_DIR$/microservicios/promotion-service/promotion-service/promotion-service.iml" filepath="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/promotion-service.iml" />
+     </modules>
+   </component>
+Index: microservicios/notification-service/src/main/java/com/GameHubStore/notification_service/service/NotificationServiceImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.GameHubStore.notification_service.service;\r\n\r\n\r\nimport com.GameHubStore.notification_service.exception.NotificationInvalidException;\r\nimport com.GameHubStore.notification_service.exception.NotificationNotFoundException;\r\nimport com.GameHubStore.notification_service.model.dto.NotificationRequest;\r\nimport com.GameHubStore.notification_service.model.dto.NotificationResponse;\r\nimport com.GameHubStore.notification_service.model.entities.Notification;\r\nimport com.GameHubStore.notification_service.repository.NotificationRepository;\r\nimport feign.FeignException;\r\nimport lombok.RequiredArgsConstructor;\r\nimport org.slf4j.Logger;\r\nimport org.slf4j.LoggerFactory;\r\nimport org.springframework.stereotype.Service;\r\nimport org.springframework.transaction.annotation.Transactional;\r\n\r\nimport java.util.List;\r\nimport java.util.stream.Collectors;\r\n\r\n\r\n@Service\r\n@RequiredArgsConstructor\r\npublic class NotificationServiceImpl implements NotificationService {\r\n\r\n    private static final Logger log = LoggerFactory.getLogger(NotificationServiceImpl.class);\r\n\r\n    private final NotificationRepository notificationRepository;\r\n\r\n\r\n\r\n\r\n    @Override\r\n    @Transactional\r\n    public NotificationResponse createNotification(NotificationRequest request) {\r\n        log.info(\"[notification-service] Creating notification – type='{}', userId={}\",\r\n                request.getType(), request.getUserId());\r\n\r\n\r\n        validateUserExists(request.getUserId());\r\n\r\n        Notification notification = Notification.builder()\r\n                .userId(request.getUserId())\r\n                .type(request.getType().toUpperCase())\r\n                .message(request.getMessage())\r\n                .read(false)\r\n                .status(\"ACTIVA\")\r\n                .build();\r\n\r\n        Notification saved = notificationRepository.save(notification);\r\n        log.info(\"[notification-service] Notification created – id={}, userId={}\",\r\n                saved.getId(), saved.getUserId());\r\n\r\n        return toResponse(saved);\r\n    }\r\n    @Override\r\n    public List<NotificationResponse> findAll() {\r\n        return notificationRepository.findAll()\r\n                .stream()\r\n                .map(this::toResponse) // Asumiendo que tienes este método de mapeo\r\n                .collect(Collectors.toList());\r\n    }\r\n\r\n\r\n    @Override\r\n    public List<NotificationResponse> listByUser(Long userId) {\r\n        log.info(\"[notification-service] Listing all notifications for userId={}\", userId);\r\n        return notificationRepository.findByUserIdOrderByCreatedAtDesc(userId)\r\n                .stream()\r\n                .map(this::toResponse)\r\n                .collect(Collectors.toList());\r\n    }\r\n\r\n\r\n\r\n\r\n    @Override\r\n    public NotificationResponse findById(Long id) {\r\n        log.info(\"[notification-service] Fetching notification id={}\", id);\r\n        Notification notification = getOrThrow(id);\r\n        return toResponse(notification);\r\n    }\r\n\r\n\r\n\r\n\r\n\r\n    @Override\r\n    @Transactional\r\n    public NotificationResponse markAsRead(Long id) {\r\n        log.info(\"[notification-service] Marking notification id={} as read\", id);\r\n        Notification notification = getOrThrow(id);\r\n\r\n\r\n        if (Boolean.TRUE.equals(notification.getRead())) {\r\n            log.warn(\"[notification-service] Notification id={} is already read – ignoring\", id);\r\n            throw new NotificationInvalidException(\r\n                    \"La notificación ya fue marcada como leída\");\r\n        }\r\n\r\n        notification.setRead(true);\r\n        Notification saved = notificationRepository.save(notification);\r\n        log.info(\"[notification-service] Notification id={} marked as read\", saved.getId());\r\n        return toResponse(saved);\r\n    }\r\n\r\n\r\n\r\n\r\n\r\n    @Override\r\n    @Transactional\r\n    public void deleteNotification(Long id) {\r\n        log.info(\"[notification-service] Deleting notification id={}\", id);\r\n        Notification notification = getOrThrow(id);\r\n        notificationRepository.delete(notification);\r\n        log.info(\"[notification-service] Notification id={} deleted\", id);\r\n    }\r\n\r\n\r\n    private Notification getOrThrow(Long id) {\r\n        return notificationRepository.findById(id)\r\n                .orElseThrow(() -> {\r\n                    log.error(\"[notification-service] Notification not found – id={}\", id);\r\n                    return new NotificationNotFoundException(\r\n                            \"Notificación no encontrada con ID: \" + id);\r\n                });\r\n    }\r\n\r\n\r\n    private void validateUserExists(Long userId) {\r\n        try {\r\n\r\n        } catch (FeignException.NotFound ex) {\r\n            log.error(\"[notification-service] User not found in user-service – userId={}\", userId);\r\n            throw new NotificationInvalidException(\r\n                    \"No se puede crear la notificación: el usuario con ID \" + userId + \" no existe\");\r\n        } catch (FeignException ex) {\r\n\r\n            log.warn(\"[notification-service] user-service unavailable (userId={}): {} – proceeding anyway\",\r\n                    userId, ex.getMessage());\r\n        }\r\n    }\r\n\r\n\r\n    private NotificationResponse toResponse(Notification n) {\r\n        return NotificationResponse.builder()\r\n                .id(n.getId())\r\n                .userId(n.getUserId())\r\n                .type(n.getType())\r\n                .message(n.getMessage())\r\n                .read(n.getRead())\r\n                .status(n.getStatus())\r\n                .createdAt(n.getCreatedAt())\r\n                .build();\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/microservicios/notification-service/src/main/java/com/GameHubStore/notification_service/service/NotificationServiceImpl.java b/microservicios/notification-service/src/main/java/com/GameHubStore/notification_service/service/NotificationServiceImpl.java
+--- a/microservicios/notification-service/src/main/java/com/GameHubStore/notification_service/service/NotificationServiceImpl.java	(revision 2bcda8c86195d44c6bd399fe96a69fc74807c154)
++++ b/microservicios/notification-service/src/main/java/com/GameHubStore/notification_service/service/NotificationServiceImpl.java	(date 1779648570287)
+@@ -32,8 +32,7 @@
+     @Override
+     @Transactional
+     public NotificationResponse createNotification(NotificationRequest request) {
+-        log.info("[notification-service] Creating notification – type='{}', userId={}",
+-                request.getType(), request.getUserId());
++
+ 
+ 
+         validateUserExists(request.getUserId());
+@@ -47,8 +46,7 @@
+                 .build();
+ 
+         Notification saved = notificationRepository.save(notification);
+-        log.info("[notification-service] Notification created – id={}, userId={}",
+-                saved.getId(), saved.getUserId());
++
+ 
+         return toResponse(saved);
+     }
+@@ -56,14 +54,13 @@
+     public List<NotificationResponse> findAll() {
+         return notificationRepository.findAll()
+                 .stream()
+-                .map(this::toResponse) // Asumiendo que tienes este método de mapeo
++                .map(this::toResponse)
+                 .collect(Collectors.toList());
+     }
+ 
+ 
+     @Override
+     public List<NotificationResponse> listByUser(Long userId) {
+-        log.info("[notification-service] Listing all notifications for userId={}", userId);
+         return notificationRepository.findByUserIdOrderByCreatedAtDesc(userId)
+                 .stream()
+                 .map(this::toResponse)
+@@ -75,7 +72,7 @@
+ 
+     @Override
+     public NotificationResponse findById(Long id) {
+-        log.info("[notification-service] Fetching notification id={}", id);
++
+         Notification notification = getOrThrow(id);
+         return toResponse(notification);
+     }

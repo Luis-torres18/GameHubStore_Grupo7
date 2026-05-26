@@ -27,8 +27,7 @@ GameHub_Store/
 ├── promotion-service/ || Puerto: 8088
 ├── review-service/ || Puerto: 8089
 ├── warranty-service/ || Puerto: 8090
-├── notification-service/ || Puerto: 8091
-└── README.md
+└──  notification-service/ || Puerto: 8091
 ```
 
 3. Pasos para Ejecutar

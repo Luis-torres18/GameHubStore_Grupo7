@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/GameHubStore_Grupo.iml" filepath="$PROJECT_DIR$/.idea/GameHubStore_Grupo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/microservicios/order-service/order.service.iml" filepath="$PROJECT_DIR$/microservicios/order-service/order.service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/GameHubStore_Grupo7.iml" filepath="$PROJECT_DIR$/.idea/GameHubStore_Grupo7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservicios/promotion-service/promotion-service/promotion-service.iml" filepath="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/promotion-service.iml" />
     </modules>
   </component>
 </project>

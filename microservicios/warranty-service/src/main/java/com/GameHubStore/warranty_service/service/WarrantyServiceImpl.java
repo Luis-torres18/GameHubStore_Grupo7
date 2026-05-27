@@ -21,7 +21,6 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class WarrantyServiceImpl implements WarrantyService {
 
-    private static final Logger log = LoggerFactory.getLogger(WarrantyServiceImpl.class);
 
     private static final int WARRANTY_MONTHS = 12;
     private static final String STATUS_CLOSED = "CLOSED";
@@ -39,16 +38,8 @@ public class WarrantyServiceImpl implements WarrantyService {
 
     @Override
     public WarrantyResponse createWarranty(WarrantyRequest request) {
-        log.info("[warranty-service] Creating warranty for userId={} orderId={} productId={}",
-                request.getUserId(), request.getOrderId(), request.getProductId());
 
-        // Business rule: no warranty without an associated purchase
-        // -> orderClient.findById(request.getOrderId()) must return a valid order
-        //    containing the product; throw WarrantyInvalidException if not found.
 
-        // Business rule: warranty request must be within the allowed period
-        // -> order.getDate().plusMonths(WARRANTY_MONTHS).isAfter(LocalDate.now())
-        //    throw WarrantyInvalidException("La garantía ha vencido, plazo de " + WARRANTY_MONTHS + " meses superado")
 
         Warranty warranty = Warranty.builder()
                 .userId(request.getUserId())
@@ -60,13 +51,11 @@ public class WarrantyServiceImpl implements WarrantyService {
                 .build();
 
         Warranty saved = warrantyRepository.save(warranty);
-        log.info("[warranty-service] Warranty created with ID: {}", saved.getId());
         return toResponse(saved);
     }
 
     @Override
     public List<WarrantyResponse> findByUser(Long userId) {
-        log.info("[warranty-service] Listing warranties for userId={}", userId);
         return warrantyRepository.findByUserId(userId).stream()
                 .map(this::toResponse)
                 .collect(Collectors.toList());
@@ -74,7 +63,6 @@ public class WarrantyServiceImpl implements WarrantyService {
 
     @Override
     public List<WarrantyResponse> findByProduct(Long productId) {
-        log.info("[warranty-service] Listing warranties for productId={}", productId);
         return warrantyRepository.findByProductId(productId).stream()
                 .map(this::toResponse)
                 .collect(Collectors.toList());
@@ -82,7 +70,6 @@ public class WarrantyServiceImpl implements WarrantyService {
 
     @Override
     public List<WarrantyResponse> findByStatus(String status) {
-        log.info("[warranty-service] Listing warranties with status={}", status);
         return warrantyRepository.findByStatus(status.toUpperCase()).stream()
                 .map(this::toResponse)
                 .collect(Collectors.toList());
@@ -90,7 +77,6 @@ public class WarrantyServiceImpl implements WarrantyService {
 
     @Override
     public WarrantyResponse findById(Long id) {
-        log.info("[warranty-service] Searching warranty with ID: {}", id);
         Warranty warranty = warrantyRepository.findById(id)
                 .orElseThrow(() -> new WarrantyNotFoundException("Garantía no encontrada con ID: " + id));
         return toResponse(warranty);
@@ -98,11 +84,10 @@ public class WarrantyServiceImpl implements WarrantyService {
 
     @Override
     public WarrantyResponse updateWarranty(Long id, UpdateWarrantyRequest request) {
-        log.info("[warranty-service] Updating status/diagnosis for warrantyId={}", id);
         Warranty warranty = warrantyRepository.findById(id)
                 .orElseThrow(() -> new WarrantyNotFoundException("Garantía no encontrada con ID: " + id));
 
-        // Business rule: cannot modify a closed warranty
+
         if (STATUS_CLOSED.equals(warranty.getStatus())) {
             throw new WarrantyInvalidException("No se puede actualizar una garantía ya cerrada");
         }
@@ -113,22 +98,18 @@ public class WarrantyServiceImpl implements WarrantyService {
         }
 
         Warranty updated = warrantyRepository.save(warranty);
-        log.info("[warranty-service] Warranty updated ID: {} -> status: {}", updated.getId(), updated.getStatus());
         return toResponse(updated);
     }
 
     @Override
     public WarrantyResponse closeWarranty(Long id, CloseWarrantyRequest request) {
-        log.info("[warranty-service] Closing warranty with ID: {}", id);
         Warranty warranty = warrantyRepository.findById(id)
                 .orElseThrow(() -> new WarrantyNotFoundException("Garantía no encontrada con ID: " + id));
 
-        // Business rule: cannot close an already closed warranty
         if (STATUS_CLOSED.equals(warranty.getStatus())) {
             throw new WarrantyInvalidException("La garantía ya está cerrada");
         }
 
-        // Business rule: cannot close without a resolution
         if (request.getResolution() == null || request.getResolution().isBlank()) {
             throw new WarrantyInvalidException("No se puede cerrar una garantía sin resolución");
         }
@@ -137,7 +118,6 @@ public class WarrantyServiceImpl implements WarrantyService {
         warranty.setStatus(STATUS_CLOSED);
 
         Warranty saved = warrantyRepository.save(warranty);
-        log.info("[warranty-service] Warranty closed with ID: {}", saved.getId());
         return toResponse(saved);
     }
 

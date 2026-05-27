@@ -22,7 +22,6 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class NotificationServiceImpl implements NotificationService {
 
-    private static final Logger log = LoggerFactory.getLogger(NotificationServiceImpl.class);
 
     private final NotificationRepository notificationRepository;
 
@@ -32,8 +31,7 @@ public class NotificationServiceImpl implements NotificationService {
     @Override
     @Transactional
     public NotificationResponse createNotification(NotificationRequest request) {
-        log.info("[notification-service] Creating notification – type='{}', userId={}",
-                request.getType(), request.getUserId());
+
 
 
         validateUserExists(request.getUserId());
@@ -47,8 +45,7 @@ public class NotificationServiceImpl implements NotificationService {
                 .build();
 
         Notification saved = notificationRepository.save(notification);
-        log.info("[notification-service] Notification created – id={}, userId={}",
-                saved.getId(), saved.getUserId());
+
 
         return toResponse(saved);
     }
@@ -63,7 +60,6 @@ public class NotificationServiceImpl implements NotificationService {
 
     @Override
     public List<NotificationResponse> listByUser(Long userId) {
-        log.info("[notification-service] Listing all notifications for userId={}", userId);
         return notificationRepository.findByUserIdOrderByCreatedAtDesc(userId)
                 .stream()
                 .map(this::toResponse)
@@ -75,7 +71,6 @@ public class NotificationServiceImpl implements NotificationService {
 
     @Override
     public NotificationResponse findById(Long id) {
-        log.info("[notification-service] Fetching notification id={}", id);
         Notification notification = getOrThrow(id);
         return toResponse(notification);
     }
@@ -87,19 +82,16 @@ public class NotificationServiceImpl implements NotificationService {
     @Override
     @Transactional
     public NotificationResponse markAsRead(Long id) {
-        log.info("[notification-service] Marking notification id={} as read", id);
         Notification notification = getOrThrow(id);
 
 
         if (Boolean.TRUE.equals(notification.getRead())) {
-            log.warn("[notification-service] Notification id={} is already read – ignoring", id);
             throw new NotificationInvalidException(
                     "La notificación ya fue marcada como leída");
         }
 
         notification.setRead(true);
         Notification saved = notificationRepository.save(notification);
-        log.info("[notification-service] Notification id={} marked as read", saved.getId());
         return toResponse(saved);
     }
 
@@ -110,17 +102,14 @@ public class NotificationServiceImpl implements NotificationService {
     @Override
     @Transactional
     public void deleteNotification(Long id) {
-        log.info("[notification-service] Deleting notification id={}", id);
         Notification notification = getOrThrow(id);
         notificationRepository.delete(notification);
-        log.info("[notification-service] Notification id={} deleted", id);
     }
 
 
     private Notification getOrThrow(Long id) {
         return notificationRepository.findById(id)
                 .orElseThrow(() -> {
-                    log.error("[notification-service] Notification not found – id={}", id);
                     return new NotificationNotFoundException(
                             "Notificación no encontrada con ID: " + id);
                 });
@@ -131,13 +120,8 @@ public class NotificationServiceImpl implements NotificationService {
         try {
 
         } catch (FeignException.NotFound ex) {
-            log.error("[notification-service] User not found in user-service – userId={}", userId);
             throw new NotificationInvalidException(
                     "No se puede crear la notificación: el usuario con ID " + userId + " no existe");
-        } catch (FeignException ex) {
-
-            log.warn("[notification-service] user-service unavailable (userId={}): {} – proceeding anyway",
-                    userId, ex.getMessage());
         }
     }
 

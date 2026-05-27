@@ -15,17 +15,14 @@ import java.util.Map;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    private static final Logger log = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
     @ExceptionHandler(WarrantyNotFoundException.class)
     public ResponseEntity<Map<String, Object>> handleNotFound(WarrantyNotFoundException ex) {
-        log.error("[warranty-service] Garantía no encontrada: {}", ex.getMessage());
         return buildResponse(HttpStatus.NOT_FOUND, ex.getMessage());
     }
 
     @ExceptionHandler(WarrantyInvalidException.class)
     public ResponseEntity<Map<String, Object>> handleInvalid(WarrantyInvalidException ex) {
-        log.error("[warranty-service] Operación inválida: {}", ex.getMessage());
         return buildResponse(HttpStatus.BAD_REQUEST, ex.getMessage());
     }
 
@@ -34,13 +31,11 @@ public class GlobalExceptionHandler {
         String msg = ex.getBindingResult().getFieldErrors().stream()
                 .map(e -> e.getField() + ": " + e.getDefaultMessage())
                 .reduce("", (a, b) -> a + "; " + b);
-        log.warn("[warranty-service] Validación fallida: {}", msg);
         return buildResponse(HttpStatus.BAD_REQUEST, "Error de validación: " + msg);
     }
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Map<String, Object>> handleGeneral(Exception ex) {
-        log.error("[warranty-service] Error inesperado: {}", ex.getMessage(), ex);
         return buildResponse(HttpStatus.INTERNAL_SERVER_ERROR, "Error interno del servidor");
     }
 

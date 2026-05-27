@@ -17,18 +17,15 @@ import java.util.Map;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    private static final Logger log = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
 
     @ExceptionHandler(NotificationNotFoundException.class)
     public ResponseEntity<Map<String, Object>> handleNotFound(NotificationNotFoundException ex) {
-        log.error("[notification-service] Notification not found: {}", ex.getMessage());
         return buildResponse(HttpStatus.NOT_FOUND, ex.getMessage());
     }
 
     @ExceptionHandler(NotificationInvalidException.class)
     public ResponseEntity<Map<String, Object>> handleInvalid(NotificationInvalidException ex) {
-        log.warn("[notification-service] Invalid operation: {}", ex.getMessage());
         return buildResponse(HttpStatus.BAD_REQUEST, ex.getMessage());
     }
 
@@ -40,7 +37,6 @@ public class GlobalExceptionHandler {
                 .map(error -> {
                     String field = ((FieldError) error).getField();
                     String msg   = error.getDefaultMessage();
-                    log.warn("[notification-service] Validation failed – field '{}': {}", field, msg);
                     return field + ": " + msg;
                 })
                 .reduce("", (a, b) -> a.isEmpty() ? b : a + " | " + b);
@@ -52,7 +48,6 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Map<String, Object>> handleGeneral(Exception ex) {
-        log.error("[notification-service] Unexpected error: {}", ex.getMessage(), ex);
         return buildResponse(HttpStatus.INTERNAL_SERVER_ERROR, "Error interno del servidor");
     }
 

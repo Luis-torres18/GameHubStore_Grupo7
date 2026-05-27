@@ -20,48 +20,49 @@ public class WarrantyController {
 
     private final WarrantyService warrantyService;
 
-    // Create warranty request
+    // crear garantia
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public WarrantyResponse createWarranty(@RequestBody @Valid WarrantyRequest request) {
         return warrantyService.createWarranty(request);
     }
 
-    // List all warranties
+    // listar todas las garantias
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<WarrantyResponse> findAllWarranties() {
         return warrantyService.findAll();
     }
-    // List warranties by user
+
+    // listar garantias garantia por usuario
     @GetMapping("/user/{userId}")
     @ResponseStatus(HttpStatus.OK)
     public List<WarrantyResponse> findByUser(@PathVariable Long userId) {
         return warrantyService.findByUser(userId);
     }
 
-    // List warranties by product
+    // listar garantias por producto
     @GetMapping("/product/{productId}")
     @ResponseStatus(HttpStatus.OK)
     public List<WarrantyResponse> findByProduct(@PathVariable Long productId) {
         return warrantyService.findByProduct(productId);
     }
 
-    // List warranties by status
+    // listar garantias por estatus
     @GetMapping("/status/{status}")
     @ResponseStatus(HttpStatus.OK)
     public List<WarrantyResponse> findByStatus(@PathVariable String status) {
         return warrantyService.findByStatus(status);
     }
 
-    // Find warranty by ID
+    // find garantia por id
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public List<WarrantyResponse> findById(@PathVariable Long id) {
         return Collections.singletonList(warrantyService.findById(id));
     }
 
-    // Update status and diagnosis
+    // actualizar garantia
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public WarrantyResponse updateWarranty(
@@ -70,7 +71,7 @@ public class WarrantyController {
         return warrantyService.updateWarranty(id, request);
     }
 
-    // Close warranty request with resolution
+    // cerrar garantia
     @PatchMapping("/{id}/close")
     @ResponseStatus(HttpStatus.OK)
     public WarrantyResponse closeWarranty(

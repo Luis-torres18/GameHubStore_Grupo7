@@ -17,5 +17,4 @@ public interface WarrantyRepository extends JpaRepository<Warranty, Long> {
 
 
 
-    boolean existsByOrderIdAndProductId(Long orderId, Long productId);
 }

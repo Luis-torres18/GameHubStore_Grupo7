@@ -17,17 +17,14 @@ import java.util.Map;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    private static final Logger log = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
     @ExceptionHandler(PromotionNotFoundException.class)
     public ResponseEntity<Map<String, Object>> handleNotFound(PromotionNotFoundException ex) {
-        log.error("[promotion-service] Promoción no encontrada: {}", ex.getMessage());
         return buildResponse(HttpStatus.NOT_FOUND, ex.getMessage());
     }
 
     @ExceptionHandler(InvalidPromotion.class)
     public ResponseEntity<Map<String, Object>> handleInvalid(InvalidPromotion ex) {
-        log.error("[promotion-service] Promoción inválida: {}", ex.getMessage());
         return buildResponse(HttpStatus.BAD_REQUEST, ex.getMessage());
     }
 
@@ -36,13 +33,11 @@ public class GlobalExceptionHandler {
         String msg = ex.getBindingResult().getFieldErrors().stream()
                 .map(e -> e.getField() + ": " + e.getDefaultMessage())
                 .reduce("", (a, b) -> a + "; " + b);
-        log.warn("[promotion-service] Validación fallida: {}", msg);
         return buildResponse(HttpStatus.BAD_REQUEST, "Error de validación: " + msg);
     }
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Map<String, Object>> handleGeneral(Exception ex) {
-        log.error("[promotion-service] Error inesperado: {}", ex.getMessage(), ex);
         return buildResponse(HttpStatus.INTERNAL_SERVER_ERROR, "Error interno del servidor");
     }
 

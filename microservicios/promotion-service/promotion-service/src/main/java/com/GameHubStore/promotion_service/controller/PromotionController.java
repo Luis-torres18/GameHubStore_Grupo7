@@ -18,42 +18,42 @@ public class PromotionController {
 
     private final PromotionService promotionService;
 
-    // Create promotion
+    // crear promocion
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public PromotionResponse createPromotion(@RequestBody @Valid PromotionRequest request) {
         return promotionService.createPromotion(request);
     }
 
-    // Get active promotions
+    // obenter promociones activas
     @GetMapping("/active")
     @ResponseStatus(HttpStatus.OK)
     public List<PromotionResponse> getActivePromotions() {
         return promotionService.getActivePromotions();
     }
 
-    // Get all promotions (historical + active)
+    // tener todas las promociones
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<PromotionResponse> getAllPromotions() {
         return promotionService.getAllPromotions();
     }
 
-    // Get promotion by ID
+    // obtener promociones por id
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public PromotionResponse getPromotionById(@PathVariable Long id) {
         return promotionService.getPromotionById(id);
     }
 
-    // Get promotion by code
+    // obtener promociones por codigo
     @GetMapping("/code/{code}")
     @ResponseStatus(HttpStatus.OK)
     public PromotionResponse getPromotionByCode(@PathVariable String code) {
         return promotionService.getPromotionByCode(code);
     }
 
-    // Update conditions and dates
+    // actualizar promocion
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public PromotionResponse updatePromotion(
@@ -62,7 +62,7 @@ public class PromotionController {
         return promotionService.updatePromotion(id, request);
     }
 
-    // Deactivate promotion
+    // desactivar promocion
     @PatchMapping("/{id}/desactivate")
     @ResponseStatus(HttpStatus.OK)
     public PromotionResponse desactivatePromotion(@PathVariable Long id) {

@@ -7,8 +7,7 @@ import com.GameHubStore.promotion_service.model.dto.PromotionResponse;
 import com.GameHubStore.promotion_service.model.entities.Promotion;
 import com.GameHubStore.promotion_service.repository.PromotionRepository;
 import lombok.RequiredArgsConstructor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -19,12 +18,10 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class PromotionServiceImpl implements PromotionService {
 
-    private static final Logger log = LoggerFactory.getLogger(PromotionServiceImpl.class);
     private final PromotionRepository promotionRepository;
 
     @Override
     public PromotionResponse createPromotion(PromotionRequest request) {
-        log.info("[promotion-service] Creando promocion con codigo: {}", request.getCode());
 
         if (promotionRepository.existsByCode(request.getCode().toUpperCase())) {
             throw new InvalidPromotion("Una promocion ya existe actualmente con el codigo: " + request.getCode());
@@ -48,13 +45,11 @@ public class PromotionServiceImpl implements PromotionService {
                 .build();
 
         Promotion saved = promotionRepository.save(promotion);
-        log.info("[promotion-service] Promocion creada con ID: {}", saved.getId());
         return toResponse(saved);
     }
 
     @Override
     public List<PromotionResponse> getActivePromotions() {
-        log.info("[promotion-service] Mostrando promociones activas");
         LocalDate today = LocalDate.now();
         return promotionRepository
                 .findByIsActiveTrueAndStartDateLessThanEqualAndEndDateGreaterThanEqual(today, today)
@@ -65,7 +60,6 @@ public class PromotionServiceImpl implements PromotionService {
 
     @Override
     public List<PromotionResponse> getAllPromotions() {
-        log.info("[promotion-service] Mostrando todas las promociones (historial)");
         return promotionRepository.findAllByOrderByStartDateDesc()
                 .stream()
                 .map(this::toResponse)
@@ -74,7 +68,6 @@ public class PromotionServiceImpl implements PromotionService {
 
     @Override
     public PromotionResponse getPromotionById(Long id) {
-        log.info("[promotion-service] Buscando promocion por ID: {}", id);
         Promotion promotion = promotionRepository.findById(id)
                 .orElseThrow(() -> new PromotionNotFoundException("Promocion no encontrada con ID: " + id));
         return toResponse(promotion);
@@ -82,7 +75,6 @@ public class PromotionServiceImpl implements PromotionService {
 
     @Override
     public PromotionResponse getPromotionByCode(String code) {
-        log.info("[promotion-service] Buscando promocion por codigo: {}", code);
         Promotion promotion = promotionRepository.findByCode(code.toUpperCase())
                 .orElseThrow(() -> new PromotionNotFoundException("Promocion no encontrada con el codigo: " + code));
         return toResponse(promotion);
@@ -90,7 +82,6 @@ public class PromotionServiceImpl implements PromotionService {
 
     @Override
     public PromotionResponse updatePromotion(Long id, PromotionRequest request) {
-        log.info("[promotion-service] Actualizando promocion con ID: {}", id);
         Promotion promotion = promotionRepository.findById(id)
                 .orElseThrow(() -> new PromotionNotFoundException("Promocion no encontrada con ID: " + id));
 
@@ -109,13 +100,11 @@ public class PromotionServiceImpl implements PromotionService {
         promotion.setIsActive(request.getIsActive());
 
         Promotion updated = promotionRepository.save(promotion);
-        log.info("[promotion-service] Promocion actualizada de ID: {}", updated.getId());
         return toResponse(updated);
     }
 
     @Override
     public PromotionResponse desactivatePromotion(Long id) {
-        log.info("[promotion-service] Desactivando promocion de ID: {}", id);
         Promotion promotion = promotionRepository.findById(id)
                 .orElseThrow(() -> new PromotionNotFoundException("Promocion no encontrada con el ID: " + id));
 
@@ -124,7 +113,6 @@ public class PromotionServiceImpl implements PromotionService {
         }
         promotion.setIsActive(false);
         Promotion saved = promotionRepository.save(promotion);
-        log.info("[promotion-service] Promocion desactivada con ID: {}", saved.getId());
         return toResponse(saved);
     }
 

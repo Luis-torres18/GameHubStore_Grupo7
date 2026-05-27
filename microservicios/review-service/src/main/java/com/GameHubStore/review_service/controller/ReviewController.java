@@ -20,40 +20,42 @@ public class ReviewController {
 
     private final ReviewService reviewService;
 
-    // Create review
+    // create reseña
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public ReviewResponse createReview(@RequestBody @Valid ReviewRequest request) {
         return reviewService.createReview(request);
     }
-
+    // obtener todas las reseñas
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<ReviewResponse> findAllReviews() {
         return reviewService.findAll();
     }
-    // Get reviews by product
+
+    // obtener reseñas por producto
+
     @GetMapping("/product/{productId}")
     @ResponseStatus(HttpStatus.OK)
     public List<ReviewResponse> getReviewsByProduct(@PathVariable Long productId) {
         return reviewService.getReviewsByProduct(productId);
     }
 
-    // Get reviews by user
+    //  obtener reseña por usuario
     @GetMapping("/user/{userId}")
     @ResponseStatus(HttpStatus.OK)
     public List<ReviewResponse> getReviewsByUser(@PathVariable Long userId) {
         return reviewService.getReviewsByUser(userId);
     }
 
-    // Get review by ID
+    // obtener reseña por id
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public ReviewResponse getReviewById(@PathVariable Long id) {
         return reviewService.getReviewById(id);
     }
 
-    // Update review
+    // actualizar reseña
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public ReviewResponse updateReview(
@@ -62,14 +64,14 @@ public class ReviewController {
         return reviewService.updateReview(id, request);
     }
 
-    // Moderate review (admin)
+    // moderar reseña
     @PatchMapping("/{id}/moderate")
     @ResponseStatus(HttpStatus.OK)
     public ReviewResponse moderateReview(@PathVariable Long id) {
         return reviewService.moderateReview(id);
     }
 
-    // Delete review
+    // eliminar reseña
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public ResponseEntity<String> deleteReview(@PathVariable Long id) {

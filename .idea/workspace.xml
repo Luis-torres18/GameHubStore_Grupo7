@@ -6,22 +6,29 @@
   <component name="ChangeListManager">
     <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="Se a comprobado la funcionalidad del crud generall, se agregaron funciones para listar todo en cada microservicio y corregidos algunos errores">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/controller/ShippingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/controller/ShippingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/exception/ShippingException.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/exception/ShippingException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/exception/ShippingNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/exception/ShippingNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/exception/ShippingValidationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/exception/ShippingValidationException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/model/dto/ShippingRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/model/dto/ShippingRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/model/dto/ShippingResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/model/dto/ShippingResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/model/entities/Shipping.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/model/entities/Shipping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/repository/ShippingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/repository/ShippingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/service/ShippingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/service/ShippingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/auth-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/auth-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/auth-service/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/controller/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/product-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/product-service/src/main/java/com/GameHubStore/product_service/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/product-service/src/main/java/com/GameHubStore/product_service/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/product-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/product-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/product-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/product-service/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/product-service/target/classes/com/GameHubStore/product_service/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/product-service/target/classes/com/GameHubStore/product_service/controller/ProductController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="305" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -35,7 +42,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="update_2" />
+        <entry key="$PROJECT_DIR$" value="update_4" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,6 +65,10 @@
         <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
@@ -140,19 +151,22 @@
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.Application.executor": "Run",
+    "Spring Boot.AuthServiceApplication.executor": "Run",
     "Spring Boot.NotificationServiceApplication.executor": "Run",
     "Spring Boot.OrderServiceApplication.executor": "Run",
+    "Spring Boot.ProductServiceApplication.executor": "Run",
     "Spring Boot.PromotionServiceApplication.executor": "Run",
     "Spring Boot.ReviewServiceApplication.executor": "Run",
     "Spring Boot.ShippingServiceAplication.executor": "Run",
     "Spring Boot.WarrantyServiceApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "update__4",
+    "git-widget-placeholder": "EA3__Update",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
@@ -162,6 +176,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
     "run.configurations.included.in.services": "true",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "to.speed.mode.migration.done": "true",
@@ -192,8 +209,10 @@
           <value>
             <map>
               <entry key="Application" value="STOPPED" />
+              <entry key="AuthServiceApplication" value="STOPPED" />
               <entry key="NotificationServiceApplication" value="STOPPED" />
               <entry key="OrderServiceApplication" value="STOPPED" />
+              <entry key="ProductServiceApplication" value="STOPPED" />
               <entry key="PromotionServiceApplication" value="STOPPED" />
               <entry key="ReviewServiceApplication" value="STOPPED" />
               <entry key="ShippingServiceAplication" value="STOPPED" />
@@ -204,11 +223,25 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ShippingServiceAplication">
+  <component name="RunManager" selected="Spring Boot.ProductServiceApplication">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="inventory.service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.inventory.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="auth-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.auth_service.AuthServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.GameHubStore.auth_service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -277,12 +310,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.AuthServiceApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.24374.151" />
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.138" />
       </set>
     </attachedChunks>
   </component>
@@ -375,6 +412,19 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.validation:jakarta.validation-api" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.cloud:spring-cloud-context" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate.validator:hibernate-validator" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Se realizo la creacion de el micro servicio de promocion con sus respectivos, controller, repository,service, funciones etc" />

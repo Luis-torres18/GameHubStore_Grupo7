@@ -13,10 +13,11 @@
         <option value="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/pom.xml" />
         <option value="$PROJECT_DIR$/microservicios/review-service/pom.xml" />
         <option value="$PROJECT_DIR$/microservicios/warranty-service/pom.xml" />
+        <option value="$PROJECT_DIR$/microservicios/auth-service/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_25" default="true" project-jdk-name="ms-25" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_25" project-jdk-name="ms-25" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

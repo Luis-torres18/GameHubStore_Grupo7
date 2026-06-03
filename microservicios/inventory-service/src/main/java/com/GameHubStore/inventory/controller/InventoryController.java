@@ -62,7 +62,6 @@ public class InventoryController{
         return ResponseEntity.ok(inventoryService.updateStock(id, availableStock, reservedStock));
     }
 
-
     // Reservar stock cuando se crea una orden (antes de pagar)
     @PatchMapping("/reserve/{productId}")
     public ResponseEntity<InventoryResponse> reserveStock(

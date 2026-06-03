@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/pom.xml" />
         <option value="$PROJECT_DIR$/microservicios/review-service/pom.xml" />
         <option value="$PROJECT_DIR$/microservicios/warranty-service/pom.xml" />
+        <option value="$PROJECT_DIR$/microservicios/inventory-service/pom.xml" />
       </list>
     </option>
   </component>

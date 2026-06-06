@@ -1,5 +1,6 @@
 package com.GameHubStore.inventory.service;
 
+import com.GameHubStore.inventory.client.ProductClient;
 import com.GameHubStore.inventory.exception.BusinessException;
 import com.GameHubStore.inventory.exception.InventoryNotFoundException;
 import com.GameHubStore.inventory.model.dto.InventoryRequest;
@@ -23,12 +24,20 @@ public class InventoryService {
 
     private final InventoryRepository inventoryRepository;
     private final InventoryMovementRepository inventoryMovementRepository;
-
+    private final ProductClient productClient;
     // Crea registro de stock para cada producto
     @Transactional
     public InventoryResponse addInventory(InventoryRequest request) {
         log.info("[INVENTORY-SERVICE] Creating stock record for productId={}", request.getProductId());
 
+        // Comunicación con product-service
+        try {
+            productClient.getProductById(request.getProductId());
+            log.info("[INVENTORY-SERVICE] Product verified id={}", request.getProductId());
+        } catch (Exception e) {
+            log.error("[INVENTORY-SERVICE] Product not found id={}", request.getProductId());
+            throw new BusinessException("Product not found in product-service with id=" + request.getProductId());
+        }
         // validacion no duplicar productos
         if (inventoryRepository.existsByProductId(request.getProductId())) {
             log.warn("[INVENTORY-SERVICE] Stock record already exists for productId={}", request.getProductId());
@@ -62,7 +71,7 @@ public class InventoryService {
                 });
         return mapToResponse(inventory);
     }
-    //  Listar stock por bodega (ubicacion) ──────────────────────────────────────
+    //  Listar stock por bodega (ubicacion)
     public List<InventoryResponse> getInventoryByLocation(String location) {
         log.info("[INVENTORY-SERVICE] Fetching stock for location={}", location);
         return inventoryRepository.findByLocation(location)
@@ -71,7 +80,7 @@ public class InventoryService {
                 .collect(Collectors.toList());
     }
 
-    // ─── Buscar stock por ID ──────────────────────────────────────────────────────
+    // Buscar stock por ID
     public InventoryResponse getInventoryById(Long id) {
         log.info("[INVENTORY-SERVICE] Fetching stock by id={}", id);
         Inventory inventory = inventoryRepository.findById(id)
@@ -82,7 +91,7 @@ public class InventoryService {
         return mapToResponse(inventory);
     }
 
-    // ─── Actualizar cantidades disponibles o reservadas ───────────────────────────
+    // Actualizar cantidades disponibles o reservadas
     @Transactional
     public InventoryResponse updateStock(Long id, Integer availableStock, Integer reservedStock) {
         log.info("[INVENTORY-SERVICE] Updating stock for id={}", id);
@@ -142,7 +151,7 @@ public class InventoryService {
         return mapToResponse(inventory);
     }
 
-    // ─── Eliminar o cerrar registro de stock obsoleto ───
+    //  Eliminar o cerrar registro de stock obsoleto
     @Transactional
     public void deleteInventory(Long id) {
         log.info("[INVENTORY-SERVICE] Deleting stock record id={}", id);
@@ -152,7 +161,7 @@ public class InventoryService {
         log.info("[INVENTORY-SERVICE] Stock record deleted id={}", id);
     }
 
-    // ─── Helper: registrar movimiento por cada ajuste ────
+    //  Helper: registrar movimiento por cada ajuste
     private void registerMovement(Long productId, String type, Integer quantity) {
         InventoryMovement movement = InventoryMovement.builder()
                 .productId(productId)
@@ -163,7 +172,7 @@ public class InventoryService {
         log.info("[INVENTORY-SERVICE] Movement registered: type={}, productId={}, quantity={}", type, productId, quantity);
     }
 
-    // mapear entidad a response DTO ───
+    // mapear entidad a response DTO
     private InventoryResponse mapToResponse(Inventory inventory) {
         return InventoryResponse.builder()
                 .id(inventory.getId())

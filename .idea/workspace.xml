@@ -6,20 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="Se a comprobado la funcionalidad del crud generall, se agregaron funciones para listar todo en cada microservicio y corregidos algunos errores">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/auth-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/auth-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/auth-service/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/controller/AuthController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/product-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/product-service/src/main/java/com/GameHubStore/product_service/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/product-service/src/main/java/com/GameHubStore/product_service/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/product-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/product-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/product-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/product-service/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/product-service/target/classes/com/GameHubStore/product_service/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/product-service/target/classes/com/GameHubStore/product_service/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/src/main/java/com/GameHubStore/inventory/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/src/main/java/com/GameHubStore/inventory/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/src/main/java/com/GameHubStore/inventory/service/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/src/main/java/com/GameHubStore/inventory/service/InventoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/target/classes/com/GameHubStore/inventory/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/target/classes/com/GameHubStore/inventory/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/target/classes/com/GameHubStore/inventory/service/InventoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/target/classes/com/GameHubStore/inventory/service/InventoryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/notification-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/order-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +25,6 @@
   </component>
   <component name="EmbeddingIndexingInfo">
     <option name="cachedIndexableFilesCount" value="305" />
-    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -42,7 +38,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="update_4" />
+        <entry key="$PROJECT_DIR$" value="EA3_Update" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -72,61 +68,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0000013698388945" />
-      <entry key="S10" value="1.0055660286207337" />
-      <entry key="S30" value="2.5910272357562203" />
-      <entry key="S60" value="7.676739324018999" />
-      <entry key="M2" value="14.933592458702051" />
-      <entry key="M5" value="24.390968669893468" />
-      <entry key="M10" value="32.235100532272156" />
-      <entry key="M15" value="39.139141095902914" />
-      <entry key="M30" value="60.2590511625258" />
-      <entry key="H1" value="96.52689737227324" />
-      <entry key="H2" value="157.2642566991405" />
-      <entry key="H4" value="238.13182784683426" />
-      <entry key="D1" value="383.86625767748114" />
-      <entry key="W1" value="422.10619361249155" />
+      <entry key="MS100" value="1.0000008836632366" />
+      <entry key="MS500" value="1.061554152680972" />
+      <entry key="S2" value="1.4980978919101724" />
+      <entry key="S5" value="1.7609593331006588" />
+      <entry key="S10" value="1.9655350454742273" />
+      <entry key="S30" value="2.9414053747470055" />
+      <entry key="S60" value="4.055136407073402" />
+      <entry key="M2" value="5.153294978566955" />
+      <entry key="M5" value="6.3158624602294235" />
+      <entry key="M10" value="8.185996384472302" />
+      <entry key="M15" value="10.86070339827552" />
+      <entry key="M30" value="23.489711119940292" />
+      <entry key="H1" value="56.58778695806112" />
+      <entry key="H2" value="120.88289851010781" />
+      <entry key="H4" value="213.53576416558238" />
+      <entry key="D1" value="398.0351661843739" />
+      <entry key="W1" value="449.58425254877915" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="7.002350630058166E-132" />
-      <entry key="S10" value="5.154489895584916E-66" />
-      <entry key="S30" value="4.32615050436773E-22" />
-      <entry key="S60" value="4.1883016010863684E-11" />
-      <entry key="M2" value="1.3714381753909813E-5" />
-      <entry key="M5" value="0.0338576672533467" />
-      <entry key="M10" value="0.6107347664046513" />
-      <entry key="M15" value="1.870806473475416" />
-      <entry key="M30" value="6.7211338771848155" />
-      <entry key="H1" value="14.182072749257877" />
-      <entry key="H2" value="22.583004439257312" />
-      <entry key="H4" value="30.490767825316304" />
-      <entry key="D1" value="41.83305255333919" />
-      <entry key="W1" value="44.52329149747794" />
+      <entry key="MS100" value="1.1725686173850853E-88" />
+      <entry key="MS500" value="2.593150460515146E-18" />
+      <entry key="S2" value="4.091824787361309E-5" />
+      <entry key="S5" value="0.02157079591093089" />
+      <entry key="S10" value="0.21508398459589537" />
+      <entry key="S30" value="1.1851210240667018" />
+      <entry key="S60" value="1.8725679122094632" />
+      <entry key="M2" value="2.3663983064511522" />
+      <entry key="M5" value="2.8844382338263737" />
+      <entry key="M10" value="4.0937480617052575" />
+      <entry key="M15" value="5.524879355814137" />
+      <entry key="M30" value="9.816539767935923" />
+      <entry key="H1" value="17.793686733644105" />
+      <entry key="H2" value="29.07784464024083" />
+      <entry key="H4" value="40.846536810139035" />
+      <entry key="D1" value="58.802587064827826" />
+      <entry key="W1" value="63.21288264285042" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.8766057213160351" />
-      <entry key="MS500" value="0.974004268543241" />
-      <entry key="S2" value="0.9934367347173356" />
-      <entry key="S5" value="0.9973708510375854" />
-      <entry key="S10" value="1.0042164437820271" />
-      <entry key="S30" value="2.5883899349721227" />
-      <entry key="S60" value="7.671578789288621" />
-      <entry key="M2" value="14.92499350525" />
-      <entry key="M5" value="24.407936645196024" />
-      <entry key="M10" value="32.82404270325104" />
-      <entry key="M15" value="40.986088102939036" />
-      <entry key="M30" value="66.95516106028026" />
-      <entry key="H1" value="110.6876836019996" />
-      <entry key="H2" value="179.83167624702833" />
-      <entry key="H4" value="268.61216974845956" />
-      <entry key="D1" value="425.696834942603" />
-      <entry key="W1" value="466.62910412440306" />
+      <entry key="MS100" value="3.289677951283931E-4" />
+      <entry key="MS500" value="0.2362114647052178" />
+      <entry key="S2" value="1.102556912879169" />
+      <entry key="S5" value="1.5896313603450811" />
+      <entry key="S10" value="2.058238529185211" />
+      <entry key="S30" value="4.036109848293951" />
+      <entry key="S60" value="5.85504298669736" />
+      <entry key="M2" value="7.469855968506941" />
+      <entry key="M5" value="9.174398390250316" />
+      <entry key="M10" value="12.261675824644342" />
+      <entry key="M15" value="16.36930442742495" />
+      <entry key="M30" value="33.29009118905595" />
+      <entry key="H1" value="74.36456122115905" />
+      <entry key="H2" value="149.94571095918894" />
+      <entry key="H4" value="254.3710747604373" />
+      <entry key="D1" value="456.83481447420974" />
+      <entry key="W1" value="512.7966747172621" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -144,47 +140,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.Application.executor": "Run",
-    "Spring Boot.AuthServiceApplication.executor": "Run",
-    "Spring Boot.NotificationServiceApplication.executor": "Run",
-    "Spring Boot.OrderServiceApplication.executor": "Run",
-    "Spring Boot.ProductServiceApplication.executor": "Run",
-    "Spring Boot.PromotionServiceApplication.executor": "Run",
-    "Spring Boot.ReviewServiceApplication.executor": "Run",
-    "Spring Boot.ShippingServiceAplication.executor": "Run",
-    "Spring Boot.WarrantyServiceApplication.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "EA3__Update",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/moa/IdeaProjects/GameHubStore_Grupo7/microservicios/notification-service/src/main/java/com/GameHubStore/notification_service/service",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.AuthServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.NotificationServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.OrderServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ProductServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.PromotionServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ReviewServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ShippingServiceAplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.WarrantyServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;EA3__Update2&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/moa/IdeaProjects/GameHubStore_Grupo7/microservicios/notification-service/src/main/java/com/GameHubStore/notification_service/service&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\notification-service\src\main\java\com\GameHubStore\notification_service\service" />
@@ -223,7 +220,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProductServiceApplication">
+  <component name="RunManager" selected="Spring Boot.Application">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="inventory.service" />
@@ -233,7 +230,7 @@
       </method>
     </configuration>
     <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="auth-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.auth_service.AuthServiceApplication" />
       <extension name="coverage">
@@ -319,7 +316,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.138" />
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
       </set>
     </attachedChunks>
   </component>
@@ -342,6 +340,7 @@
       <workItem from="1779760925793" duration="89000" />
       <workItem from="1779763350036" duration="2214000" />
       <workItem from="1779766136763" duration="1556000" />
+      <workItem from="1780714105531" duration="2274000" />
     </task>
     <task id="LOCAL-00001" summary="Se realizo la creacion de el micro servicio de promocion con sus respectivos, controller, repository,service, funciones etc">
       <option name="closed" value="true" />

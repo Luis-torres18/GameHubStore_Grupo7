@@ -9,7 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="microservicios" />
       </profile>
-      <profile name="Annotation profile for product-service" enabled="true">
+      <profile name="Annotation profile for inventory.service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -21,8 +21,8 @@
         <module name="review-service" />
         <module name="promotion-service" />
         <module name="product-service" />
-        <module name="order.service" />
         <module name="inventory.service" />
+        <module name="order.service" />
         <module name="warranty-service" />
         <module name="shipping.service" />
         <module name="notification-service" />

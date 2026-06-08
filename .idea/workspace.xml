@@ -4,19 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="Se a comprobado la funcionalidad del crud generall, se agregaron funciones para listar todo en cada microservicio y corregidos algunos errores">
+    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="Se creo conexion de microservicio inventory, tambien se hizo la implementacion de swagger">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/src/main/java/com/GameHubStore/inventory/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/src/main/java/com/GameHubStore/inventory/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/src/main/java/com/GameHubStore/inventory/service/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/src/main/java/com/GameHubStore/inventory/service/InventoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/target/classes/com/GameHubStore/inventory/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/target/classes/com/GameHubStore/inventory/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/target/classes/com/GameHubStore/inventory/service/InventoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/target/classes/com/GameHubStore/inventory/service/InventoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/notification-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/src/main/java/com/GameHubStore/inventory/controller/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/src/main/java/com/GameHubStore/inventory/controller/InventoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/target/classes/com/GameHubStore/inventory/controller/InventoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/target/classes/com/GameHubStore/inventory/controller/InventoryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/order-service/order.service.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,61 +66,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000008836632366" />
-      <entry key="MS500" value="1.061554152680972" />
-      <entry key="S2" value="1.4980978919101724" />
-      <entry key="S5" value="1.7609593331006588" />
-      <entry key="S10" value="1.9655350454742273" />
-      <entry key="S30" value="2.9414053747470055" />
-      <entry key="S60" value="4.055136407073402" />
-      <entry key="M2" value="5.153294978566955" />
-      <entry key="M5" value="6.3158624602294235" />
-      <entry key="M10" value="8.185996384472302" />
-      <entry key="M15" value="10.86070339827552" />
-      <entry key="M30" value="23.489711119940292" />
-      <entry key="H1" value="56.58778695806112" />
-      <entry key="H2" value="120.88289851010781" />
-      <entry key="H4" value="213.53576416558238" />
-      <entry key="D1" value="398.0351661843739" />
-      <entry key="W1" value="449.58425254877915" />
+      <entry key="MS100" value="1.9024713426717493E-113" />
+      <entry key="MS500" value="2.8566933560200125E-23" />
+      <entry key="S2" value="2.3118832911540354E-6" />
+      <entry key="S5" value="0.005566664920283238" />
+      <entry key="S10" value="0.07508201255870772" />
+      <entry key="S30" value="0.5456413090927721" />
+      <entry key="S60" value="1.2117184808441934" />
+      <entry key="M2" value="2.384505737828923" />
+      <entry key="M5" value="4.978930809110626" />
+      <entry key="M10" value="9.307605300659958" />
+      <entry key="M15" value="14.661264872770133" />
+      <entry key="M30" value="31.680375503107893" />
+      <entry key="H1" value="66.63319266338789" />
+      <entry key="H2" value="132.9357485902456" />
+      <entry key="H4" value="231.20867454810502" />
+      <entry key="D1" value="436.78147930633315" />
+      <entry key="W1" value="496.0919665085673" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.1725686173850853E-88" />
-      <entry key="MS500" value="2.593150460515146E-18" />
-      <entry key="S2" value="4.091824787361309E-5" />
-      <entry key="S5" value="0.02157079591093089" />
-      <entry key="S10" value="0.21508398459589537" />
-      <entry key="S30" value="1.1851210240667018" />
-      <entry key="S60" value="1.8725679122094632" />
-      <entry key="M2" value="2.3663983064511522" />
-      <entry key="M5" value="2.8844382338263737" />
-      <entry key="M10" value="4.0937480617052575" />
-      <entry key="M15" value="5.524879355814137" />
-      <entry key="M30" value="9.816539767935923" />
-      <entry key="H1" value="17.793686733644105" />
-      <entry key="H2" value="29.07784464024083" />
-      <entry key="H4" value="40.846536810139035" />
-      <entry key="D1" value="58.802587064827826" />
-      <entry key="W1" value="63.21288264285042" />
+      <entry key="MS100" value="1.0000000000002471" />
+      <entry key="MS500" value="1.003010043392025" />
+      <entry key="S2" value="1.234284288120809" />
+      <entry key="S5" value="1.587130142147074" />
+      <entry key="S10" value="2.022117360433591" />
+      <entry key="S30" value="3.706547156462923" />
+      <entry key="S60" value="5.557682152188966" />
+      <entry key="M2" value="8.225156542643234" />
+      <entry key="M5" value="12.709307197049286" />
+      <entry key="M10" value="15.807260076911994" />
+      <entry key="M15" value="17.58425888126684" />
+      <entry key="M30" value="21.827032302739322" />
+      <entry key="H1" value="29.75330424547816" />
+      <entry key="H2" value="42.02142385227982" />
+      <entry key="H4" value="55.67775174219575" />
+      <entry key="D1" value="77.51364312808138" />
+      <entry key="W1" value="83.01355236014902" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="3.289677951283931E-4" />
-      <entry key="MS500" value="0.2362114647052178" />
-      <entry key="S2" value="1.102556912879169" />
-      <entry key="S5" value="1.5896313603450811" />
-      <entry key="S10" value="2.058238529185211" />
-      <entry key="S30" value="4.036109848293951" />
-      <entry key="S60" value="5.85504298669736" />
-      <entry key="M2" value="7.469855968506941" />
-      <entry key="M5" value="9.174398390250316" />
-      <entry key="M10" value="12.261675824644342" />
-      <entry key="M15" value="16.36930442742495" />
-      <entry key="M30" value="33.29009118905595" />
-      <entry key="H1" value="74.36456122115905" />
-      <entry key="H2" value="149.94571095918894" />
-      <entry key="H4" value="254.3710747604373" />
-      <entry key="D1" value="456.83481447420974" />
-      <entry key="W1" value="512.7966747172621" />
+      <entry key="MS100" value="0.003129179209334565" />
+      <entry key="MS500" value="0.31620019306108016" />
+      <entry key="S2" value="0.9084209759539631" />
+      <entry key="S5" value="1.399109188673388" />
+      <entry key="S10" value="1.9586764033267066" />
+      <entry key="S30" value="4.139375911532715" />
+      <entry key="S60" value="6.672731010494196" />
+      <entry key="M2" value="10.526613696748433" />
+      <entry key="M5" value="17.62672064639954" />
+      <entry key="M10" value="25.073059036745928" />
+      <entry key="M15" value="32.21289475221356" />
+      <entry key="M30" value="53.48429484859844" />
+      <entry key="H1" value="96.36706825003681" />
+      <entry key="H2" value="174.94070244067868" />
+      <entry key="H4" value="286.8740791218299" />
+      <entry key="D1" value="514.2918252780393" />
+      <entry key="W1" value="579.1049994845403" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -173,7 +171,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
@@ -340,7 +338,9 @@
       <workItem from="1779760925793" duration="89000" />
       <workItem from="1779763350036" duration="2214000" />
       <workItem from="1779766136763" duration="1556000" />
-      <workItem from="1780714105531" duration="2274000" />
+      <workItem from="1780714105531" duration="3556000" />
+      <workItem from="1780797776078" duration="5582000" />
+      <workItem from="1780804037304" duration="618000" />
     </task>
     <task id="LOCAL-00001" summary="Se realizo la creacion de el micro servicio de promocion con sus respectivos, controller, repository,service, funciones etc">
       <option name="closed" value="true" />
@@ -406,7 +406,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779648374325</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Se creo conexion de microservicio inventory, tambien se hizo la implementacion de swagger">
+      <option name="closed" value="true" />
+      <created>1780716550971</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1780716550971</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -434,6 +442,7 @@
     <MESSAGE value="corregidos algunos errores" />
     <MESSAGE value="Se a comprobado la funcionalidad del crud de review y notification ademas de agregar ciertas funcionalidades para que presente mensaje en el body al eliminar una reseña en postman" />
     <MESSAGE value="Se a comprobado la funcionalidad del crud generall, se agregaron funciones para listar todo en cada microservicio y corregidos algunos errores" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se a comprobado la funcionalidad del crud generall, se agregaron funciones para listar todo en cada microservicio y corregidos algunos errores" />
+    <MESSAGE value="Se creo conexion de microservicio inventory, tambien se hizo la implementacion de swagger" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se creo conexion de microservicio inventory, tambien se hizo la implementacion de swagger" />
   </component>
 </project>

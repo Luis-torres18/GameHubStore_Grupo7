@@ -4,12 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="implementacion de swagger en microservicio order-service, creacion de conexion de microservicio orderservice hacia inventory-service y user-service">
+    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="(ACTUALIZACION) Imprementacion de OpenAPI (OAS) y Swagger, configurado dentro del microservicio &quot;Product-Service&quot; (Casi terminado)">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/auth-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/src/main/java/com/GameHubStore/auth_service/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/auth-service/src/main/java/com/GameHubStore/auth_service/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/category-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/category-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/category-service/src/main/java/com/GameHubStore/category_service/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/category-service/src/main/java/com/GameHubStore/category_service/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/category-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/category-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicios/product-service/src/main/java/com/GameHubStore/product_service/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/product-service/src/main/java/com/GameHubStore/product_service/controller/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicios/product-service/target/classes/com/GameHubStore/product_service/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/product-service/target/classes/com/GameHubStore/product_service/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/user-service/src/main/java/com/GameHubStore/user_service/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/user-service/src/main/java/com/GameHubStore/user_service/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/user-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/user-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/user-service/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/user-service/target/classes/com/GameHubStore/user_service/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/user-service/target/classes/com/GameHubStore/user_service/controller/UserController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +236,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProductServiceApplication">
+  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
     <configuration name="ProductServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.GameHubStore.product_service.ProductServiceApplication" />
       <module name="product-service" />
@@ -255,6 +266,14 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CategoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="category-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.category_service.CategoryServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -380,7 +399,7 @@
       <workItem from="1780804037304" duration="618000" />
       <workItem from="1780883364670" duration="824000" />
       <workItem from="1781035029311" duration="12402000" />
-      <workItem from="1781100062282" duration="1640000" />
+      <workItem from="1781100062282" duration="6330000" />
     </task>
     <task id="LOCAL-00001" summary="Se realizo la creacion de el micro servicio de promocion con sus respectivos, controller, repository,service, funciones etc">
       <option name="closed" value="true" />
@@ -478,7 +497,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781052260736</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="(ACTUALIZACION) Imprementacion de OpenAPI (OAS) y Swagger, configurado dentro del microservicio &quot;Product-Service&quot; (Casi terminado)">
+      <option name="closed" value="true" />
+      <created>1781102102237</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1781102102237</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,6 +536,7 @@
     <MESSAGE value="Se creo conexion de microservicio inventory, tambien se hizo la implementacion de swagger" />
     <MESSAGE value="implementación de swagger en microservicio inventory" />
     <MESSAGE value="implementacion de swagger en microservicio order-service, creacion de conexion de microservicio orderservice hacia inventory-service y user-service" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementacion de swagger en microservicio order-service, creacion de conexion de microservicio orderservice hacia inventory-service y user-service" />
+    <MESSAGE value="(ACTUALIZACION) Imprementacion de OpenAPI (OAS) y Swagger, configurado dentro del microservicio &quot;Product-Service&quot; (Casi terminado)" />
+    <option name="LAST_COMMIT_MESSAGE" value="(ACTUALIZACION) Imprementacion de OpenAPI (OAS) y Swagger, configurado dentro del microservicio &quot;Product-Service&quot; (Casi terminado)" />
   </component>
 </project>

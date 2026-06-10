@@ -120,9 +120,30 @@ public class ProductController {
             summary = "Agregar un producto",
             description = "Permite agregar un nuevo producto al sistema"
     )
-    @io.swagger.v3.oas.annotations.parameters.RequestBody(
-            description = "Información del producto a agregar", required = true,
-            content = @Content(schema = @Schema(implementation = ProductRequest.class))
+    @ApiResponses(
+            value ={
+            @ApiResponse(
+                    responseCode = "201",
+                    description = "Producto agregado exitosamente",
+                    content = @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = ProductResponse.class),
+                    examples ={
+                            @ExampleObject(
+                                    name = "Producto agregado exitosamente",
+                                    value = "{\"nombre\": \"PlayStation 5\", " +
+                                            "\"marca\": \"Sony\", " +
+                                            "\"modelo\": \"CFI-1215A\", " +
+                                            "\"precio\": 549.99, " +
+                                            "\"categoriaId\": \"consolas\", " +
+                                            "\"descripcion\": \"Consola PlayStation 5 con lector de disco\", " +
+                                            "\"estado\": true}"
+                            )
+                    })
+            ),
+            @ApiResponse(
+                    responseCode = "400",
+                    description = "Solicitud inválida")
+            }
     )
     public void addProduct(@RequestBody ProductRequest productRequest){
         this.productService.addProduct(productRequest);
@@ -134,6 +155,31 @@ public class ProductController {
     @Operation(
             summary = "Actualizar precio de un producto",
             description = "Permite actualizar el precio de un producto existente"
+    )
+    @ApiResponses(
+            value ={
+            @ApiResponse(
+                    responseCode = "200",
+                    description = "Precio actualizado correctamente",
+                    content = @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = ProductResponse.class),
+                    examples ={
+                            @ExampleObject(
+                                    name = "Precio actualizado",
+                                    value = "{\"nombre\": \"PlayStation 5\", " +
+                                            "\"marca\": \"Sony\", " +
+                                            "\"modelo\": \"CFI-1215A\", " +
+                                            "\"precio\": 549.99, " +
+                                            "\"categoriaId\": \"consolas\", " +
+                                            "\"descripcion\": \"Consola PlayStation 5 con lector de disco\", " +
+                                            "\"estado\": true}"
+                            )
+                    })
+            ),
+            @ApiResponse(
+                    responseCode = "404",
+                    description = "Producto no encontrado"
+            )}
     )
     public ProductResponse updateProduct(
             @PathVariable Long id,
@@ -147,6 +193,17 @@ public class ProductController {
     @Operation(
             summary = "Desactivar un producto",
             description = "Permite desactivar un producto existente"
+    )
+    @ApiResponses(
+            value ={
+            @ApiResponse(
+                    responseCode = "200",
+                    description = "Producto desactivado exitosamente"
+            ),
+            @ApiResponse(
+                    responseCode = "404",
+                    description = "Producto no encontrado"
+            )}
     )
     public ProductResponse desactivarProducto(@PathVariable Long id){
         return productService.desactivarProducto(id);

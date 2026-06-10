@@ -8,7 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
       </profile>
-      <profile name="Annotation profile for product-service" enabled="true">
+      <profile name="Annotation profile for category-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -16,10 +16,12 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
         <module name="product-service" />
+        <module name="auth-service" />
+        <module name="category-service" />
+        <module name="user-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="auth-service" target="25" />
       <module name="inventory.service" target="25" />
       <module name="inventory.service (1)" target="25" />
       <module name="inventory.service (2)" target="25" />
@@ -28,13 +30,13 @@
       <module name="payment.service" target="25" />
       <module name="review-service" target="25" />
       <module name="shipping.service" target="25" />
-      <module name="user-service" target="25" />
       <module name="warranty-service" target="25" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="auth-service" options="-parameters" />
+      <module name="category-service" options="-parameters" />
       <module name="inventory.service" options="-parameters" />
       <module name="inventory.service (1)" options="-parameters" />
       <module name="inventory.service (2)" options="-parameters" />

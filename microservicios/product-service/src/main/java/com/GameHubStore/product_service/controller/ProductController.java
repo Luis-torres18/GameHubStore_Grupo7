@@ -46,7 +46,8 @@ public class ProductController {
     @Operation(
             summary = "Obtener Producto por ID",
             description = "Retorna un producto por su ID")
-    @ApiResponses(value={
+    @ApiResponses(
+            value={
             @ApiResponse(
                     responseCode = "200",
                     description = "Producto encontrado exitosamente",
@@ -80,6 +81,34 @@ public class ProductController {
     // Listar productos por marca
     @GetMapping("/marca/{marca}")
     @ResponseStatus(HttpStatus.OK)
+    @Operation(
+            summary = "Obtener lista de productos segun su marca",
+            description = "Retorna una lista de productos segun su marca")
+    @ApiResponses(
+            value ={
+            @ApiResponse(
+                    responseCode = "200",
+                    description = "Lista encontrada exitosamente",
+                    content = @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = ProductResponse.class),
+                    examples = {
+                            @ExampleObject(
+                                    name = "Ejemplo lista por marca",
+                                    value = "{\"nombre\": \"PlayStation 5\", " +
+                                            "\"marca\": \"Sony\", " +
+                                            "\"modelo\": \"CFI-1215A\", " +
+                                            "\"precio\": 549.99, " +
+                                            "\"categoriaId\": \"consolas\", " +
+                                            "\"descripcion\": \"Consola PlayStation 5 con lector de disco\", " +
+                                            "\"estado\": true}"
+                            )
+                    }
+                    )
+            ),
+            @ApiResponse(
+                    responseCode = "404",
+                    description = "Marca no encontrada")
+            })
     public List<ProductResponse> getProductByMarca(@PathVariable String marca){
         return this.productService.getProductByMarca(marca);
     }
@@ -87,9 +116,34 @@ public class ProductController {
     // Agregar un producto
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    @io.swagger.v3.oas.annotations.parameters.RequestBody(
-            description = "Información del producto a agregar", required = true,
-            content = @Content(schema = @Schema(implementation = ProductRequest.class))
+    @Operation(
+            summary = "Agregar un producto",
+            description = "Permite agregar un nuevo producto al sistema"
+    )
+    @ApiResponses(
+            value ={
+            @ApiResponse(
+                    responseCode = "201",
+                    description = "Producto agregado exitosamente",
+                    content = @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = ProductResponse.class),
+                    examples ={
+                            @ExampleObject(
+                                    name = "Producto agregado exitosamente",
+                                    value = "{\"nombre\": \"PlayStation 5\", " +
+                                            "\"marca\": \"Sony\", " +
+                                            "\"modelo\": \"CFI-1215A\", " +
+                                            "\"precio\": 549.99, " +
+                                            "\"categoriaId\": \"consolas\", " +
+                                            "\"descripcion\": \"Consola PlayStation 5 con lector de disco\", " +
+                                            "\"estado\": true}"
+                            )
+                    })
+            ),
+            @ApiResponse(
+                    responseCode = "400",
+                    description = "Solicitud inválida")
+            }
     )
     public void addProduct(@RequestBody ProductRequest productRequest){
         this.productService.addProduct(productRequest);
@@ -98,6 +152,35 @@ public class ProductController {
     // Actualizar precio de un producto
     @PutMapping("/{id}/precio")
     @ResponseStatus(HttpStatus.OK)
+    @Operation(
+            summary = "Actualizar precio de un producto",
+            description = "Permite actualizar el precio de un producto existente"
+    )
+    @ApiResponses(
+            value ={
+            @ApiResponse(
+                    responseCode = "200",
+                    description = "Precio actualizado correctamente",
+                    content = @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = ProductResponse.class),
+                    examples ={
+                            @ExampleObject(
+                                    name = "Precio actualizado",
+                                    value = "{\"nombre\": \"PlayStation 5\", " +
+                                            "\"marca\": \"Sony\", " +
+                                            "\"modelo\": \"CFI-1215A\", " +
+                                            "\"precio\": 549.99, " +
+                                            "\"categoriaId\": \"consolas\", " +
+                                            "\"descripcion\": \"Consola PlayStation 5 con lector de disco\", " +
+                                            "\"estado\": true}"
+                            )
+                    })
+            ),
+            @ApiResponse(
+                    responseCode = "404",
+                    description = "Producto no encontrado"
+            )}
+    )
     public ProductResponse updateProduct(
             @PathVariable Long id,
             @RequestParam Double precio){
@@ -107,6 +190,21 @@ public class ProductController {
     // Desactivar un producto
     @PatchMapping("/{id}/desactivar")
     @ResponseStatus(HttpStatus.OK)
+    @Operation(
+            summary = "Desactivar un producto",
+            description = "Permite desactivar un producto existente"
+    )
+    @ApiResponses(
+            value ={
+            @ApiResponse(
+                    responseCode = "200",
+                    description = "Producto desactivado exitosamente"
+            ),
+            @ApiResponse(
+                    responseCode = "404",
+                    description = "Producto no encontrado"
+            )}
+    )
     public ProductResponse desactivarProducto(@PathVariable Long id){
         return productService.desactivarProducto(id);
     }

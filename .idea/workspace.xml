@@ -4,14 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="implementacion de swagger en microservicio order-service, creacion de conexion de microservicio orderservice hacia inventory-service y user-service">
+    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="implementacion de swagger en microservicio shipping-service, creacion de conexion de microservicio shippingservice hacia order-service y user-service">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/shipping-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/shipping-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/ShippingServiceAplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/ShippingServiceAplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/controller/ShippingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/controller/ShippingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/shipping-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/shipping-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/client/InventoryClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/client/InventoryClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/model/dto/OrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/model/dto/OrderRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/model/dto/OrderResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/model/dto/OrderResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/model/entities/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/model/entities/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/src/main/java/com/GameHubStore/payment/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/src/main/java/com/GameHubStore/payment/controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/src/main/java/com/GameHubStore/payment/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/src/main/java/com/GameHubStore/payment/service/PaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/target/classes/com/GameHubStore/payment/controller/PaymentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/target/classes/com/GameHubStore/payment/controller/PaymentController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,15 +32,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Exception" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="EA3_Update" />
+        <entry key="$PROJECT_DIR$" value="EA3_Update2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,9 +57,9 @@
     &quot;accountId&quot;: &quot;ff94218c-61b3-49ba-a10d-437385576a25&quot;
   }
 }</component>
-  <component name="HttpClientOnboardingState"><![CDATA[{
-  "isOnboardingCommentShown": true
-}]]></component>
+  <component name="HttpClientOnboardingState">{
+  &quot;isOnboardingCommentShown&quot;: true
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -66,61 +73,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="3.3459980857742135E-133" />
-      <entry key="S2" value="7.607866462913264E-34" />
-      <entry key="S5" value="5.890136050082954E-14" />
-      <entry key="S10" value="3.0882651409257853E-7" />
-      <entry key="S30" value="0.018358040266609015" />
-      <entry key="S60" value="0.3656683561204086" />
-      <entry key="M2" value="1.816864812525012" />
-      <entry key="M5" value="6.136691782547572" />
-      <entry key="M10" value="12.565731538495264" />
-      <entry key="M15" value="17.780933388014773" />
-      <entry key="M30" value="27.903165659449524" />
-      <entry key="H1" value="41.84405478234158" />
-      <entry key="H2" value="72.68772276043822" />
-      <entry key="H4" value="152.3908597758174" />
-      <entry key="D1" value="489.51349330572225" />
-      <entry key="W1" value="632.4454951612837" />
+      <entry key="MS100" value="1.1615441038296865" />
+      <entry key="MS500" value="1.6944775678825552" />
+      <entry key="S2" value="1.9128984012021255" />
+      <entry key="S5" value="1.980170428268917" />
+      <entry key="S10" value="2.188521983306161" />
+      <entry key="S30" value="3.8280201891641306" />
+      <entry key="S60" value="6.528642249688424" />
+      <entry key="M2" value="11.766557955948219" />
+      <entry key="M5" value="23.78128238741891" />
+      <entry key="M10" value="34.95183563786023" />
+      <entry key="M15" value="42.477623181758666" />
+      <entry key="M30" value="57.68607977481146" />
+      <entry key="H1" value="78.56249144873541" />
+      <entry key="H2" value="113.84687200392109" />
+      <entry key="H4" value="190.0728436145178" />
+      <entry key="D1" value="558.7392785431985" />
+      <entry key="W1" value="734.7694997720497" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0001517516910254" />
-      <entry key="S2" value="1.1135871907343147" />
-      <entry key="S5" value="1.548929289057907" />
-      <entry key="S10" value="2.240596666122654" />
-      <entry key="S30" value="4.11540389252471" />
-      <entry key="S60" value="5.982028800017179" />
-      <entry key="M2" value="9.421022387545989" />
-      <entry key="M5" value="18.345838293713864" />
-      <entry key="M10" value="29.84166832616795" />
-      <entry key="M15" value="37.837128207019234" />
-      <entry key="M30" value="50.92447821201089" />
-      <entry key="H1" value="63.246861038526326" />
-      <entry key="H2" value="83.88195557324966" />
-      <entry key="H4" value="120.35328700385857" />
-      <entry key="D1" value="213.06409153054145" />
-      <entry key="W1" value="243.28387208002954" />
+      <entry key="MS100" value="1.216754868554316E-69" />
+      <entry key="MS500" value="1.6483166794345865E-14" />
+      <entry key="S2" value="3.6437141865230385E-4" />
+      <entry key="S5" value="0.05107048711169349" />
+      <entry key="S10" value="0.33313504260561166" />
+      <entry key="S30" value="1.645085120630617" />
+      <entry key="S60" value="3.175604901827419" />
+      <entry key="M2" value="5.8902295769991335" />
+      <entry key="M5" value="12.459466959647552" />
+      <entry key="M10" value="19.227630751856193" />
+      <entry key="M15" value="24.156503136743243" />
+      <entry key="M30" value="35.76980826147228" />
+      <entry key="H1" value="57.25335240338823" />
+      <entry key="H2" value="93.77502573353452" />
+      <entry key="H4" value="146.85059167296214" />
+      <entry key="D1" value="281.5477127914952" />
+      <entry key="W1" value="328.05287769394937" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="3.845409230438629E-12" />
-      <entry key="MS500" value="0.005255691602101201" />
-      <entry key="S2" value="0.3517237427115541" />
-      <entry key="S5" value="1.0638738079905603" />
-      <entry key="S10" value="1.9020804706940277" />
-      <entry key="S30" value="3.9469287290210557" />
-      <entry key="S60" value="6.222532889083979" />
-      <entry key="M2" value="11.14746977709341" />
-      <entry key="M5" value="24.410202678747748" />
-      <entry key="M10" value="42.33732831340532" />
-      <entry key="M15" value="55.55228202197082" />
-      <entry key="M30" value="78.777099906287" />
-      <entry key="H1" value="105.05621584724545" />
-      <entry key="H2" value="156.5444829965781" />
-      <entry key="H4" value="272.7244139690555" />
-      <entry key="D1" value="702.5708606454757" />
-      <entry key="W1" value="875.7282308316836" />
+      <entry key="MS100" value="0.26796334828994334" />
+      <entry key="MS500" value="1.2798207672522395" />
+      <entry key="S2" value="1.7848408823802844" />
+      <entry key="S5" value="1.9652204306655134" />
+      <entry key="S10" value="2.4435699040630943" />
+      <entry key="S30" value="5.341926081650248" />
+      <entry key="S60" value="9.554989347604097" />
+      <entry key="M2" value="17.507051825752615" />
+      <entry key="M5" value="36.119788466381756" />
+      <entry key="M10" value="54.08904902387194" />
+      <entry key="M15" value="66.5579502662736" />
+      <entry key="M30" value="93.39869246731345" />
+      <entry key="H1" value="135.77164514481908" />
+      <entry key="H2" value="207.58726386147384" />
+      <entry key="H4" value="336.8966531439303" />
+      <entry key="D1" value="840.277957448789" />
+      <entry key="W1" value="1062.8208379889795" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -138,50 +145,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.Application.executor": "Run",
-    "Spring Boot.AuthServiceApplication.executor": "Run",
-    "Spring Boot.InventoryServiceApplication.executor": "Run",
-    "Spring Boot.NotificationServiceApplication.executor": "Run",
-    "Spring Boot.OrderServiceApplication.executor": "Run",
-    "Spring Boot.ProductServiceApplication.executor": "Run",
-    "Spring Boot.PromotionServiceApplication.executor": "Run",
-    "Spring Boot.ReviewServiceApplication.executor": "Run",
-    "Spring Boot.ShippingServiceAplication.executor": "Run",
-    "Spring Boot.UserServiceApplication.executor": "Run",
-    "Spring Boot.WarrantyServiceApplication.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "EA3__Update2",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/moa/IdeaProjects/GameHubStore_Grupo7/microservicios/notification-service/src/main/java/com/GameHubStore/notification_service/service",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.AuthServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.InventoryServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.NotificationServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.OrderServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.PaymentServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ProductServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.PromotionServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ReviewServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ShippingServiceAplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.WarrantyServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;EA3__Update2&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/moa/IdeaProjects/GameHubStore_Grupo7/microservicios/notification-service/src/main/java/com/GameHubStore/notification_service/service&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\notification-service\src\main\java\com\GameHubStore\notification_service\service" />
@@ -205,23 +213,14 @@
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <map>
-              <entry key="AuthServiceApplication" value="STOPPED" />
-              <entry key="InventoryServiceApplication" value="STOPPED" />
-              <entry key="NotificationServiceApplication" value="STOPPED" />
-              <entry key="OrderServiceApplication" value="STOPPED" />
-              <entry key="ProductServiceApplication" value="STOPPED" />
-              <entry key="PromotionServiceApplication" value="STOPPED" />
-              <entry key="ReviewServiceApplication" value="STOPPED" />
-              <entry key="ShippingServiceAplication" value="STOPPED" />
-              <entry key="UserServiceApplication" value="STOPPED" />
-              <entry key="WarrantyServiceApplication" value="STOPPED" />
+              <entry key="PaymentServiceApplication" value="STOPPED" />
             </map>
           </value>
         </entry>
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
+  <component name="RunManager" selected="Spring Boot.OrderServiceApplication">
     <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="auth-service" />
@@ -319,6 +318,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.AuthServiceApplication" />
+        <item itemvalue="Spring Boot.AuthServiceApplication" />
+        <item itemvalue="Spring Boot.AuthServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -354,6 +355,8 @@
       <workItem from="1780804037304" duration="618000" />
       <workItem from="1780883364670" duration="824000" />
       <workItem from="1781035029311" duration="12402000" />
+      <workItem from="1781644898857" duration="6452000" />
+      <workItem from="1781652766517" duration="3277000" />
     </task>
     <task id="LOCAL-00001" summary="Se realizo la creacion de el micro servicio de promocion con sus respectivos, controller, repository,service, funciones etc">
       <option name="closed" value="true" />

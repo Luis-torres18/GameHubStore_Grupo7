@@ -20,6 +20,12 @@ public class Order {
     private Long userId;
 
     @Column(nullable = false)
+    private Integer productId;
+
+    @Column(nullable = false)
+    private Integer quantity;
+
+    @Column(nullable = false)
     private String status;
 
     @Column(nullable = false)

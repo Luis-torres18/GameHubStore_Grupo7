@@ -1,11 +1,14 @@
 package com.GameHubStore.payment.service;
 
+import com.GameHubStore.payment.client.OrderClient;
+import com.GameHubStore.payment.client.OrderClientResponse;
 import com.GameHubStore.payment.exception.PaymentNotFoundException;
 import com.GameHubStore.payment.exception.PaymentValidationException;
 import com.GameHubStore.payment.model.dto.PaymentRequest;
 import com.GameHubStore.payment.model.dto.PaymentResponse;
 import com.GameHubStore.payment.model.entities.Payment;
 import com.GameHubStore.payment.repository.PaymentRepository;
+import feign.FeignException;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,9 +24,26 @@ public class PaymentService {
 
     private static final Logger log = LoggerFactory.getLogger(PaymentService.class);
     private final PaymentRepository paymentRepository;
-
+    private OrderClient orderClient;
     public PaymentResponse createPayment(PaymentRequest request) {
 
+        OrderClientResponse order;
+        try {
+            List<OrderClientResponse> orders = orderClient.getOrderById(request.getOrdenId());
+            if (orders == null || orders.isEmpty()) {
+                throw new PaymentValidationException("No existe una orden con este ID: " + request.getOrdenId());
+            }
+            order = orders.get(0);
+        }catch (FeignException.NotFound e) {
+            throw new PaymentValidationException("No existe una orden con este ID: " + request.getOrdenId());
+        } catch (FeignException e){
+            log.error("Error al comunicarse con order-service: {}", e.getMessage());
+            throw new PaymentValidationException("No se pudo validar la orden, intenta mas tarde. ");
+
+        }
+        if (Math.abs(request.getMonto() - order.getTotal())>0.001){
+            throw new PaymentValidationException("El monto (" + request.getMonto() +") no coincide con el total de la orden (" + order.getTotal() +")");
+        }
         // Evitar pago duplicado aprobado
         if (paymentRepository.existsByOrdenIdAndEstado(request.getOrdenId(), "APPROVED")) {
             throw new PaymentValidationException("Ya existe un pago aprobado para la orden: " + request.getOrdenId());

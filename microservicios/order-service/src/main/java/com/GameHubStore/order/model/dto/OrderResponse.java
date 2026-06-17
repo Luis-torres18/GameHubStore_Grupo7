@@ -11,6 +11,8 @@ public class OrderResponse {
 
     private Long id;
     private Long userId;
+    private Long productId;
+    private Integer quantity;
     private String status;
     private Double total;
     private LocalDateTime createdAt;

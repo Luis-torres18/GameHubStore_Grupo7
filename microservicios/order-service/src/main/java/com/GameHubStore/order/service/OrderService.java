@@ -1,10 +1,12 @@
 package com.GameHubStore.order.service;
 
+import com.GameHubStore.order.client.InventoryClient;
 import com.GameHubStore.order.exception.OrderNotFoundException;
 import com.GameHubStore.order.model.dto.OrderRequest;
 import com.GameHubStore.order.model.dto.OrderResponse;
 import com.GameHubStore.order.model.entities.Order;
 import com.GameHubStore.order.repository.OrderRepository;
+import feign.FeignException;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,9 +23,17 @@ public class OrderService {
     private static final Logger log = LoggerFactory.getLogger(OrderService.class);
 
     private final OrderRepository orderRepository;
+    private final InventoryClient inventoryClient;
 
     // Crear una nueva orden
     public void createOrder(OrderRequest request) {
+        try{ inventoryClient.reserveStock(request.getProductId(), request.getQuantity());
+        } catch (FeignException.NotFound e) {
+            throw new IllegalStateException("No existe stock registrado para el producto:" + request.getProductId());
+        } catch (FeignException e) {
+            throw new IllegalStateException("No se pudo reservar el stock " + e.getLocalizedMessage());
+        }
+
         Order newOrder = Order.builder()
                 .userId(request.getUserId())
                 .total(request.getTotal())

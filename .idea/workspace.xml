@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="implementacion de swagger en microservicio shipping-service, creacion de conexion de microservicio shippingservice hacia order-service y user-service">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/client/InventoryClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/client/InventoryClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/model/dto/OrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/model/dto/OrderRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/model/dto/OrderResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/model/dto/OrderResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/model/entities/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/model/entities/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/src/main/java/com/GameHubStore/payment/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/src/main/java/com/GameHubStore/payment/controller/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/src/main/java/com/GameHubStore/payment/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/src/main/java/com/GameHubStore/payment/service/PaymentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/target/classes/com/GameHubStore/payment/controller/PaymentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/target/classes/com/GameHubStore/payment/controller/PaymentController.class" afterDir="false" />
+    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="Correccion en conexion de microservicios, implementacion de swagger en payment">
+      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/target/classes/com/GameHubStore/payment/service/PaymentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/target/classes/com/GameHubStore/payment/service/PaymentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/target/test-classes/com/GameHubStore/payment/service/PaymentServiceApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,61 +61,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.1615441038296865" />
-      <entry key="MS500" value="1.6944775678825552" />
-      <entry key="S2" value="1.9128984012021255" />
-      <entry key="S5" value="1.980170428268917" />
-      <entry key="S10" value="2.188521983306161" />
-      <entry key="S30" value="3.8280201891641306" />
-      <entry key="S60" value="6.528642249688424" />
-      <entry key="M2" value="11.766557955948219" />
-      <entry key="M5" value="23.78128238741891" />
-      <entry key="M10" value="34.95183563786023" />
-      <entry key="M15" value="42.477623181758666" />
-      <entry key="M30" value="57.68607977481146" />
-      <entry key="H1" value="78.56249144873541" />
-      <entry key="H2" value="113.84687200392109" />
-      <entry key="H4" value="190.0728436145178" />
-      <entry key="D1" value="558.7392785431985" />
-      <entry key="W1" value="734.7694997720497" />
+      <entry key="MS100" value="1.000000113563299" />
+      <entry key="MS500" value="1.0410289199217002" />
+      <entry key="S2" value="1.733143637536953" />
+      <entry key="S5" value="3.868725446986642" />
+      <entry key="S10" value="7.104982428226472" />
+      <entry key="S30" value="13.350932920360242" />
+      <entry key="S60" value="17.896633033160164" />
+      <entry key="M2" value="24.307531533020725" />
+      <entry key="M5" value="37.65298840438334" />
+      <entry key="M10" value="49.977310749248566" />
+      <entry key="M15" value="58.089445694348086" />
+      <entry key="M30" value="74.08707018556636" />
+      <entry key="H1" value="95.48838040595172" />
+      <entry key="H2" value="131.07951883591886" />
+      <entry key="H4" value="207.44121914328923" />
+      <entry key="D1" value="576.4342214568328" />
+      <entry key="W1" value="752.7122888839809" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.216754868554316E-69" />
-      <entry key="MS500" value="1.6483166794345865E-14" />
-      <entry key="S2" value="3.6437141865230385E-4" />
-      <entry key="S5" value="0.05107048711169349" />
-      <entry key="S10" value="0.33313504260561166" />
-      <entry key="S30" value="1.645085120630617" />
-      <entry key="S60" value="3.175604901827419" />
-      <entry key="M2" value="5.8902295769991335" />
-      <entry key="M5" value="12.459466959647552" />
-      <entry key="M10" value="19.227630751856193" />
-      <entry key="M15" value="24.156503136743243" />
-      <entry key="M30" value="35.76980826147228" />
-      <entry key="H1" value="57.25335240338823" />
-      <entry key="H2" value="93.77502573353452" />
-      <entry key="H4" value="146.85059167296214" />
-      <entry key="D1" value="281.5477127914952" />
-      <entry key="W1" value="328.05287769394937" />
+      <entry key="MS100" value="6.7569393436363415E-273" />
+      <entry key="MS500" value="3.6808662658907525E-55" />
+      <entry key="S2" value="2.5047918983213454E-14" />
+      <entry key="S5" value="4.396032947666365E-6" />
+      <entry key="S10" value="0.003090763593391186" />
+      <entry key="S30" value="0.34567677168225264" />
+      <entry key="S60" value="1.455684893813622" />
+      <entry key="M2" value="3.9879773028748406" />
+      <entry key="M5" value="10.659765356196386" />
+      <entry key="M10" value="17.784835988537086" />
+      <entry key="M15" value="22.93243268539521" />
+      <entry key="M30" value="34.85175421286983" />
+      <entry key="H1" value="56.51385546350823" />
+      <entry key="H2" value="93.16744798723737" />
+      <entry key="H4" value="146.37408877495852" />
+      <entry key="D1" value="281.39524485014175" />
+      <entry key="W1" value="328.02749292817555" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.26796334828994334" />
-      <entry key="MS500" value="1.2798207672522395" />
-      <entry key="S2" value="1.7848408823802844" />
-      <entry key="S5" value="1.9652204306655134" />
-      <entry key="S10" value="2.4435699040630943" />
-      <entry key="S30" value="5.341926081650248" />
-      <entry key="S60" value="9.554989347604097" />
-      <entry key="M2" value="17.507051825752615" />
-      <entry key="M5" value="36.119788466381756" />
-      <entry key="M10" value="54.08904902387194" />
-      <entry key="M15" value="66.5579502662736" />
-      <entry key="M30" value="93.39869246731345" />
-      <entry key="H1" value="135.77164514481908" />
-      <entry key="H2" value="207.58726386147384" />
-      <entry key="H4" value="336.8966531439303" />
-      <entry key="D1" value="840.277957448789" />
-      <entry key="W1" value="1062.8208379889795" />
+      <entry key="MS100" value="6.643796933455135E-5" />
+      <entry key="MS500" value="0.1866849235491161" />
+      <entry key="S2" value="1.3496557086223513" />
+      <entry key="S5" value="3.6903271686730688" />
+      <entry key="S10" value="7.009729841684772" />
+      <entry key="S30" value="13.625609047744616" />
+      <entry key="S60" value="19.257274752866508" />
+      <entry key="M2" value="28.17884562938068" />
+      <entry key="M5" value="48.202535856413284" />
+      <entry key="M10" value="67.6750324915537" />
+      <entry key="M15" value="80.94721412424597" />
+      <entry key="M30" value="108.88190877443488" />
+      <entry key="H1" value="151.9580105023447" />
+      <entry key="H2" value="224.21225768282793" />
+      <entry key="H4" value="353.7884626238421" />
+      <entry key="D1" value="857.8204122731115" />
+      <entry key="W1" value="1080.7382388763374" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -356,7 +344,7 @@
       <workItem from="1780883364670" duration="824000" />
       <workItem from="1781035029311" duration="12402000" />
       <workItem from="1781644898857" duration="6452000" />
-      <workItem from="1781652766517" duration="3277000" />
+      <workItem from="1781652766517" duration="3591000" />
     </task>
     <task id="LOCAL-00001" summary="Se realizo la creacion de el micro servicio de promocion con sus respectivos, controller, repository,service, funciones etc">
       <option name="closed" value="true" />
@@ -454,7 +442,31 @@
       <option name="project" value="LOCAL" />
       <updated>1781052260736</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Correccion en conexion de microservicios, implementacion de swagger en payment">
+      <option name="closed" value="true" />
+      <created>1781656243817</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1781656243818</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Correccion en conexion de microservicios, implementacion de swagger en payment">
+      <option name="closed" value="true" />
+      <created>1781656257393</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1781656257393</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Correccion en conexion de microservicios, implementacion de swagger en payment">
+      <option name="closed" value="true" />
+      <created>1781656278808</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1781656278808</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -485,6 +497,7 @@
     <MESSAGE value="Se creo conexion de microservicio inventory, tambien se hizo la implementacion de swagger" />
     <MESSAGE value="implementación de swagger en microservicio inventory" />
     <MESSAGE value="implementacion de swagger en microservicio order-service, creacion de conexion de microservicio orderservice hacia inventory-service y user-service" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementacion de swagger en microservicio order-service, creacion de conexion de microservicio orderservice hacia inventory-service y user-service" />
+    <MESSAGE value="Correccion en conexion de microservicios, implementacion de swagger en payment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correccion en conexion de microservicios, implementacion de swagger en payment" />
   </component>
 </project>

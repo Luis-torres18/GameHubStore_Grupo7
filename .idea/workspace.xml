@@ -6,21 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="(ACTUALIZACION) Imprementacion de OpenAPI (OAS) y Swagger, configurado dentro del microservicio &quot;Product-Service&quot; (Casi terminado)">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/auth-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/src/main/java/com/GameHubStore/auth_service/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/auth-service/src/main/java/com/GameHubStore/auth_service/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/category-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/category-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/category-service/src/main/java/com/GameHubStore/category_service/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/category-service/src/main/java/com/GameHubStore/category_service/controller/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/category-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/category-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/product-service/src/main/java/com/GameHubStore/product_service/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/product-service/src/main/java/com/GameHubStore/product_service/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/product-service/target/classes/com/GameHubStore/product_service/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/product-service/target/classes/com/GameHubStore/product_service/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/user-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/user-service/src/main/java/com/GameHubStore/user_service/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/user-service/src/main/java/com/GameHubStore/user_service/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/user-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/user-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/user-service/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/user-service/target/classes/com/GameHubStore/user_service/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/user-service/target/classes/com/GameHubStore/user_service/controller/UserController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,12 +40,12 @@
     &quot;assignee&quot;: &quot;BenLeivaa&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Luis-torres18/GameHubStore_Grupo7.git",
-    "accountId": "ca66562f-e3e5-4eed-938c-69b65035ee44"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Luis-torres18/GameHubStore_Grupo7.git&quot;,
+    &quot;accountId&quot;: &quot;ca66562f-e3e5-4eed-938c-69b65035ee44&quot;
   }
-}]]></component>
+}</component>
   <component name="HttpClientOnboardingState">{
   &quot;isOnboardingCommentShown&quot;: true
 }</component>
@@ -182,7 +168,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/moa/IdeaProjects/GameHubStore_Grupo7/microservicios/notification-service/src/main/java/com/GameHubStore/notification_service/service",
+    "last_opened_file_path": "C:/Users/va-alumno/IdeaProjects/GameHubStore_/microservicios",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -286,6 +272,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MsvcEurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="msvc-eureka" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hospital.msvc_eureka.MsvcEurekaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MsvcGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="msvc-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hospital.msvc_gateway.MsvcGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NotificationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="notification-service" />
@@ -370,8 +370,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.33813.25" />
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.33813.25" />
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.138" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.29346.138" />
       </set>
     </attachedChunks>
   </component>

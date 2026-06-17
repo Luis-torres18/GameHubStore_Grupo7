@@ -4,6 +4,8 @@
     <file url="file://$PROJECT_DIR$/microservicios/auth-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservicios/category-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservicios/inventory-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservicios/msvc-eureka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservicios/msvc-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservicios/notification-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservicios/order-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservicios/payment-service/src/main/java" charset="UTF-8" />

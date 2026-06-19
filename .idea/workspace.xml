@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="creacion clients de promotion,review,warranty">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/src/main/java/com/GameHubStore/inventory/client/ProductClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/src/main/java/com/GameHubStore/inventory/client/ProductClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/client/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/client/UserClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/src/main/java/com/GameHubStore/payment/PaymentServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/src/main/java/com/GameHubStore/payment/PaymentServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/src/main/java/com/GameHubStore/payment/client/OrderClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/src/main/java/com/GameHubStore/payment/client/OrderClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/src/main/java/com/GameHubStore/payment/client/OrderClientResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/src/main/java/com/GameHubStore/payment/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/src/main/java/com/GameHubStore/payment/service/PaymentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/target/classes/com/GameHubStore/payment/PaymentServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/target/classes/com/GameHubStore/payment/PaymentServiceApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/target/classes/com/GameHubStore/payment/client/OrderClientResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/target/classes/com/GameHubStore/payment/service/PaymentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/target/classes/com/GameHubStore/payment/service/PaymentService.class" afterDir="false" />
+    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="(Actualizacion) se actualizo la conexion de clients del microservicio order-service">
+      <change beforePath="$PROJECT_DIR$/microservicios/msvc-gateway/src/main/java/com/hospital/msvc_gateway/MsvcGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/msvc-gateway/src/main/java/com/hospital/msvc_gateway/MsvcGatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/msvc-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/msvc-gateway/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -409,7 +398,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781753629681</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="(Actualizacion) se actualizo la conexion de clients del microservicio order-service">
+      <option name="closed" value="true" />
+      <created>1781841696406</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1781841696410</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,6 +422,7 @@
     <MESSAGE value="Se a comprobado la funcionalidad del crud de review y notification ademas de agregar ciertas funcionalidades para que presente mensaje en el body al eliminar una reseña en postman" />
     <MESSAGE value="Se a comprobado la funcionalidad del crud generall, se agregaron funciones para listar todo en cada microservicio y corregidos algunos errores" />
     <MESSAGE value="creacion clients de promotion,review,warranty" />
-    <option name="LAST_COMMIT_MESSAGE" value="creacion clients de promotion,review,warranty" />
+    <MESSAGE value="(Actualizacion) se actualizo la conexion de clients del microservicio order-service" />
+    <option name="LAST_COMMIT_MESSAGE" value="(Actualizacion) se actualizo la conexion de clients del microservicio order-service" />
   </component>
 </project>

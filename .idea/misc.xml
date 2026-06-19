@@ -5,13 +5,17 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/microservicios/pom.xml" />
-        <option value="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/pom.xml" />
         <option value="$PROJECT_DIR$/microservicios/msvc-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/microservicios/msvc-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/pom.xml" />
+        <option value="$PROJECT_DIR$/microservicios/warranty-service/pom.xml" />
+        <option value="$PROJECT_DIR$/microservicios/review-service/pom.xml" />
+        <option value="$PROJECT_DIR$/microservicios/notification-service/pom.xml" />
+        <option value="$PROJECT_DIR$/microservicios/category-service/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="21" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_25" default="true" project-jdk-name="ms-25" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

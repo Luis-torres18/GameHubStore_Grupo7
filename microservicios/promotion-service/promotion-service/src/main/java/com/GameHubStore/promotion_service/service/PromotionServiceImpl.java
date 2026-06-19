@@ -1,7 +1,11 @@
 package com.GameHubStore.promotion_service.service;
 
+import com.GameHubStore.promotion_service.client.CategoryClient;
+import com.GameHubStore.promotion_service.client.ProductClient;
 import com.GameHubStore.promotion_service.exception.InvalidPromotion;
 import com.GameHubStore.promotion_service.exception.PromotionNotFoundException;
+import com.GameHubStore.promotion_service.client.dto.CategoryResponse;
+import com.GameHubStore.promotion_service.client.dto.ProductResponse;
 import com.GameHubStore.promotion_service.model.dto.PromotionRequest;
 import com.GameHubStore.promotion_service.model.dto.PromotionResponse;
 import com.GameHubStore.promotion_service.model.entities.Promotion;
@@ -19,6 +23,8 @@ import java.util.stream.Collectors;
 public class PromotionServiceImpl implements PromotionService {
 
     private final PromotionRepository promotionRepository;
+    private final ProductClient productClient;
+    private final CategoryClient categoryClient;
 
     @Override
     public PromotionResponse createPromotion(PromotionRequest request) {
@@ -30,6 +36,25 @@ public class PromotionServiceImpl implements PromotionService {
             throw new InvalidPromotion("Fecha de inicio no puede ser anterior a fecha de inicio");
         }
 
+        if(request.getProductId()!=null){
+            List<ProductResponse> productos = productClient.getProductById(request.getProductId());
+            if(productos.isEmpty()) {
+                throw new InvalidPromotion("El producto con ID" + request.getProductId() + "no existe");
+            }
+            if(!Boolean.TRUE.equals(productos.get(0).getEstado())){
+                throw new InvalidPromotion(("El producto con ID "+request.getProductId()+"esta inactivo"));
+            }
+
+        }
+        if(request.getCategoryId()!=null){
+            CategoryResponse categoria = categoryClient.getCategoryById(request.getCategoryId());
+            if (categoria == null){
+                throw new InvalidPromotion("La categoria con id "+ request.getCategoryId() + "no existe");
+            }
+            if(!Boolean.TRUE.equals(categoria.getEstado())){
+                throw new InvalidPromotion(("El producto con ID "+request.getProductId()+"esta inactivo"));
+            }
+        }
         Promotion promotion = Promotion.builder()
                 .code(request.getCode().toUpperCase())
                 .type(request.getType().toUpperCase())
@@ -46,6 +71,8 @@ public class PromotionServiceImpl implements PromotionService {
 
         Promotion saved = promotionRepository.save(promotion);
         return toResponse(saved);
+
+
     }
 
     @Override

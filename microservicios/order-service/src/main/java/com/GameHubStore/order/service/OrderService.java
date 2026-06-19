@@ -1,6 +1,6 @@
 package com.GameHubStore.order.service;
 
-import com.GameHubStore.order.client.InventoryClient;
+import com.GameHubStore.order.client.*;
 import com.GameHubStore.order.exception.OrderNotFoundException;
 import com.GameHubStore.order.model.dto.OrderRequest;
 import com.GameHubStore.order.model.dto.OrderResponse;
@@ -23,17 +23,68 @@ public class OrderService {
     private static final Logger log = LoggerFactory.getLogger(OrderService.class);
 
     private final OrderRepository orderRepository;
+    private final UserClient userClient;
+    private final ProductClient productClient;
     private final InventoryClient inventoryClient;
-
-    // Crear una nueva orden
+    private final PromotionClient promotionClient;
     public void createOrder(OrderRequest request) {
-        try{ inventoryClient.reserveStock(request.getProductId(), request.getQuantity());
+        try {
+            UserResponse user = userClient.getUserById(request.getUserId());
+            if (user == null || Boolean.FALSE.equals(user.getEstado())) {
+                throw new IllegalStateException("Usuario inactivo o no encontrado: " + request.getUserId());
+            }
+            log.info("Usuario validado userId={}", request.getUserId());
         } catch (FeignException.NotFound e) {
-            throw new IllegalStateException("No existe stock registrado para el producto:" + request.getProductId());
+            throw new IllegalStateException("No existe usuario con ID: " + request.getUserId());
         } catch (FeignException e) {
-            throw new IllegalStateException("No se pudo reservar el stock " + e.getLocalizedMessage());
+            log.error("Error al comunicarse con user-service: {}", e.getMessage());
+            throw new IllegalStateException("No se pudo validar el usuario, intenta más tarde.");
         }
 
+        try {
+            List<ProductResponse> products = productClient.getProductById(request.getProductId());
+            if (products == null || products.isEmpty()) {
+                throw new IllegalStateException("Producto no encontrado: " + request.getProductId());
+            }
+            ProductResponse product = products.get(0);
+            if (Boolean.FALSE.equals(product.getEstado())) {
+                throw new IllegalStateException("El producto está inactivo: " + request.getProductId());
+            }
+            log.info("Producto validado productId={}", request.getProductId());
+        } catch (FeignException.NotFound e) {
+            throw new IllegalStateException("No existe producto con ID: " + request.getProductId());
+        } catch (FeignException e) {
+            log.error("Error al comunicarse con product-service: {}", e.getMessage());
+            throw new IllegalStateException("No se pudo validar el producto, intenta más tarde.");
+        }
+
+        try {
+            inventoryClient.reserveStock(request.getProductId(), request.getQuantity());
+            log.info("Stock reservado productId={} cantidad={}", request.getProductId(), request.getQuantity());
+        } catch (FeignException.NotFound e) {
+            throw new IllegalStateException("No existe stock para el producto: " + request.getProductId());
+        } catch (FeignException e) {
+            log.error("Error al comunicarse con inventory-service: {}", e.getMessage());
+            throw new IllegalStateException("No se pudo reservar el stock, intenta más tarde.");
+        }
+
+        Double total = request.getTotal();
+        try {
+            List<PromotionResponse> promotions = promotionClient.getActivePromotions();
+            if (promotions != null && !promotions.isEmpty()) {
+                for (PromotionResponse promo : promotions) {
+                    if (Boolean.TRUE.equals(promo.getIsValid())
+                            && promo.getMinAmount() != null
+                            && total >= promo.getMinAmount()) {
+                        total = total - promo.getDiscountAmount();
+                        log.info("Promoción aplicada code={} descuento={}", promo.getCode(), promo.getDiscountAmount());
+                        break;
+                    }
+                }
+            }
+        } catch (FeignException e) {
+            log.warn("No se pudo consultar promotion-service, se continúa sin descuento: {}", e.getMessage());
+        }
         Order newOrder = Order.builder()
                 .userId(request.getUserId())
                 .total(request.getTotal())

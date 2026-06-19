@@ -1,7 +1,7 @@
 package com.GameHubStore.payment.service;
 
+import com.GameHubStore.order.model.dto.OrderResponse;
 import com.GameHubStore.payment.client.OrderClient;
-import com.GameHubStore.payment.client.OrderClientResponse;
 import com.GameHubStore.payment.exception.PaymentNotFoundException;
 import com.GameHubStore.payment.exception.PaymentValidationException;
 import com.GameHubStore.payment.model.dto.PaymentRequest;
@@ -27,9 +27,9 @@ public class PaymentService {
     private OrderClient orderClient;
     public PaymentResponse createPayment(PaymentRequest request) {
 
-        OrderClientResponse order;
+        OrderResponse order;
         try {
-            List<OrderClientResponse> orders = orderClient.getOrderById(request.getOrdenId());
+            List<OrderResponse> orders = orderClient.getOrderById(request.getOrdenId());
             if (orders == null || orders.isEmpty()) {
                 throw new PaymentValidationException("No existe una orden con este ID: " + request.getOrdenId());
             }

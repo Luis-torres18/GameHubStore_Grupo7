@@ -7,12 +7,12 @@
         <option value="$PROJECT_DIR$/microservicios/msvc-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/microservicios/msvc-eureka/pom.xml" />
         <option value="$PROJECT_DIR$/microservicios/review-service/pom.xml" />
-        <option value="$PROJECT_DIR$/microservicios/notification-service/pom.xml" />
         <option value="$PROJECT_DIR$/microservicios/category-service/pom.xml" />
         <option value="$PROJECT_DIR$/microservicios/inventory-service/pom.xml" />
         <option value="$PROJECT_DIR$/microservicios/order-service/pom.xml" />
         <option value="$PROJECT_DIR$/microservicios/pom.xml" />
         <option value="$PROJECT_DIR$/microservicios/warranty-service/pom.xml" />
+        <option value="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/pom.xml" />
       </list>
     </option>
   </component>

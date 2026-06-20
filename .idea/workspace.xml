@@ -4,43 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="creacion clients de promotion,review,warranty">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="(Actualizacion) se implemento dependencias eureka en los microservicios, se agregaron clients en warranty">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/auth-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/category-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/category-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/msvc-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/msvc-gateway/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicios/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/notification-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicios/notification-service/src/main/java/com/GameHubStore/notification_service/controller/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/notification-service/src/main/java/com/GameHubStore/notification_service/controller/NotificationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/notification-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/notification-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/order-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/order-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/product-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/product-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/product-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/review-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/review-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/review-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/review-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/shipping-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/shipping-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/shipping-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/shipping-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/user-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/user-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/src/main/java/com/GameHubStore/promotion_service/assemblers/PromotionModelAssembler.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/src/main/java/com/GameHubStore/promotion_service/assemblers/PromotionModelAssembler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicios/warranty-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/warranty-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/warranty-service/src/main/java/com/GameHubStore/warranty_service/client/OrderClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/warranty-service/src/main/java/com/GameHubStore/warranty_service/client/OrderClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/warranty-service/src/main/java/com/GameHubStore/warranty_service/client/ProductClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/warranty-service/src/main/java/com/GameHubStore/warranty_service/client/ProductClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/warranty-service/src/main/java/com/GameHubStore/warranty_service/client/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/warranty-service/src/main/java/com/GameHubStore/warranty_service/client/UserClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/warranty-service/src/main/java/com/GameHubStore/warranty_service/service/WarrantyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/warranty-service/src/main/java/com/GameHubStore/warranty_service/service/WarrantyServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/warranty-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/warranty-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/warranty-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/warranty-service/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/warranty-service/target/classes/com/GameHubStore/warranty_service/WarrantyServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/warranty-service/target/classes/com/GameHubStore/warranty_service/WarrantyServiceApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/warranty-service/target/classes/com/GameHubStore/warranty_service/controller/WarrantyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/warranty-service/target/classes/com/GameHubStore/warranty_service/controller/WarrantyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/warranty-service/target/classes/com/GameHubStore/warranty_service/exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/warranty-service/target/classes/com/GameHubStore/warranty_service/exception/GlobalExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/warranty-service/target/classes/com/GameHubStore/warranty_service/repository/WarrantyRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/warranty-service/target/classes/com/GameHubStore/warranty_service/repository/WarrantyRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/warranty-service/target/classes/com/GameHubStore/warranty_service/service/WarrantyServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/warranty-service/target/classes/com/GameHubStore/warranty_service/service/WarrantyServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,61 +55,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="5.900732736310733E-67" />
-      <entry key="MS500" value="7.858281627700927E-14" />
-      <entry key="S2" value="0.0014385422881912713" />
-      <entry key="S5" value="0.18781935125881435" />
-      <entry key="S10" value="0.9883128168554896" />
-      <entry key="S30" value="3.504152263808809" />
-      <entry key="S60" value="5.44147383115017" />
-      <entry key="M2" value="7.299399669292887" />
-      <entry key="M5" value="9.560478466540234" />
-      <entry key="M10" value="13.424267551235207" />
-      <entry key="M15" value="17.71158234084071" />
-      <entry key="M30" value="31.647582711939197" />
-      <entry key="H1" value="65.81641732392097" />
-      <entry key="H2" value="139.59994193709215" />
-      <entry key="H4" value="265.8120522190015" />
-      <entry key="D1" value="595.0718689389314" />
-      <entry key="W1" value="705.0905531524252" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0000000001042921" />
+      <entry key="S30" value="1.0011443125135122" />
+      <entry key="S60" value="1.1131150565467665" />
+      <entry key="M2" value="2.5740064496355544" />
+      <entry key="M5" value="11.16175260902711" />
+      <entry key="M10" value="22.531138276933905" />
+      <entry key="M15" value="31.12099268905345" />
+      <entry key="M30" value="52.58857555778237" />
+      <entry key="H1" value="91.20706134769274" />
+      <entry key="H2" value="166.80662939926847" />
+      <entry key="H4" value="297.7061679830705" />
+      <entry key="D1" value="659.1682513384554" />
+      <entry key="W1" value="784.8840294047276" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000007492775576" />
-      <entry key="S2" value="1.0306266524041579" />
-      <entry key="S5" value="1.3289225910082052" />
-      <entry key="S10" value="1.920914464969504" />
-      <entry key="S30" value="3.6524249524616073" />
-      <entry key="S60" value="5.212061065362128" />
-      <entry key="M2" value="6.799278348628586" />
-      <entry key="M5" value="8.400934959676762" />
-      <entry key="M10" value="9.148952265265695" />
-      <entry key="M15" value="9.708911750613456" />
-      <entry key="M30" value="15.201315608285016" />
-      <entry key="H1" value="36.218317990594564" />
-      <entry key="H2" value="74.94522062974363" />
-      <entry key="H4" value="121.07329172982992" />
-      <entry key="D1" value="199.57762262222568" />
-      <entry key="W1" value="220.25287158232805" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="1.2412004296602541E-254" />
+      <entry key="S2" value="3.337801299439654E-64" />
+      <entry key="S5" value="4.068889354900964E-26" />
+      <entry key="S10" value="2.0734990117835722E-13" />
+      <entry key="S30" value="1.1957287830829857E-4" />
+      <entry key="S60" value="0.03147249387901929" />
+      <entry key="M2" value="0.6412958394841773" />
+      <entry key="M5" value="4.729770801644114" />
+      <entry key="M10" value="9.885201389818336" />
+      <entry key="M15" value="13.084975673575046" />
+      <entry key="M30" value="19.779610831390283" />
+      <entry key="H1" value="36.02742148371758" />
+      <entry key="H2" value="71.91287404713731" />
+      <entry key="H4" value="121.4097887898454" />
+      <entry key="D1" value="214.55134710219272" />
+      <entry key="W1" value="240.29239169717013" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="9.121562331793158E-10" />
-      <entry key="MS500" value="0.01556029356849162" />
-      <entry key="S2" value="0.37457201663686707" />
-      <entry key="S5" value="1.1091142965345397" />
-      <entry key="S10" value="2.583436755789759" />
-      <entry key="S30" value="6.905671711852738" />
-      <entry key="S60" value="10.459489436050541" />
-      <entry key="M2" value="13.960331077079525" />
-      <entry key="M5" value="17.885476965237725" />
-      <entry key="M10" value="22.529726515922725" />
-      <entry key="M15" value="27.389216034656492" />
-      <entry key="M30" value="46.82578200247607" />
-      <entry key="H1" value="102.00962197015184" />
-      <entry key="H2" value="214.51905595550923" />
-      <entry key="H4" value="386.86314396373194" />
-      <entry key="D1" value="794.6427623070041" />
-      <entry key="W1" value="925.3423372310517" />
+      <entry key="MS100" value="0.9592641193252643" />
+      <entry key="MS500" value="0.9917167307382933" />
+      <entry key="S2" value="0.9979227189990506" />
+      <entry key="S5" value="0.999168569213607" />
+      <entry key="S10" value="0.9995841982577488" />
+      <entry key="S30" value="1.001081180075118" />
+      <entry key="S60" value="1.1410567595633567" />
+      <entry key="M2" value="3.182478447950309" />
+      <entry key="M5" value="15.793242283619797" />
+      <entry key="M10" value="32.313695469537954" />
+      <entry key="M15" value="44.11664889676004" />
+      <entry key="M30" value="72.3060620726123" />
+      <entry key="H1" value="127.18996275339013" />
+      <entry key="H2" value="238.68403336790675" />
+      <entry key="H4" value="419.0884912446467" />
+      <entry key="D1" value="873.7115377493842" />
+      <entry key="W1" value="1025.1751185204769" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -432,7 +402,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781753629681</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="(Actualizacion) se implemento dependencias eureka en los microservicios, se agregaron clients en warranty">
+      <option name="closed" value="true" />
+      <created>1781925826199</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1781925826199</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,6 +437,7 @@
     <MESSAGE value="Se a comprobado la funcionalidad del crud de review y notification ademas de agregar ciertas funcionalidades para que presente mensaje en el body al eliminar una reseña en postman" />
     <MESSAGE value="Se a comprobado la funcionalidad del crud generall, se agregaron funciones para listar todo en cada microservicio y corregidos algunos errores" />
     <MESSAGE value="creacion clients de promotion,review,warranty" />
-    <option name="LAST_COMMIT_MESSAGE" value="creacion clients de promotion,review,warranty" />
+    <MESSAGE value="(Actualizacion) se implemento dependencias eureka en los microservicios, se agregaron clients en warranty" />
+    <option name="LAST_COMMIT_MESSAGE" value="(Actualizacion) se implemento dependencias eureka en los microservicios, se agregaron clients en warranty" />
   </component>
 </project>

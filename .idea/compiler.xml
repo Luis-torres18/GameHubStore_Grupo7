@@ -7,11 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="microservicios" />
         <module name="msvc-gateway" />
+        <module name="microservicios" />
         <module name="msvc-eureka" />
       </profile>
-      <profile name="Annotation profile for order.service" enabled="true">
+      <profile name="Annotation profile for notification-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -21,9 +21,9 @@
         <module name="order.service" />
         <module name="inventory.service" />
         <module name="category-service" />
+        <module name="notification-service" />
         <module name="warranty-service" />
         <module name="review-service" />
-        <module name="notification-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

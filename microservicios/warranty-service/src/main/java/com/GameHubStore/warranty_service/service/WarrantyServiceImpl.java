@@ -1,5 +1,11 @@
 package com.GameHubStore.warranty_service.service;
 
+import com.GameHubStore.warranty_service.client.OrderClient;
+import com.GameHubStore.warranty_service.client.ProductClient;
+import com.GameHubStore.warranty_service.client.UserClient;
+import com.GameHubStore.warranty_service.client.dto.OrderDto;
+import com.GameHubStore.warranty_service.client.dto.ProductDto;
+import com.GameHubStore.warranty_service.client.dto.UserDto;
 import com.GameHubStore.warranty_service.exception.WarrantyInvalidException;
 import com.GameHubStore.warranty_service.exception.WarrantyNotFoundException;
 import com.GameHubStore.warranty_service.model.dto.CloseWarrantyRequest;
@@ -27,6 +33,10 @@ public class WarrantyServiceImpl implements WarrantyService {
 
     private final WarrantyRepository warrantyRepository;
 
+    private final OrderClient orderClient;
+    private final ProductClient productClient;
+    private final UserClient userClient;
+
     @Override
     public List<WarrantyResponse> findAll() {
         return warrantyRepository.findAll()
@@ -35,10 +45,30 @@ public class WarrantyServiceImpl implements WarrantyService {
                 .collect(Collectors.toList());
     }
 
-
     @Override
     public WarrantyResponse createWarranty(WarrantyRequest request) {
 
+        UserDto usuario = userClient.getUserById(request.getUserId());
+            if(usuario == null){
+                throw new WarrantyInvalidException("El usuario con ID" + request.getUserId() + "no existe");
+            }
+            if (!Boolean.TRUE.equals(usuario.getEstado())){
+                throw new WarrantyInvalidException(("El usuario con ID" + request.getUserId()+ " esta inactivo"));
+            }
+        List<ProductDto> productos = productClient.getProductById(request.getProductId());
+            if(productos.isEmpty()){
+                throw new WarrantyInvalidException("El producto con ID" + request.getProductId() + "no existe");
+            }
+        List<OrderDto> ordenes  = orderClient.getOrderById(request.getOrderId());
+            if(ordenes.isEmpty()){
+                throw new WarrantyInvalidException("La orden  con ID" + request.getOrderId() + "no existe");
+        }
+        OrderDto orden = ordenes.get(0);
+        if (!orden.getUserId().equals(request.getUserId())
+                || !orden.getProductId().equals(request.getProductId())) {
+            throw new WarrantyInvalidException(
+                    "La orden no corresponde a este usuario y producto, no se puede solicitar garantía");
+        }
 
 
         Warranty warranty = Warranty.builder()

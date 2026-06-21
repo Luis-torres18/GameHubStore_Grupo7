@@ -8,6 +8,26 @@ spring:
           # Cada ruta: si la URL entra por el patron 'predicates', el gateway la reenvia
           # a 'uri'. lb:// significa "busca este nombre en Eureka y balancea la carga".
           routes:
+            - - id: auth-service
+            - uri: lb://auth-service
+            - predicates:
+            - Path=/api/auth/**
+            -
+            - id: user-service
+              uri: lb://user-service
+              predicates:
+                - Path=/api/user/**
+
+            - id: product-service
+              uri: lb://product-service
+              predicates:
+                - Path=/api/product/**
+
+            - id: category-service
+              uri: lb://category-service
+              predicates:
+                - Path=/api/category/**
+
             - id: Inventory-service
               uri: lb://inventory-service
               predicates:
@@ -25,35 +45,61 @@ spring:
               predicates:
                 -Path=/api/shipping/**
 
+            - id: promotion-service
+              uri: lb://promotion-service
+              predicates:
+                - Path=/api/promotion/**
+
+            - id: review-service
+              uri: lb://review-service
+              predicates:
+                - Path=/api/review/**
+
+            - id: warranty-service
+              uri: lb://warranty-service
+              predicates:
+                - Path=/api/warranty/**
+
+            - id: notification-service
+              uri: lb://notification-service
+              predicates:
+                - Path=/api/notification/**
+
             # Rutas para el OpenAPI (JSON) de cada microservicio. El Swagger UI del gateway
             # las consume. Usan el prefijo /api-docs/<svc> (NO /v3/api-docs) para no chocar con
             # el /v3/api-docs propio del gateway. RewritePath lo traduce al /v3/api-docs real del servicio.
-            - id: medicos-api-docs
-              uri: lb://msvc-medicos
+            - id: product-service
+              uri: lb://product-service
               predicates:
-                - Path=/api-docs/medicos
+                - Path=/api/product/**
               filters:
-                - RewritePath=/api-docs/medicos, /v3/api-docs
-            - id: shipping-service
-            - uri: lb://shipping-service
-            - predicates:
-                -Path=/api/shipping/**
-              filters:
-                - RewritePath=/api-docs/pacientes, /v3/api-docs
-            - id: atenciones-api-docs
-              uri: lb://msvc-atenciones
-              predicates:
-                - Path=/api-docs/atenciones
-              filters:
-                - RewritePath=/api-docs/atenciones, /v3/api-docs
-            - id: usuarios-api-docs
-              uri: lb://msvc-usuarios
-              predicates:
-                - Path=/api-docs/usuarios
-              filters:
-                - RewritePath=/api-docs/usuarios, /v3/api-docs
+                - RewritePath=/api-docs/product, /v3/api-docs
 
-# Punto de entrada unico: todo el trafico entra por aqui.
+            - id: user-service
+            - uri: lb://user-service
+              predicates:
+                - Path=/api/user/**
+            - filters:
+                RewritePath=/api-docs/user, /v3/api-docs
+                -
+
+            - id: order-service
+              uri: lb://order-service
+              predicates:
+                Path=/api/order/**
+              filters:
+                - RewritePath=/api-docs/order, /v3/api-docs
+
+
+            - id: category-service
+              uri: lb://category-service
+              predicates:
+                - Path=/api/category/**
+              filters:
+                - RewritePath=/api-docs/category, /v3/api-docs
+                -
+
+                # Punto de entrada unico: todo el trafico entra por aqui.
 server:
   port: 8080
 
@@ -70,14 +116,14 @@ springdoc:
     path: /docs/swagger-ui.html
     # El desplegable apunta a los docs de cada servicio (ruteados por el gateway via lb://).
     urls:
-      - name: usuarios
-        url: /api-docs/usuarios
-      - name: medicos
-        url: /api-docs/medicos
-      - name: pacientes
-        url: /api-docs/pacientes
-      - name: atenciones
-        url: /api-docs/atenciones
+      - name: product
+        url: /api-docs/product
+      - name: user
+        url: /api-docs/user
+      - name: order
+        url: /api-docs/order
+      - name: category
+        url: /api-docs/category
 
 # CLAVE SECRETA JWT: la MISMA que en msvc-usuarios y en los 3 microservicios. El gateway la usa para validar.
 jwt:

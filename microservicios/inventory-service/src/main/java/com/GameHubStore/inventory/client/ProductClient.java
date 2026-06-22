@@ -1,5 +1,6 @@
 package com.GameHubStore.inventory.client;
 
+import com.GameHubStore.inventory.client.dto.ProductDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,5 +12,5 @@ import java.util.List;
 public interface ProductClient {
 
     @GetMapping("/{id}")
-    List<ProductResponse> getProductById(@PathVariable ("id") Long id);
+    List<ProductDto> getProductById(@PathVariable ("id") Long id);
 }

@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="(Actualizacion)implementacion de hateoas en microservicios payment y shipping">
+    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="(Actualizacion)implementacion de test en microservicio payment">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/src/main/java/com/GameHubStore/payment/client/OrderClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/src/main/java/com/GameHubStore/payment/client/OrderClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/src/main/java/com/GameHubStore/payment/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/src/main/java/com/GameHubStore/payment/service/PaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/src/main/java/com/GameHubStore/inventory/client/ProductClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/src/main/java/com/GameHubStore/inventory/client/ProductClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/src/main/java/com/GameHubStore/inventory/client/ProductResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/src/main/java/com/GameHubStore/inventory/client/dto/ProductDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/src/main/java/com/GameHubStore/inventory/controller/InventoryControllerV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/src/main/java/com/GameHubStore/inventory/controller/InventoryControllerV2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/src/main/java/com/GameHubStore/inventory/model/dto/InventoryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/src/main/java/com/GameHubStore/inventory/model/dto/InventoryRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/target/classes/com/GameHubStore/inventory/client/ProductClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/target/classes/com/GameHubStore/inventory/client/ProductClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/target/classes/com/GameHubStore/inventory/model/dto/InventoryRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/target/classes/com/GameHubStore/inventory/model/dto/InventoryRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/target/classes/com/GameHubStore/inventory/service/InventoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/target/classes/com/GameHubStore/inventory/service/InventoryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/msvc-gateway/src/main/java/com/GameHubStore/msvc_gateway/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/msvc-gateway/src/main/java/com/GameHubStore/msvc_gateway/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/msvc-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/msvc-gateway/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,41 +135,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.NotificationServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.OrderServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.PromotionServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ReviewServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.WarrantyServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;EA3__Update2&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/moa/IdeaProjects/GameHubStore_Grupo7/microservicios/notification-service/src/main/java/com/GameHubStore/notification_service&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.Application.executor": "Run",
+    "Spring Boot.InventoryServiceApplication.executor": "Run",
+    "Spring Boot.MsvcEurekaApplication (1).executor": "Run",
+    "Spring Boot.MsvcEurekaApplication.executor": "Run",
+    "Spring Boot.NotificationServiceApplication.executor": "Run",
+    "Spring Boot.OrderServiceApplication.executor": "Run",
+    "Spring Boot.PromotionServiceApplication.executor": "Run",
+    "Spring Boot.ReviewServiceApplication.executor": "Run",
+    "Spring Boot.WarrantyServiceApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "EA3__Update2",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/moa/IdeaProjects/GameHubStore_Grupo7/microservicios/notification-service/src/main/java/com/GameHubStore/notification_service",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\notification-service\src\main\java\com\GameHubStore\notification_service" />
@@ -168,6 +180,9 @@
       <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\review-service\src\main\java\com\GameHubStore\review_service" />
       <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\notification-service\src\main\java\com\GameHubStore\notification_service\service" />
       <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\notification-service\src\main\java\com\GameHubStore\notification_service\exception" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\esofe\IdeaProjects\GameHubStore\GameHubStore_Grupo7\microservicios\inventory-service\src\main\java\com\GameHubStore\inventory\client\dto" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.GameHubStore.review_service.client.dto" />
@@ -188,6 +203,9 @@
           <value>
             <map>
               <entry key="Application" value="STOPPED" />
+              <entry key="InventoryServiceApplication" value="STOPPED" />
+              <entry key="MsvcEurekaApplication" value="FAILED" />
+              <entry key="MsvcEurekaApplication (1)" value="STOPPED" />
               <entry key="NotificationServiceApplication" value="STOPPED" />
               <entry key="OrderServiceApplication" value="STOPPED" />
               <entry key="PromotionServiceApplication" value="STOPPED" />
@@ -199,7 +217,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.WarrantyServiceApplication">
+  <component name="RunManager" selected="Spring Boot.InventoryServiceApplication">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="inventory.service" />
@@ -346,7 +364,7 @@
       <workItem from="1782089508415" duration="352000" />
       <workItem from="1782090255850" duration="53000" />
       <workItem from="1782090393801" duration="6664000" />
-      <workItem from="1782151279577" duration="8978000" />
+      <workItem from="1782151279577" duration="15352000" />
     </task>
     <task id="LOCAL-00001" summary="Se realizo la creacion de el micro servicio de promocion con sus respectivos, controller, repository,service, funciones etc">
       <option name="closed" value="true" />
@@ -444,7 +462,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782099917825</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="(Actualizacion)implementacion de test en microservicio payment">
+      <option name="closed" value="true" />
+      <created>1782161951978</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1782161951979</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -474,6 +500,7 @@
     <MESSAGE value="(Actualizacion) se implemento dependencias eureka en los microservicios, se agregaron clients en warranty" />
     <MESSAGE value="(Actualizacion)implementacion de hateoas en microservicios order y inventory" />
     <MESSAGE value="(Actualizacion)implementacion de hateoas en microservicios payment y shipping" />
-    <option name="LAST_COMMIT_MESSAGE" value="(Actualizacion)implementacion de hateoas en microservicios payment y shipping" />
+    <MESSAGE value="(Actualizacion)implementacion de test en microservicio payment" />
+    <option name="LAST_COMMIT_MESSAGE" value="(Actualizacion)implementacion de test en microservicio payment" />
   </component>
 </project>

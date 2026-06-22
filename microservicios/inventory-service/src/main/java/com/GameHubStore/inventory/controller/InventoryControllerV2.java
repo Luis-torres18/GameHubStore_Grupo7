@@ -26,7 +26,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 @RestController
-@RequestMapping("/api/inventory")
+@RequestMapping("/api/v2/inventory")
 @RequiredArgsConstructor
 @Tag(name = "Inventory", description = "Operaciones relacionadas con el inventario de productos")
 public class InventoryControllerV2{

@@ -10,7 +10,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 @Component
-public class ShippingModelAssembler implements RepresentationModelAssembler<ShippingResponse, EntityModel<ShippingResponse>> {
+public class ShippingModelAssemblers implements RepresentationModelAssembler<ShippingResponse, EntityModel<ShippingResponse>> {
     @Override
     public EntityModel<ShippingResponse> toModel (ShippingResponse response) {
         return EntityModel.of(

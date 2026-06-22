@@ -1,6 +1,6 @@
 package com.GameHubStore.payment.controller;
 
-import com.GameHubStore.payment.assemblers.PaymentModelAssembler;
+import com.GameHubStore.payment.assemblers.PaymentModelAssemblers;
 import com.GameHubStore.payment.model.dto.PaymentRequest;
 import com.GameHubStore.payment.model.dto.PaymentResponse;
 import com.GameHubStore.payment.service.PaymentService;
@@ -30,7 +30,7 @@ public class PaymentControllerV2 {
 
     private static final Logger log = LoggerFactory.getLogger(PaymentControllerV2.class);
     private final PaymentService paymentService;
-    private final PaymentModelAssembler assembler; // Inyección del Assembler
+    private final PaymentModelAssemblers assembler; // Inyección del Assembler
 
     // POST /api/payments
     @Operation(summary = "Crear un pago", description = "Registra un nuevo pago para una orden")

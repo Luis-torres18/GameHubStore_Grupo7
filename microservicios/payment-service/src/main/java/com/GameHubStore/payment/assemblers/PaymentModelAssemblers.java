@@ -10,7 +10,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 @Component
-public class PaymentModelAssembler implements RepresentationModelAssembler<PaymentResponse, EntityModel<PaymentResponse>> {
+public class PaymentModelAssemblers implements RepresentationModelAssembler<PaymentResponse, EntityModel<PaymentResponse>> {
 
     @Override
     public EntityModel<PaymentResponse> toModel(PaymentResponse response) {

@@ -1,6 +1,6 @@
 package com.GameHubStore.shipping.controller;
 
-import com.GameHubStore.shipping.assemblers.ShippingModelAssembler;
+import com.GameHubStore.shipping.assemblers.ShippingModelAssemblers;
 import com.GameHubStore.shipping.model.dto.ShippingRequest;
 import com.GameHubStore.shipping.model.dto.ShippingResponse;
 import com.GameHubStore.shipping.service.ShippingService;
@@ -33,7 +33,7 @@ public class ShippingControllerV2 {
 
     private static final Logger log = LoggerFactory.getLogger(ShippingController.class);
     private final ShippingService shippingService;
-    private final ShippingModelAssembler assembler; // Inyección del Assembler
+    private final ShippingModelAssemblers assembler; // Inyección del Assembler
 
     // POST /api/shippings → Crear despacho
     @PostMapping

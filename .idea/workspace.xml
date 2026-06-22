@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="(Actualizacion) se implemento dependencias eureka en los microservicios, se agregaron clients en warranty">
+    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="implementacion de controller v2 y model assambler con hateoas en review, promotion y warranty">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/notification-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/notification-service/src/main/java/com/GameHubStore/notification_service/controller/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/notification-service/src/main/java/com/GameHubStore/notification_service/controller/NotificationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/src/main/java/com/GameHubStore/promotion_service/assemblers/PromotionModelAssembler.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/src/main/java/com/GameHubStore/promotion_service/assemblers/PromotionModelAssembler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/warranty-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/warranty-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,61 +52,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0000000001042921" />
-      <entry key="S30" value="1.0011443125135122" />
-      <entry key="S60" value="1.1131150565467665" />
-      <entry key="M2" value="2.5740064496355544" />
-      <entry key="M5" value="11.16175260902711" />
-      <entry key="M10" value="22.531138276933905" />
-      <entry key="M15" value="31.12099268905345" />
-      <entry key="M30" value="52.58857555778237" />
-      <entry key="H1" value="91.20706134769274" />
-      <entry key="H2" value="166.80662939926847" />
-      <entry key="H4" value="297.7061679830705" />
-      <entry key="D1" value="659.1682513384554" />
-      <entry key="W1" value="784.8840294047276" />
+      <entry key="MS100" value="1.0209072554963121" />
+      <entry key="MS500" value="1.5957728439627759" />
+      <entry key="S2" value="3.5550556958446715" />
+      <entry key="S5" value="6.8995133315886" />
+      <entry key="S10" value="12.147296330263547" />
+      <entry key="S30" value="21.684312573204824" />
+      <entry key="S60" value="25.966267114705808" />
+      <entry key="M2" value="29.732284403204805" />
+      <entry key="M5" value="36.23307363910565" />
+      <entry key="M10" value="45.319033410589014" />
+      <entry key="M15" value="54.50182141522621" />
+      <entry key="M30" value="79.59692218373424" />
+      <entry key="H1" value="122.49513435197156" />
+      <entry key="H2" value="201.10817269739684" />
+      <entry key="H4" value="335.3987540238505" />
+      <entry key="D1" value="713.4596542935399" />
+      <entry key="W1" value="847.2302580878168" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="1.2412004296602541E-254" />
-      <entry key="S2" value="3.337801299439654E-64" />
-      <entry key="S5" value="4.068889354900964E-26" />
-      <entry key="S10" value="2.0734990117835722E-13" />
-      <entry key="S30" value="1.1957287830829857E-4" />
-      <entry key="S60" value="0.03147249387901929" />
-      <entry key="M2" value="0.6412958394841773" />
-      <entry key="M5" value="4.729770801644114" />
-      <entry key="M10" value="9.885201389818336" />
-      <entry key="M15" value="13.084975673575046" />
-      <entry key="M30" value="19.779610831390283" />
-      <entry key="H1" value="36.02742148371758" />
-      <entry key="H2" value="71.91287404713731" />
-      <entry key="H4" value="121.4097887898454" />
-      <entry key="D1" value="214.55134710219272" />
-      <entry key="W1" value="240.29239169717013" />
+      <entry key="MS500" value="7.075610876029241E-155" />
+      <entry key="S2" value="2.9192630320484865E-39" />
+      <entry key="S5" value="4.560571830581056E-16" />
+      <entry key="S10" value="3.138969132719629E-8" />
+      <entry key="S30" value="0.006581123315250873" />
+      <entry key="S60" value="0.1536942807604037" />
+      <entry key="M2" value="0.7744643159654159" />
+      <entry key="M5" value="2.5930999102497974" />
+      <entry key="M10" value="6.492264808580655" />
+      <entry key="M15" value="10.658314632127194" />
+      <entry key="M30" value="20.83260941645103" />
+      <entry key="H1" value="39.04908679837198" />
+      <entry key="H2" value="75.65715017214089" />
+      <entry key="H4" value="127.40725378923214" />
+      <entry key="D1" value="228.32065716092058" />
+      <entry key="W1" value="256.7751488693605" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9592641193252643" />
-      <entry key="MS500" value="0.9917167307382933" />
-      <entry key="S2" value="0.9979227189990506" />
-      <entry key="S5" value="0.999168569213607" />
-      <entry key="S10" value="0.9995841982577488" />
-      <entry key="S30" value="1.001081180075118" />
-      <entry key="S60" value="1.1410567595633567" />
-      <entry key="M2" value="3.182478447950309" />
-      <entry key="M5" value="15.793242283619797" />
-      <entry key="M10" value="32.313695469537954" />
-      <entry key="M15" value="44.11664889676004" />
-      <entry key="M30" value="72.3060620726123" />
-      <entry key="H1" value="127.18996275339013" />
-      <entry key="H2" value="238.68403336790675" />
-      <entry key="H4" value="419.0884912446467" />
-      <entry key="D1" value="873.7115377493842" />
-      <entry key="W1" value="1025.1751185204769" />
+      <entry key="MS100" value="0.9864132913745538" />
+      <entry key="MS500" value="1.582313584471227" />
+      <entry key="S2" value="3.3516382323623617" />
+      <entry key="S5" value="6.625980708987609" />
+      <entry key="S10" value="11.937851432606596" />
+      <entry key="S30" value="21.5971296502491" />
+      <entry key="S60" value="26.06650319210856" />
+      <entry key="M2" value="30.46950721763335" />
+      <entry key="M5" value="38.79534771545425" />
+      <entry key="M10" value="51.77350733721045" />
+      <entry key="M15" value="65.11614638482325" />
+      <entry key="M30" value="100.38357343763454" />
+      <entry key="H1" value="161.50381607731617" />
+      <entry key="H2" value="276.73058532804" />
+      <entry key="H4" value="462.77824332864236" />
+      <entry key="D1" value="941.7719189538544" />
+      <entry key="W1" value="1104.0040427252056" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -149,7 +146,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/moa/IdeaProjects/GameHubStore_Grupo7/microservicios/notification-service/src/main/java/com/GameHubStore/notification_service",
+    "last_opened_file_path": "C:/Users/moa/IdeaProjects/GameHubStore_Grupo7/microservicios/review-service/src/main/java/com/GameHubStore/review_service",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -163,13 +160,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\notification-service\src\main\java\com\GameHubStore\notification_service" />
-      <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\warranty-service\src\main\java\com\GameHubStore\warranty_service" />
       <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\review-service\src\main\java\com\GameHubStore\review_service" />
+      <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\warranty-service\src\main\java\com\GameHubStore\warranty_service" />
+      <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\notification-service\src\main\java\com\GameHubStore\notification_service" />
       <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\notification-service\src\main\java\com\GameHubStore\notification_service\service" />
       <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\notification-service\src\main\java\com\GameHubStore\notification_service\exception" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.GameHubStore.warranty_service.config" />
       <recent name="com.GameHubStore.review_service.client.dto" />
     </key>
   </component>
@@ -329,6 +327,9 @@
       <workItem from="1779654175148" duration="10452000" />
       <workItem from="1779760925793" duration="89000" />
       <workItem from="1781826516102" duration="8947000" />
+      <workItem from="1782096358815" duration="2908000" />
+      <workItem from="1782099952003" duration="605000" />
+      <workItem from="1782151374269" duration="2377000" />
     </task>
     <task id="LOCAL-00001" summary="Se realizo la creacion de el micro servicio de promocion con sus respectivos, controller, repository,service, funciones etc">
       <option name="closed" value="true" />
@@ -410,7 +411,23 @@
       <option name="project" value="LOCAL" />
       <updated>1781925826199</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="(Actualizacion) se implemento hateoas en microservicio notification">
+      <option name="closed" value="true" />
+      <created>1781929392015</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1781929392015</updated>
+    </task>
+    <task id="LOCAL-00012" summary="implementacion de controller v2 y model assambler con hateoas en review, promotion y warranty">
+      <option name="closed" value="true" />
+      <created>1782153661257</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1782153661257</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,6 +455,8 @@
     <MESSAGE value="Se a comprobado la funcionalidad del crud generall, se agregaron funciones para listar todo en cada microservicio y corregidos algunos errores" />
     <MESSAGE value="creacion clients de promotion,review,warranty" />
     <MESSAGE value="(Actualizacion) se implemento dependencias eureka en los microservicios, se agregaron clients en warranty" />
-    <option name="LAST_COMMIT_MESSAGE" value="(Actualizacion) se implemento dependencias eureka en los microservicios, se agregaron clients en warranty" />
+    <MESSAGE value="(Actualizacion) se implemento hateoas en microservicio notification" />
+    <MESSAGE value="implementacion de controller v2 y model assambler con hateoas en review, promotion y warranty" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementacion de controller v2 y model assambler con hateoas en review, promotion y warranty" />
   </component>
 </project>

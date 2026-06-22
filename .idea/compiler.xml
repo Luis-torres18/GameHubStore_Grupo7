@@ -11,18 +11,28 @@
         <module name="microservicios" />
         <module name="msvc-eureka" />
       </profile>
-      <profile name="Annotation profile for promotion-service" enabled="true">
+      <profile name="Annotation profile for notification-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
+        <module name="notification-service" />
+        <module name="review-service" />
+        <module name="warranty-service" />
+      </profile>
+      <profile name="Annotation profile for promotion-service" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
         <module name="order.service" />
         <module name="inventory.service" />
         <module name="category-service" />
-        <module name="warranty-service" />
-        <module name="review-service" />
         <module name="promotion-service" />
       </profile>
     </annotationProcessing>
@@ -30,7 +40,6 @@
       <module name="auth-service" target="25" />
       <module name="inventory.service (1)" target="25" />
       <module name="inventory.service (2)" target="25" />
-      <module name="notification-service" target="25" />
       <module name="payment.service" target="25" />
       <module name="product-service" target="25" />
       <module name="shipping.service" target="25" />

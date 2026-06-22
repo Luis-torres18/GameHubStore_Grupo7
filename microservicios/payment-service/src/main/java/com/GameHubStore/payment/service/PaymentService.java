@@ -1,7 +1,8 @@
 package com.GameHubStore.payment.service;
 
-import com.GameHubStore.order.model.dto.OrderResponse;
+import com.GameHubStore.payment.client.InventoryClient;
 import com.GameHubStore.payment.client.OrderClient;
+import com.GameHubStore.payment.client.OrderDto;
 import com.GameHubStore.payment.exception.PaymentNotFoundException;
 import com.GameHubStore.payment.exception.PaymentValidationException;
 import com.GameHubStore.payment.model.dto.PaymentRequest;
@@ -25,15 +26,16 @@ public class PaymentService {
     private static final Logger log = LoggerFactory.getLogger(PaymentService.class);
     private final PaymentRepository paymentRepository;
     private OrderClient orderClient;
+    private InventoryClient inventoryClient;
     public PaymentResponse createPayment(PaymentRequest request) {
 
-        OrderResponse order;
+        OrderDto order;
         try {
-            List<OrderResponse> orders = orderClient.getOrderById(request.getOrdenId());
+            List<OrderDto> orders = orderClient.getOrderById(request.getOrdenId());
             if (orders == null || orders.isEmpty()) {
                 throw new PaymentValidationException("No existe una orden con este ID: " + request.getOrdenId());
             }
-            order = orders.get(0);
+            order = orders.getFirst();
         }catch (FeignException.NotFound e) {
             throw new PaymentValidationException("No existe una orden con este ID: " + request.getOrdenId());
         } catch (FeignException e){
@@ -101,6 +103,11 @@ public class PaymentService {
         }
 
         payment.setEstado(estado.toUpperCase());
+        if ("APPROVED".equalsIgnoreCase(estado)) {
+            inventoryClient.confirmarPorOrdenId(payment.getOrdenId());
+        }else if("REJECTED".equalsIgnoreCase(estado)) {
+            inventoryClient.liberarPorOrdenId(payment.getOrdenId());
+        }
         log.info("Pago id={} actualizado a estado={}", id, estado);
         return mapToResponse(paymentRepository.save(payment));
     }

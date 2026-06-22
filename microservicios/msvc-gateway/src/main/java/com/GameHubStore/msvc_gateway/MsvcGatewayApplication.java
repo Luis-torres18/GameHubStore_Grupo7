@@ -1,4 +1,4 @@
-package com.hospital.msvc_gateway;
+package com.GameHubStore.msvc_gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.hospital.msvc_gateway.security;
+package com.GameHubStore.msvc_gateway;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

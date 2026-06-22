@@ -11,7 +11,7 @@
         <module name="microservicios" />
         <module name="msvc-eureka" />
       </profile>
-      <profile name="Annotation profile for payment.service" enabled="true">
+      <profile name="Annotation profile for shipping.service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -24,6 +24,7 @@
         <module name="promotion-service" />
         <module name="order.service" />
         <module name="inventory.service" />
+        <module name="shipping.service" />
         <module name="warranty-service" />
       </profile>
     </annotationProcessing>
@@ -33,7 +34,6 @@
       <module name="inventory.service (2)" target="25" />
       <module name="notification-service" target="25" />
       <module name="product-service" target="25" />
-      <module name="shipping.service" target="25" />
       <module name="user-service" target="25" />
     </bytecodeTargetLevel>
   </component>

@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="(Actualizacion) se implemento dependencias eureka en los microservicios, se agregaron clients en warranty">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/msvc-eureka/src/main/java/com/hospital/msvc_eureka/MsvcEurekaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/msvc-eureka/src/main/java/com/GameHubStore/msvc_eureka/MsvcEurekaApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/msvc-gateway/src/main/java/com/hospital/msvc_gateway/MsvcGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/msvc-gateway/src/main/java/com/GameHubStore/msvc_gateway/MsvcGatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/msvc-gateway/src/main/java/com/hospital/msvc_gateway/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/msvc-gateway/src/main/java/com/GameHubStore/msvc_gateway/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/order-service/pom.xml" afterDir="false" />
+    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="(Actualizacion)implementacion de hateoas en microservicios order y inventory">
+      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/src/main/java/com/GameHubStore/payment/assemblers/PaymentModelAssembler.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/src/main/java/com/GameHubStore/payment/assemblers/PaymentModelAssembler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/src/main/java/com/GameHubStore/payment/controller/PaymentControllerV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/src/main/java/com/GameHubStore/payment/controller/PaymentControllerV2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/shipping-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/shipping-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -348,7 +343,7 @@
       <workItem from="1781826516102" duration="8947000" />
       <workItem from="1782089508415" duration="352000" />
       <workItem from="1782090255850" duration="53000" />
-      <workItem from="1782090393801" duration="4008000" />
+      <workItem from="1782090393801" duration="6664000" />
     </task>
     <task id="LOCAL-00001" summary="Se realizo la creacion de el micro servicio de promocion con sus respectivos, controller, repository,service, funciones etc">
       <option name="closed" value="true" />
@@ -430,7 +425,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781925826199</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="(Actualizacion)implementacion de hateoas en microservicios order y inventory">
+      <option name="closed" value="true" />
+      <created>1782095546061</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1782095546061</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,6 +461,7 @@
     <MESSAGE value="Se a comprobado la funcionalidad del crud generall, se agregaron funciones para listar todo en cada microservicio y corregidos algunos errores" />
     <MESSAGE value="creacion clients de promotion,review,warranty" />
     <MESSAGE value="(Actualizacion) se implemento dependencias eureka en los microservicios, se agregaron clients en warranty" />
-    <option name="LAST_COMMIT_MESSAGE" value="(Actualizacion) se implemento dependencias eureka en los microservicios, se agregaron clients en warranty" />
+    <MESSAGE value="(Actualizacion)implementacion de hateoas en microservicios order y inventory" />
+    <option name="LAST_COMMIT_MESSAGE" value="(Actualizacion)implementacion de hateoas en microservicios order y inventory" />
   </component>
 </project>

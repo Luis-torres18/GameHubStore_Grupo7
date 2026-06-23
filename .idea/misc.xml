@@ -8,13 +8,19 @@
         <option value="$PROJECT_DIR$/microservicios/msvc-eureka/pom.xml" />
         <option value="$PROJECT_DIR$/microservicios/review-service/pom.xml" />
         <option value="$PROJECT_DIR$/microservicios/category-service/pom.xml" />
-        <option value="$PROJECT_DIR$/microservicios/inventory-service/pom.xml" />
-        <option value="$PROJECT_DIR$/microservicios/order-service/pom.xml" />
         <option value="$PROJECT_DIR$/microservicios/pom.xml" />
         <option value="$PROJECT_DIR$/microservicios/warranty-service/pom.xml" />
         <option value="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/pom.xml" />
-        <option value="$PROJECT_DIR$/microservicios/notification-service/pom.xml" />
+        <option value="$PROJECT_DIR$/microservicios/shipping-service/pom.xml" />
+        <option value="$PROJECT_DIR$/microservicios/payment-service/pom.xml" />
+        <option value="$PROJECT_DIR$/microservicios/inventory-service/pom.xml" />
+        <option value="$PROJECT_DIR$/microservicios/order-service/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/microservicios/category-service/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_25" default="true" project-jdk-name="ms-25" project-jdk-type="JavaSDK">

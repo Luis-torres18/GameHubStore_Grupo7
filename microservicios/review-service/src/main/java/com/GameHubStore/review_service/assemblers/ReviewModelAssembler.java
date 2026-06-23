@@ -32,7 +32,6 @@ public class ReviewModelAssembler
                         .withRel("reviewsByUser")
         );
 
-        // Solo se ofrece la acción de marcar como leída si la notificación aún no fue leída
         if (Boolean.TRUE.equals(review.getStatus())) {
             model.add(linkTo(methodOn(ReviewControllerV2.class)
                     .moderateReview(review.getId())).withRel("moderate"));

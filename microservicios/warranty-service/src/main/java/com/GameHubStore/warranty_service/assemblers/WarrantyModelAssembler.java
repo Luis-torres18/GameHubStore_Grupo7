@@ -33,7 +33,6 @@ public class WarrantyModelAssembler
                         .withRel("warrantiesByStatus")
         );
 
-        // Solo se ofrece la acción de marcar como leída si la notificación aún no fue leída
         if (!"CLOSED".equalsIgnoreCase(warranty.getStatus())) {
             model.add(
                     linkTo(methodOn(WarrantyControllerV2.class)

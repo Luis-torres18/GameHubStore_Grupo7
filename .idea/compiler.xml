@@ -11,21 +11,30 @@
         <module name="microservicios" />
         <module name="msvc-eureka" />
       </profile>
-      <profile name="Annotation profile for inventory.service" enabled="true">
+      <profile name="Annotation profile for order.service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
-        <module name="payment.service" />
         <module name="category-service" />
         <module name="review-service" />
         <module name="promotion-service" />
-        <module name="inventory.service" />
         <module name="order.service" />
+        <module name="inventory.service" />
         <module name="warranty-service" />
         <module name="shipping.service" />
+      </profile>
+      <profile name="Annotation profile for payment.service" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="payment.service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

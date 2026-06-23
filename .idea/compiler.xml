@@ -11,33 +11,24 @@
         <module name="msvc-gateway" />
         <module name="msvc-eureka" />
       </profile>
-      <profile name="Annotation profile for shipping.service" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
-        </processorPath>
-        <module name="payment.service" />
-        <module name="review-service" />
-        <module name="promotion-service" />
-        <module name="order.service" />
-        <module name="inventory.service" />
-        <module name="shipping.service" />
-      </profile>
       <profile name="Annotation profile for warranty-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
+        <module name="auth-service" />
+        <module name="payment.service" />
+        <module name="review-service" />
+        <module name="promotion-service" />
+        <module name="order.service" />
+        <module name="inventory.service" />
         <module name="warranty-service" />
+        <module name="shipping.service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="auth-service" target="25" />
       <module name="category-service" target="25" />
       <module name="inventory.service (1)" target="25" />
       <module name="inventory.service (2)" target="25" />
@@ -53,7 +44,7 @@
       <module name="inventory.service" options="-parameters" />
       <module name="inventory.service (1)" options="-parameters" />
       <module name="inventory.service (2)" options="-parameters" />
-      <module name="microservicios" options="" />
+      <module name="microservicios" options="-parameters" />
       <module name="msvc-eureka" options="-parameters" />
       <module name="msvc-gateway" options="-parameters" />
       <module name="notification-service" options="-parameters" />

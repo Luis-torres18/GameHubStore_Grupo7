@@ -4,21 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="(Actualizacion)implementacion de test en microservicio order">
+    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="Se a comprobado la funcionalidad del crud generall, se agregaron funciones para listar todo en cada microservicio y corregidos algunos errores">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/auth-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/auth-service/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/controller/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/category-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/category-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/msvc-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/msvc-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/notification-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/notification-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/order-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/payment-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/payment-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/product-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/product-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/review-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/review-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/shipping-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/shipping-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/user-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/warranty-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/warranty-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="356" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Exception" />
-        <option value="Kotlin Class" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -41,7 +59,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Luis-torres18/GameHubStore_Grupo7.git&quot;,
-    &quot;accountId&quot;: &quot;e898bc28-0164-44f0-ae78-bf8f47bb31d1&quot;
+    &quot;accountId&quot;: &quot;5c16f476-85af-43c3-b5c7-3357370e665e&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -51,63 +69,67 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0000000001042921" />
-      <entry key="S30" value="1.0011443125135122" />
-      <entry key="S60" value="1.1131150565467665" />
-      <entry key="M2" value="2.5740064496355544" />
-      <entry key="M5" value="11.16175260902711" />
-      <entry key="M10" value="22.531138276933905" />
-      <entry key="M15" value="31.12099268905345" />
-      <entry key="M30" value="52.58857555778237" />
-      <entry key="H1" value="91.20706134769274" />
-      <entry key="H2" value="166.80662939926847" />
-      <entry key="H4" value="297.7061679830705" />
-      <entry key="D1" value="659.1682513384554" />
-      <entry key="W1" value="784.8840294047276" />
+      <entry key="MS100" value="1.0300261745927262" />
+      <entry key="MS500" value="1.886576199817493" />
+      <entry key="S2" value="4.426363289112405" />
+      <entry key="S5" value="8.822952860078846" />
+      <entry key="S10" value="13.954420558959828" />
+      <entry key="S30" value="21.13274991570858" />
+      <entry key="S60" value="23.904353755921488" />
+      <entry key="M2" value="25.910879241344297" />
+      <entry key="M5" value="29.436825288763124" />
+      <entry key="M10" value="34.63045365472766" />
+      <entry key="M15" value="40.63815567373612" />
+      <entry key="M30" value="60.91794684922746" />
+      <entry key="H1" value="96.64661373357737" />
+      <entry key="H2" value="156.98854602045972" />
+      <entry key="H4" value="237.43657669051083" />
+      <entry key="D1" value="382.2165629204909" />
+      <entry key="W1" value="420.1612140404729" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="1.2412004296602541E-254" />
-      <entry key="S2" value="3.337801299439654E-64" />
-      <entry key="S5" value="4.068889354900964E-26" />
-      <entry key="S10" value="2.0734990117835722E-13" />
-      <entry key="S30" value="1.1957287830829857E-4" />
-      <entry key="S60" value="0.03147249387901929" />
-      <entry key="M2" value="0.6412958394841773" />
-      <entry key="M5" value="4.729770801644114" />
-      <entry key="M10" value="9.885201389818336" />
-      <entry key="M15" value="13.084975673575046" />
-      <entry key="M30" value="19.779610831390283" />
-      <entry key="H1" value="36.02742148371758" />
-      <entry key="H2" value="71.91287404713731" />
-      <entry key="H4" value="121.4097887898454" />
-      <entry key="D1" value="214.55134710219272" />
-      <entry key="W1" value="240.29239169717013" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="3.201158806707E-312" />
+      <entry key="S5" value="5.112902942141694E-125" />
+      <entry key="S10" value="1.3928281647345607E-62" />
+      <entry key="S30" value="6.025673189348708E-21" />
+      <entry key="S60" value="1.5631113710530374E-10" />
+      <entry key="M2" value="2.6494286092251517E-5" />
+      <entry key="M5" value="0.04406029772338438" />
+      <entry key="M10" value="0.6967032566701753" />
+      <entry key="M15" value="2.0424855638452675" />
+      <entry key="M30" value="7.022756525253602" />
+      <entry key="H1" value="14.496803150434527" />
+      <entry key="H2" value="22.832211899393155" />
+      <entry key="H4" value="30.65854175741733" />
+      <entry key="D1" value="41.871328939376205" />
+      <entry key="W1" value="44.52910891660347" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9592641193252643" />
-      <entry key="MS500" value="0.9917167307382933" />
-      <entry key="S2" value="0.9979227189990506" />
-      <entry key="S5" value="0.999168569213607" />
-      <entry key="S10" value="0.9995841982577488" />
-      <entry key="S30" value="1.001081180075118" />
-      <entry key="S60" value="1.1410567595633567" />
-      <entry key="M2" value="3.182478447950309" />
-      <entry key="M5" value="15.793242283619797" />
-      <entry key="M10" value="32.313695469537954" />
-      <entry key="M15" value="44.11664889676004" />
-      <entry key="M30" value="72.3060620726123" />
-      <entry key="H1" value="127.18996275339013" />
-      <entry key="H2" value="238.68403336790675" />
-      <entry key="H4" value="419.0884912446467" />
-      <entry key="D1" value="873.7115377493842" />
-      <entry key="W1" value="1025.1751185204769" />
+      <entry key="MS100" value="0.9884577556672095" />
+      <entry key="MS500" value="1.8725397110276734" />
+      <entry key="S2" value="4.418635933572025" />
+      <entry key="S5" value="8.817104040485203" />
+      <entry key="S10" value="13.949880191489672" />
+      <entry key="S30" value="21.12998203561143" />
+      <entry key="S60" value="23.89974390979682" />
+      <entry key="M2" value="25.901370832779975" />
+      <entry key="M5" value="29.461714451110844" />
+      <entry key="M10" value="35.303696307518976" />
+      <entry key="M15" value="42.65552436905368" />
+      <entry key="M30" value="67.91502201209394" />
+      <entry key="H1" value="111.1218906680452" />
+      <entry key="H2" value="179.80511736787062" />
+      <entry key="H4" value="268.0846933101277" />
+      <entry key="D1" value="424.08542399822124" />
+      <entry key="W1" value="464.6899433061947" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -127,23 +149,18 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "JUnit.InventoryServiceApplicationTests.executor": "Run",
-    "JUnit.InventoryServiceTest.shouldAddInventory.executor": "Run",
-    "JUnit.InventoryServiceTest.shouldNotAddInventoryWhenAlreadyExists.executor": "Run",
-    "JUnit.InventoryServiceTest.shouldNotAddInventoryWhenProductNotExists.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.Application.executor": "Run",
-    "Spring Boot.InventoryServiceApplication.executor": "Run",
-    "Spring Boot.MsvcEurekaApplication (1).executor": "Run",
+    "Spring Boot.AuthServiceApplication.executor": "Run",
     "Spring Boot.MsvcEurekaApplication.executor": "Run",
+    "Spring Boot.MsvcGatewayApplication.executor": "Run",
     "Spring Boot.NotificationServiceApplication.executor": "Run",
     "Spring Boot.OrderServiceApplication.executor": "Run",
     "Spring Boot.PromotionServiceApplication.executor": "Run",
@@ -155,31 +172,28 @@
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/moa/IdeaProjects/GameHubStore_Grupo7/microservicios/notification-service/src/main/java/com/GameHubStore/notification_service",
+    "last_opened_file_path": "C:/Users/moa/IdeaProjects/GameHubStore_Grupo7/microservicios/notification-service/src/main/java/com/GameHubStore/notification_service/service",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\notification-service\src\main\java\com\GameHubStore\notification_service" />
-      <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\warranty-service\src\main\java\com\GameHubStore\warranty_service" />
-      <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\review-service\src\main\java\com\GameHubStore\review_service" />
       <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\notification-service\src\main\java\com\GameHubStore\notification_service\service" />
       <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\notification-service\src\main\java\com\GameHubStore\notification_service\exception" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\esofe\IdeaProjects\GameHubStore\GameHubStore_Grupo7\microservicios\inventory-service\src\main\java\com\GameHubStore\inventory\client\dto" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.GameHubStore.review_service.client.dto" />
+      <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\notification-service\src\main\java\com\GameHubStore\notification_service\model\entities" />
+      <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\notification-service\src\main\java\com\GameHubStore\notification_service\model\dto" />
+      <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\notification-service\src\main\java\com\GameHubStore\notification_service" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -197,9 +211,9 @@
           <value>
             <map>
               <entry key="Application" value="STOPPED" />
-              <entry key="InventoryServiceApplication" value="STOPPED" />
-              <entry key="MsvcEurekaApplication" value="FAILED" />
-              <entry key="MsvcEurekaApplication (1)" value="STOPPED" />
+              <entry key="AuthServiceApplication" value="STOPPED" />
+              <entry key="MsvcEurekaApplication" value="STOPPED" />
+              <entry key="MsvcGatewayApplication" value="FAILED" />
               <entry key="NotificationServiceApplication" value="STOPPED" />
               <entry key="OrderServiceApplication" value="STOPPED" />
               <entry key="PromotionServiceApplication" value="STOPPED" />
@@ -211,70 +225,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.InventoryServiceTest.shouldNotAddInventoryWhenAlreadyExists">
-    <configuration name="InventoryServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="inventory.service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.GameHubStore.inventory.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.GameHubStore.inventory.service" />
-      <option name="MAIN_CLASS_NAME" value="com.GameHubStore.inventory.service.InventoryServiceApplicationTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InventoryServiceTest.shouldAddInventory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="inventory.service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.GameHubStore.inventory.service.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.GameHubStore.inventory.service.service" />
-      <option name="MAIN_CLASS_NAME" value="com.GameHubStore.inventory.service.service.InventoryServiceTest" />
-      <option name="METHOD_NAME" value="shouldAddInventory" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InventoryServiceTest.shouldNotAddInventoryWhenAlreadyExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="inventory.service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.GameHubStore.inventory.service.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.GameHubStore.inventory.service.service" />
-      <option name="MAIN_CLASS_NAME" value="com.GameHubStore.inventory.service.service.InventoryServiceTest" />
-      <option name="METHOD_NAME" value="shouldNotAddInventoryWhenAlreadyExists" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InventoryServiceTest.shouldNotAddInventoryWhenProductNotExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="inventory.service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.GameHubStore.inventory.service.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.GameHubStore.inventory.service.service" />
-      <option name="MAIN_CLASS_NAME" value="com.GameHubStore.inventory.service.service.InventoryServiceTest" />
-      <option name="METHOD_NAME" value="shouldNotAddInventoryWhenProductNotExists" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.AuthServiceApplication">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="inventory.service" />
@@ -283,39 +234,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CategoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="category-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.category_service.CategoryServiceApplication" />
+    <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="auth-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.auth_service.AuthServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.GameHubStore.auth_service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InventoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="inventory.service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.inventory.InventoryServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MsvcEurekaApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="MsvcEurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
       <module name="msvc-eureka" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.msvc_eureka.MsvcEurekaApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.GameHubStore.msvc_eureka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MsvcGatewayApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="MsvcGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
       <module name="msvc-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.msvc_gateway.MsvcGatewayApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MsvcGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="msvc-gateway" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hospital.msvc_gateway.MsvcGatewayApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.GameHubStore.msvc_gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -386,18 +342,17 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.InventoryServiceTest.shouldNotAddInventoryWhenAlreadyExists" />
-        <item itemvalue="JUnit.InventoryServiceTest.shouldNotAddInventoryWhenProductNotExists" />
-        <item itemvalue="JUnit.InventoryServiceTest.shouldAddInventory" />
-        <item itemvalue="JUnit.InventoryServiceApplicationTests" />
+        <item itemvalue="Spring Boot.AuthServiceApplication" />
+        <item itemvalue="Spring Boot.MsvcGatewayApplication" />
+        <item itemvalue="Spring Boot.MsvcEurekaApplication" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.24374.151" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
       </set>
     </attachedChunks>
   </component>
@@ -418,16 +373,6 @@
       <workItem from="1779648448786" duration="122000" />
       <workItem from="1779654175148" duration="10452000" />
       <workItem from="1779760925793" duration="89000" />
-      <workItem from="1781826516102" duration="8947000" />
-      <workItem from="1782089508415" duration="352000" />
-      <workItem from="1782090255850" duration="53000" />
-      <workItem from="1782090393801" duration="6664000" />
-      <workItem from="1782151279577" duration="15834000" />
-      <workItem from="1782173723913" duration="588000" />
-      <workItem from="1782174345762" duration="665000" />
-      <workItem from="1782178313029" duration="565000" />
-      <workItem from="1782179599724" duration="1033000" />
-      <workItem from="1782180913009" duration="1141000" />
     </task>
     <task id="LOCAL-00001" summary="Se realizo la creacion de el micro servicio de promocion con sus respectivos, controller, repository,service, funciones etc">
       <option name="closed" value="true" />
@@ -493,78 +438,11 @@
       <option name="project" value="LOCAL" />
       <updated>1779648374325</updated>
     </task>
-    <task id="LOCAL-00009" summary="creacion clients de promotion,review,warranty">
-      <option name="closed" value="true" />
-      <created>1781753629681</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1781753629681</updated>
-    </task>
-    <task id="LOCAL-00010" summary="(Actualizacion) se implemento dependencias eureka en los microservicios, se agregaron clients en warranty">
-      <option name="closed" value="true" />
-      <created>1781925826199</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1781925826199</updated>
-    </task>
-    <task id="LOCAL-00011" summary="(Actualizacion)implementacion de hateoas en microservicios order y inventory">
-      <option name="closed" value="true" />
-      <created>1782095546061</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1782095546061</updated>
-    </task>
-    <task id="LOCAL-00012" summary="(Actualizacion)implementacion de hateoas en microservicios payment y shipping">
-      <option name="closed" value="true" />
-      <created>1782099917825</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1782099917825</updated>
-    </task>
-    <task id="LOCAL-00013" summary="(Actualizacion)implementacion de test en microservicio payment">
-      <option name="closed" value="true" />
-      <created>1782161951978</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1782161951979</updated>
-    </task>
-    <task id="LOCAL-00014" summary="(Actualizacion)implementacion de test en microservicio inventory">
-      <option name="closed" value="true" />
-      <created>1782168595662</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1782168595662</updated>
-    </task>
-    <task id="LOCAL-00015" summary="(Actualizacion)implementacion de test en microservicio order">
-      <option name="closed" value="true" />
-      <created>1782174996450</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1782174996450</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Se realizo la creacion de el micro servicio de promocion con sus respectivos, controller, repository,service, funciones etc" />
@@ -575,33 +453,6 @@
     <MESSAGE value="corregidos algunos errores" />
     <MESSAGE value="Se a comprobado la funcionalidad del crud de review y notification ademas de agregar ciertas funcionalidades para que presente mensaje en el body al eliminar una reseña en postman" />
     <MESSAGE value="Se a comprobado la funcionalidad del crud generall, se agregaron funciones para listar todo en cada microservicio y corregidos algunos errores" />
-    <MESSAGE value="creacion clients de promotion,review,warranty" />
-    <MESSAGE value="(Actualizacion) se implemento dependencias eureka en los microservicios, se agregaron clients en warranty" />
-    <MESSAGE value="(Actualizacion)implementacion de hateoas en microservicios order y inventory" />
-    <MESSAGE value="(Actualizacion)implementacion de hateoas en microservicios payment y shipping" />
-    <MESSAGE value="(Actualizacion)implementacion de test en microservicio payment" />
-    <MESSAGE value="(Actualizacion)implementacion de test en microservicio inventory" />
-    <MESSAGE value="(Actualizacion)implementacion de test en microservicio order" />
-    <option name="LAST_COMMIT_MESSAGE" value="(Actualizacion)implementacion de test en microservicio order" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/microservicios/inventory-service/src/test/java/com/GameHubStore/inventory/service/InventoryServiceApplicationTests.java</url>
-          <line>6</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/microservicios/inventory-service/src/test/java/com/GameHubStore/inventory/service/service/InventoryServiceTest.java</url>
-          <line>85</line>
-          <properties class="com.GameHubStore.inventory.service.service.InventoryServiceTest" method="shouldAddInventory">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <option name="LAST_COMMIT_MESSAGE" value="Se a comprobado la funcionalidad del crud generall, se agregaron funciones para listar todo en cada microservicio y corregidos algunos errores" />
   </component>
 </project>

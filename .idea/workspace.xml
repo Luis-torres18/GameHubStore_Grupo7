@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="(Actualizacion)implementacion de test en microservicio inventory">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="(Actualizacion)implementacion de test en microservicio order">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,44 +125,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.InventoryServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.MsvcEurekaApplication (1).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.MsvcEurekaApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.NotificationServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.OrderServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.PromotionServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ReviewServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.WarrantyServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;EA3__Update2&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/moa/IdeaProjects/GameHubStore_Grupo7/microservicios/notification-service/src/main/java/com/GameHubStore/notification_service&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.InventoryServiceApplicationTests.executor": "Run",
+    "JUnit.InventoryServiceTest.shouldAddInventory.executor": "Run",
+    "JUnit.InventoryServiceTest.shouldNotAddInventoryWhenAlreadyExists.executor": "Run",
+    "JUnit.InventoryServiceTest.shouldNotAddInventoryWhenProductNotExists.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.Application.executor": "Run",
+    "Spring Boot.InventoryServiceApplication.executor": "Run",
+    "Spring Boot.MsvcEurekaApplication (1).executor": "Run",
+    "Spring Boot.MsvcEurekaApplication.executor": "Run",
+    "Spring Boot.NotificationServiceApplication.executor": "Run",
+    "Spring Boot.OrderServiceApplication.executor": "Run",
+    "Spring Boot.PromotionServiceApplication.executor": "Run",
+    "Spring Boot.ReviewServiceApplication.executor": "Run",
+    "Spring Boot.WarrantyServiceApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "EA3__Update2",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/moa/IdeaProjects/GameHubStore_Grupo7/microservicios/notification-service/src/main/java/com/GameHubStore/notification_service",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\notification-service\src\main\java\com\GameHubStore\notification_service" />
@@ -208,7 +211,70 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.InventoryServiceApplication">
+  <component name="RunManager" selected="JUnit.InventoryServiceTest.shouldNotAddInventoryWhenAlreadyExists">
+    <configuration name="InventoryServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="inventory.service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.GameHubStore.inventory.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.GameHubStore.inventory.service" />
+      <option name="MAIN_CLASS_NAME" value="com.GameHubStore.inventory.service.InventoryServiceApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryServiceTest.shouldAddInventory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="inventory.service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.GameHubStore.inventory.service.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.GameHubStore.inventory.service.service" />
+      <option name="MAIN_CLASS_NAME" value="com.GameHubStore.inventory.service.service.InventoryServiceTest" />
+      <option name="METHOD_NAME" value="shouldAddInventory" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryServiceTest.shouldNotAddInventoryWhenAlreadyExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="inventory.service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.GameHubStore.inventory.service.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.GameHubStore.inventory.service.service" />
+      <option name="MAIN_CLASS_NAME" value="com.GameHubStore.inventory.service.service.InventoryServiceTest" />
+      <option name="METHOD_NAME" value="shouldNotAddInventoryWhenAlreadyExists" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryServiceTest.shouldNotAddInventoryWhenProductNotExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="inventory.service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.GameHubStore.inventory.service.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.GameHubStore.inventory.service.service" />
+      <option name="MAIN_CLASS_NAME" value="com.GameHubStore.inventory.service.service.InventoryServiceTest" />
+      <option name="METHOD_NAME" value="shouldNotAddInventoryWhenProductNotExists" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="inventory.service" />
@@ -236,13 +302,6 @@
     <configuration name="MsvcEurekaApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="msvc-eureka" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.msvc_eureka.MsvcEurekaApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MsvcEurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="msvc-eureka" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hospital.msvc_eureka.MsvcEurekaApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -325,6 +384,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.InventoryServiceTest.shouldNotAddInventoryWhenAlreadyExists" />
+        <item itemvalue="JUnit.InventoryServiceTest.shouldNotAddInventoryWhenProductNotExists" />
+        <item itemvalue="JUnit.InventoryServiceTest.shouldAddInventory" />
+        <item itemvalue="JUnit.InventoryServiceApplicationTests" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -357,7 +424,10 @@
       <workItem from="1782090393801" duration="6664000" />
       <workItem from="1782151279577" duration="15834000" />
       <workItem from="1782173723913" duration="588000" />
-      <workItem from="1782174345762" duration="452000" />
+      <workItem from="1782174345762" duration="665000" />
+      <workItem from="1782178313029" duration="565000" />
+      <workItem from="1782179599724" duration="1033000" />
+      <workItem from="1782180913009" duration="1141000" />
     </task>
     <task id="LOCAL-00001" summary="Se realizo la creacion de el micro servicio de promocion con sus respectivos, controller, repository,service, funciones etc">
       <option name="closed" value="true" />
@@ -471,7 +541,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782168595662</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="(Actualizacion)implementacion de test en microservicio order">
+      <option name="closed" value="true" />
+      <created>1782174996450</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1782174996450</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -503,6 +581,27 @@
     <MESSAGE value="(Actualizacion)implementacion de hateoas en microservicios payment y shipping" />
     <MESSAGE value="(Actualizacion)implementacion de test en microservicio payment" />
     <MESSAGE value="(Actualizacion)implementacion de test en microservicio inventory" />
-    <option name="LAST_COMMIT_MESSAGE" value="(Actualizacion)implementacion de test en microservicio inventory" />
+    <MESSAGE value="(Actualizacion)implementacion de test en microservicio order" />
+    <option name="LAST_COMMIT_MESSAGE" value="(Actualizacion)implementacion de test en microservicio order" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/microservicios/inventory-service/src/test/java/com/GameHubStore/inventory/service/InventoryServiceApplicationTests.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/microservicios/inventory-service/src/test/java/com/GameHubStore/inventory/service/service/InventoryServiceTest.java</url>
+          <line>85</line>
+          <properties class="com.GameHubStore.inventory.service.service.InventoryServiceTest" method="shouldAddInventory">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -17,22 +17,31 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
-        <module name="auth-service" />
-        <module name="payment.service" />
-        <module name="review-service" />
-        <module name="promotion-service" />
         <module name="order.service" />
         <module name="inventory.service" />
         <module name="warranty-service" />
         <module name="shipping.service" />
+        <module name="review-service" />
+      </profile>
+      <profile name="Annotation profile for notification-service" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="auth-service" />
+        <module name="payment.service" />
+        <module name="notification-service" />
+        <module name="promotion-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="category-service" target="25" />
       <module name="inventory.service (1)" target="25" />
       <module name="inventory.service (2)" target="25" />
-      <module name="notification-service" target="25" />
       <module name="product-service" target="25" />
       <module name="user-service" target="25" />
     </bytecodeTargetLevel>

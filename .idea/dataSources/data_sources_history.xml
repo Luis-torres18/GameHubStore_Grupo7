@@ -1,5 +1,5 @@
 <DataSourcesHistory>
-  <DataSourceFromHistory isRemovedFromProject="true">
+  <DataSourceFromHistory isRemovedFromProject="false">
     <data-source source="LOCAL" name="db_inventory_service" uuid="2de897f9-7dc3-448b-8fc5-5b3d047c4640">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="H2" />
       <driver-ref>h2.unified</driver-ref>
@@ -16,7 +16,7 @@
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </DataSourceFromHistory>
-  <DataSourceFromHistory isRemovedFromProject="true">
+  <DataSourceFromHistory isRemovedFromProject="false">
     <data-source source="LOCAL" name="db_order_service" uuid="b4944342-cc1c-40de-bdfa-ca954232b4a9">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="H2" />
       <driver-ref>h2.unified</driver-ref>

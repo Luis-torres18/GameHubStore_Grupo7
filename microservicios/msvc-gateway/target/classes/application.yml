@@ -5,14 +5,13 @@ spring:
     gateway:
       server:
         webmvc:
-          # Cada ruta: si la URL entra por el patron 'predicates', el gateway la reenvia
-          # a 'uri'. lb:// significa "busca este nombre en Eureka y balancea la carga".
           routes:
-            - - id: auth-service
-            - uri: lb://auth-service
-            - predicates:
-            - Path=/api/auth/**
-            -
+            # ─── Rutas de negocio ───────────────────────────────────────────
+            - id: auth-service
+              uri: lb://auth-service
+              predicates:
+                - Path=/api/auth/**
+
             - id: user-service
               uri: lb://user-service
               predicates:
@@ -28,22 +27,25 @@ spring:
               predicates:
                 - Path=/api/category/**
 
-            - id: Inventory-service
+            - id: inventory-service
               uri: lb://inventory-service
               predicates:
-                - Path=/api/inventory/** /api/v2/inventory
+                - Path=/api/inventory/**
+
             - id: order-service
               uri: lb://order-service
               predicates:
-                Path=/api/order/**
+                - Path=/api/order/**
+
             - id: payment-service
               uri: lb://payment-service
               predicates:
-                Path=/api/payment/**
+                - Path=/api/payment/**
+
             - id: shipping-service
               uri: lb://shipping-service
               predicates:
-                -Path=/api/shipping/**
+                - Path=/api/shipping/**
 
             - id: promotion-service
               uri: lb://promotion-service
@@ -65,56 +67,47 @@ spring:
               predicates:
                 - Path=/api/notification/**
 
-            # Rutas para el OpenAPI (JSON) de cada microservicio. El Swagger UI del gateway
-            # las consume. Usan el prefijo /api-docs/<svc> (NO /v3/api-docs) para no chocar con
-            # el /v3/api-docs propio del gateway. RewritePath lo traduce al /v3/api-docs real del servicio.
-            - id: product-service
+            # ─── Rutas OpenAPI (Swagger) ────────────────────────────────────
+            - id: product-service-docs
               uri: lb://product-service
               predicates:
-                - Path=/api/product/**
+                - Path=/api-docs/product
               filters:
                 - RewritePath=/api-docs/product, /v3/api-docs
 
-            - id: user-service
-            - uri: lb://user-service
+            - id: user-service-docs
+              uri: lb://user-service
               predicates:
-                - Path=/api/user/**
-            - filters:
-                RewritePath=/api-docs/user, /v3/api-docs
-                -
+                - Path=/api-docs/user
+              filters:
+                - RewritePath=/api-docs/user, /v3/api-docs
 
-            - id: order-service
+            - id: order-service-docs
               uri: lb://order-service
               predicates:
-                Path=/api/order/**
+                - Path=/api-docs/order
               filters:
                 - RewritePath=/api-docs/order, /v3/api-docs
 
-
-            - id: category-service
+            - id: category-service-docs
               uri: lb://category-service
               predicates:
-                - Path=/api/category/**
+                - Path=/api-docs/category
               filters:
                 - RewritePath=/api-docs/category, /v3/api-docs
-                -
 
-                # Punto de entrada unico: todo el trafico entra por aqui.
 server:
   port: 8080
 
-# El gateway tambien es cliente Eureka para poder resolver los lb://
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
 
-# Swagger UI agregado: una sola pagina con un desplegable para elegir el microservicio.
 springdoc:
   swagger-ui:
     enabled: true
     path: /docs/swagger-ui.html
-    # El desplegable apunta a los docs de cada servicio (ruteados por el gateway via lb://).
     urls:
       - name: product
         url: /api-docs/product
@@ -125,6 +118,5 @@ springdoc:
       - name: category
         url: /api-docs/category
 
-# CLAVE SECRETA JWT: la MISMA que en msvc-usuarios y en los 3 microservicios. El gateway la usa para validar.
 jwt:
   secret: GameHub-JWT-DSY1103-Spring-Security-Token-Key

@@ -43,9 +43,7 @@ class NotificationServiceTest {
     private String fakeMessage;
     private String fakeType;
 
-    // ───────────────────────────────────────────
-    // Setup con DataFaker
-    // ───────────────────────────────────────────
+
 
     @BeforeEach
     void setUp() {

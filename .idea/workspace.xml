@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="Se a comprobado la funcionalidad del crud generall, se agregaron funciones para listar todo en cada microservicio y corregidos algunos errores">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="[Actualizacion] Implementacion Test promotion y notification , correccion de gateway">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/msvc-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/msvc-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/notification-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicios/notification-service/src/test/java/com/GameHubStore/notification_service/Service/NotificationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/notification-service/src/test/java/com/GameHubStore/notification_service/Service/NotificationServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/src/test/java/com/GameHubStore/promotion_service/Service/PromotionServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/src/test/java/com/GameHubStore/promotion_service/Service/PromotionServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/src/test/java/com/GameHubStore/promotion_service/Service/PromotionServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,61 +59,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000000024680178" />
-      <entry key="S2" value="1.007048343740156" />
-      <entry key="S5" value="1.1377958841362614" />
-      <entry key="S10" value="1.371878191889978" />
-      <entry key="S30" value="1.8061944048057892" />
-      <entry key="S60" value="2.1435739457268927" />
-      <entry key="M2" value="2.470439509361087" />
-      <entry key="M5" value="3.764805735677754" />
-      <entry key="M10" value="9.453439977236274" />
-      <entry key="M15" value="16.515916986155382" />
-      <entry key="M30" value="38.546214010490665" />
-      <entry key="H1" value="77.26403207241799" />
-      <entry key="H2" value="141.08460508382893" />
-      <entry key="H4" value="226.35712297022985" />
-      <entry key="D1" value="383.51155960370494" />
-      <entry key="W1" value="425.4188930385343" />
+      <entry key="MS100" value="1.0000105240139414" />
+      <entry key="MS500" value="1.1443539217642884" />
+      <entry key="S2" value="3.0798186462693815" />
+      <entry key="S5" value="6.860970091433256" />
+      <entry key="S10" value="11.232983829717343" />
+      <entry key="S30" value="18.008539497826114" />
+      <entry key="S60" value="21.290898563975215" />
+      <entry key="M2" value="24.269522367604264" />
+      <entry key="M5" value="28.016190234330637" />
+      <entry key="M10" value="33.06573506629032" />
+      <entry key="M15" value="39.19172557980103" />
+      <entry key="M30" value="59.83803194742019" />
+      <entry key="H1" value="98.32521874678767" />
+      <entry key="H2" value="162.80357431025635" />
+      <entry key="H4" value="249.6595369705108" />
+      <entry key="D1" value="411.605234480682" />
+      <entry key="W1" value="455.1163492645994" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="1.6402434201224589E-189" />
-      <entry key="S5" value="3.061705502925642E-76" />
-      <entry key="S10" value="1.750582838705032E-38" />
-      <entry key="S30" value="2.8011810530941854E-13" />
-      <entry key="S60" value="6.717656997397483E-7" />
-      <entry key="M2" value="0.0012335377106046268" />
-      <entry key="M5" value="0.12810019334962272" />
-      <entry key="M10" value="0.7301971829063676" />
-      <entry key="M15" value="1.6642573949280983" />
-      <entry key="M30" value="5.6531549106782695" />
-      <entry key="H1" value="13.08917973834283" />
-      <entry key="H2" value="22.324294310977873" />
-      <entry key="H4" value="31.283582792662425" />
-      <entry key="D1" value="44.326212618765744" />
-      <entry key="W1" value="47.44615901677682" />
+      <entry key="S2" value="2.031045779616178E-282" />
+      <entry key="S5" value="2.1042046600224888E-113" />
+      <entry key="S10" value="4.5892841503604237E-57" />
+      <entry key="S30" value="1.7927866409820446E-19" />
+      <entry key="S60" value="5.374171712680388E-10" />
+      <entry key="M2" value="3.488986489273837E-5" />
+      <entry key="M5" value="0.03077290725748919" />
+      <entry key="M10" value="0.3578899676746583" />
+      <entry key="M15" value="1.0345704657004076" />
+      <entry key="M30" value="4.457185169794674" />
+      <entry key="H1" value="11.622440368865025" />
+      <entry key="H2" value="21.036340266640153" />
+      <entry key="H4" value="30.367756552617855" />
+      <entry key="D1" value="44.107251494355204" />
+      <entry key="W1" value="47.41260606961322" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.42928271821887687" />
-      <entry key="MS500" value="0.8444008892204861" />
-      <entry key="S2" value="0.9651100104239079" />
-      <entry key="S5" value="1.116719278547126" />
-      <entry key="S10" value="1.3573685734909549" />
-      <entry key="S30" value="1.7873771419286733" />
-      <entry key="S60" value="2.118513981361761" />
-      <entry key="M2" value="2.4496854771116783" />
-      <entry key="M5" value="3.879458537546537" />
-      <entry key="M10" value="10.17164920839442" />
-      <entry key="M15" value="18.166498604270867" />
-      <entry key="M30" value="44.181682088654824" />
-      <entry key="H1" value="90.33529548062386" />
-      <entry key="H2" value="163.39440995110726" />
-      <entry key="H4" value="257.63051134515445" />
-      <entry key="D1" value="427.8352473973396" />
-      <entry key="W1" value="472.864660573365" />
+      <entry key="MS100" value="0.9659464946501864" />
+      <entry key="MS500" value="1.13650567057964" />
+      <entry key="S2" value="3.0709289610697086" />
+      <entry key="S5" value="6.81987437115859" />
+      <entry key="S10" value="11.175339440961235" />
+      <entry key="S30" value="17.969233958305566" />
+      <entry key="S60" value="21.267250412555097" />
+      <entry key="M2" value="24.25592495923844" />
+      <entry key="M5" value="28.038197146856632" />
+      <entry key="M10" value="33.41492090849288" />
+      <entry key="M15" value="40.215894965667594" />
+      <entry key="M30" value="64.28031511072524" />
+      <entry key="H1" value="109.93127015009809" />
+      <entry key="H2" value="183.8260204691501" />
+      <entry key="H4" value="280.0172771309708" />
+      <entry key="D1" value="455.70995353671196" />
+      <entry key="W1" value="502.52856125940355" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -372,7 +366,7 @@
       <workItem from="1779654175148" duration="10452000" />
       <workItem from="1779760925793" duration="89000" />
       <workItem from="1782185081599" duration="55000" />
-      <workItem from="1783548548126" duration="3657000" />
+      <workItem from="1783548548126" duration="3989000" />
     </task>
     <task id="LOCAL-00001" summary="Se realizo la creacion de el micro servicio de promocion con sus respectivos, controller, repository,service, funciones etc">
       <option name="closed" value="true" />
@@ -438,7 +432,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779648374325</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="[Actualizacion] Implementacion Test promotion y notification , correccion de gateway">
+      <option name="closed" value="true" />
+      <created>1783552935944</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1783552935945</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,7 +455,8 @@
     <MESSAGE value="corregidos algunos errores" />
     <MESSAGE value="Se a comprobado la funcionalidad del crud de review y notification ademas de agregar ciertas funcionalidades para que presente mensaje en el body al eliminar una reseña en postman" />
     <MESSAGE value="Se a comprobado la funcionalidad del crud generall, se agregaron funciones para listar todo en cada microservicio y corregidos algunos errores" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se a comprobado la funcionalidad del crud generall, se agregaron funciones para listar todo en cada microservicio y corregidos algunos errores" />
+    <MESSAGE value="[Actualizacion] Implementacion Test promotion y notification , correccion de gateway" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Actualizacion] Implementacion Test promotion y notification , correccion de gateway" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -4,10 +4,89 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="[Actualizacion] Implementacion Test promotion y notification , correccion de gateway">
+    <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="Se a comprobado la funcionalidad del crud generall, se agregaron funciones para listar todo en cada microservicio y corregidos algunos errores">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/notification-service/src/test/java/com/GameHubStore/notification_service/Service/NotificationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/notification-service/src/test/java/com/GameHubStore/notification_service/Service/NotificationServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/src/test/java/com/GameHubStore/promotion_service/Service/PromotionServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/src/test/java/com/GameHubStore/promotion_service/Service/PromotionServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/src/main/java/com/GameHubStore/auth_service/AuthServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/src/main/java/com/GameHubStore/auth_service/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/src/main/java/com/GameHubStore/auth_service/controller/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/src/main/java/com/GameHubStore/auth_service/exception/BusinessException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/src/main/java/com/GameHubStore/auth_service/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/src/main/java/com/GameHubStore/auth_service/exception/ResourceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/src/main/java/com/GameHubStore/auth_service/model/dto/CuentaResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/src/main/java/com/GameHubStore/auth_service/model/dto/CuentaUpdateRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/src/main/java/com/GameHubStore/auth_service/model/dto/LoginRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/src/main/java/com/GameHubStore/auth_service/model/dto/LoginResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/src/main/java/com/GameHubStore/auth_service/model/dto/RegisterRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/src/main/java/com/GameHubStore/auth_service/model/entities/CuentaAcceso.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/src/main/java/com/GameHubStore/auth_service/model/entities/Rol.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/src/main/java/com/GameHubStore/auth_service/repository/CuentaAccesoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/src/main/java/com/GameHubStore/auth_service/service/AuthService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/src/main/java/com/GameHubStore/auth_service/util/JwtUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/AuthServiceApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/config/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/controller/AuthController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/exception/BusinessException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/exception/GlobalExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/exception/ResourceNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/model/dto/CuentaResponse$CuentaResponseBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/model/dto/CuentaResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/model/dto/CuentaUpdateRequest$CuentaUpdateRequestBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/model/dto/CuentaUpdateRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/model/dto/LoginRequest$LoginRequestBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/model/dto/LoginRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/model/dto/LoginResponse$LoginResponseBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/model/dto/LoginResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/model/dto/RegisterRequest$RegisterRequestBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/model/dto/RegisterRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/model/entities/CuentaAcceso$CuentaAccesoBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/model/entities/CuentaAcceso.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/model/entities/Rol.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/repository/CuentaAccesoRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/service/AuthService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/target/classes/com/GameHubStore/auth_service/util/JwtUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/category-service/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/category-service/target/classes/com/GameHubStore/category_service/CategoryServiceApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/category-service/target/classes/com/GameHubStore/category_service/controller/CategoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/category-service/target/classes/com/GameHubStore/category_service/exception/BusinessException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/category-service/target/classes/com/GameHubStore/category_service/exception/CategoryNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/category-service/target/classes/com/GameHubStore/category_service/model/dto/CategoryRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/category-service/target/classes/com/GameHubStore/category_service/model/dto/CategoryResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/category-service/target/classes/com/GameHubStore/category_service/model/dto/CategoryUpdateRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/category-service/target/classes/com/GameHubStore/category_service/model/entities/Category.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/category-service/target/classes/com/GameHubStore/category_service/repository/CategoryRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/category-service/target/classes/com/GameHubStore/category_service/service/CategoryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/product-service/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/product-service/target/classes/com/GameHubStore/product_service/ProductServiceApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/product-service/target/classes/com/GameHubStore/product_service/config/SwaggerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/product-service/target/classes/com/GameHubStore/product_service/controller/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/product-service/target/classes/com/GameHubStore/product_service/exception/BusinessException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/product-service/target/classes/com/GameHubStore/product_service/exception/ProductNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/product-service/target/classes/com/GameHubStore/product_service/model/dto/ProductRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/product-service/target/classes/com/GameHubStore/product_service/model/dto/ProductResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/product-service/target/classes/com/GameHubStore/product_service/model/entities/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/product-service/target/classes/com/GameHubStore/product_service/repository/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/product-service/target/classes/com/GameHubStore/product_service/service/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/product-service/target/test-classes/com/GameHubStore/product_service/ProductServiceApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/user-service/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/user-service/target/classes/com/GameHubStore/user_service/UserServiceApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/user-service/target/classes/com/GameHubStore/user_service/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/user-service/target/classes/com/GameHubStore/user_service/exception/BusinessException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/user-service/target/classes/com/GameHubStore/user_service/exception/GlobalExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/user-service/target/classes/com/GameHubStore/user_service/exception/ResourceNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/user-service/target/classes/com/GameHubStore/user_service/model/dto/DireccionRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/user-service/target/classes/com/GameHubStore/user_service/model/dto/DireccionResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/user-service/target/classes/com/GameHubStore/user_service/model/dto/UserRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/user-service/target/classes/com/GameHubStore/user_service/model/dto/UserResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/user-service/target/classes/com/GameHubStore/user_service/model/dto/UserUpdateRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/user-service/target/classes/com/GameHubStore/user_service/model/entities/Direccion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/user-service/target/classes/com/GameHubStore/user_service/model/entities/Rol.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/user-service/target/classes/com/GameHubStore/user_service/model/entities/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/user-service/target/classes/com/GameHubStore/user_service/repository/DireccionRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/user-service/target/classes/com/GameHubStore/user_service/repository/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/user-service/target/classes/com/GameHubStore/user_service/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/user-service/target/test-classes/com/GameHubStore/user_service/UserServiceApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +94,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="356" />
+    <option name="cachedIndexableFilesCount" value="352" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -29,7 +108,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="EA3_Update2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -59,61 +138,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000105240139414" />
-      <entry key="MS500" value="1.1443539217642884" />
-      <entry key="S2" value="3.0798186462693815" />
-      <entry key="S5" value="6.860970091433256" />
-      <entry key="S10" value="11.232983829717343" />
-      <entry key="S30" value="18.008539497826114" />
-      <entry key="S60" value="21.290898563975215" />
-      <entry key="M2" value="24.269522367604264" />
-      <entry key="M5" value="28.016190234330637" />
-      <entry key="M10" value="33.06573506629032" />
-      <entry key="M15" value="39.19172557980103" />
-      <entry key="M30" value="59.83803194742019" />
-      <entry key="H1" value="98.32521874678767" />
-      <entry key="H2" value="162.80357431025635" />
-      <entry key="H4" value="249.6595369705108" />
-      <entry key="D1" value="411.605234480682" />
-      <entry key="W1" value="455.1163492645994" />
+      <entry key="MS100" value="1.0300261745927262" />
+      <entry key="MS500" value="1.886576199817493" />
+      <entry key="S2" value="4.426363289112405" />
+      <entry key="S5" value="8.822952860078846" />
+      <entry key="S10" value="13.954420558959828" />
+      <entry key="S30" value="21.13274991570858" />
+      <entry key="S60" value="23.904353755921488" />
+      <entry key="M2" value="25.910879241344297" />
+      <entry key="M5" value="29.436825288763124" />
+      <entry key="M10" value="34.63045365472766" />
+      <entry key="M15" value="40.63815567373612" />
+      <entry key="M30" value="60.91794684922746" />
+      <entry key="H1" value="96.64661373357737" />
+      <entry key="H2" value="156.98854602045972" />
+      <entry key="H4" value="237.43657669051083" />
+      <entry key="D1" value="382.2165629204909" />
+      <entry key="W1" value="420.1612140404729" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="2.031045779616178E-282" />
-      <entry key="S5" value="2.1042046600224888E-113" />
-      <entry key="S10" value="4.5892841503604237E-57" />
-      <entry key="S30" value="1.7927866409820446E-19" />
-      <entry key="S60" value="5.374171712680388E-10" />
-      <entry key="M2" value="3.488986489273837E-5" />
-      <entry key="M5" value="0.03077290725748919" />
-      <entry key="M10" value="0.3578899676746583" />
-      <entry key="M15" value="1.0345704657004076" />
-      <entry key="M30" value="4.457185169794674" />
-      <entry key="H1" value="11.622440368865025" />
-      <entry key="H2" value="21.036340266640153" />
-      <entry key="H4" value="30.367756552617855" />
-      <entry key="D1" value="44.107251494355204" />
-      <entry key="W1" value="47.41260606961322" />
+      <entry key="S2" value="3.201158806707E-312" />
+      <entry key="S5" value="5.112902942141694E-125" />
+      <entry key="S10" value="1.3928281647345607E-62" />
+      <entry key="S30" value="6.025673189348708E-21" />
+      <entry key="S60" value="1.5631113710530374E-10" />
+      <entry key="M2" value="2.6494286092251517E-5" />
+      <entry key="M5" value="0.04406029772338438" />
+      <entry key="M10" value="0.6967032566701753" />
+      <entry key="M15" value="2.0424855638452675" />
+      <entry key="M30" value="7.022756525253602" />
+      <entry key="H1" value="14.496803150434527" />
+      <entry key="H2" value="22.832211899393155" />
+      <entry key="H4" value="30.65854175741733" />
+      <entry key="D1" value="41.871328939376205" />
+      <entry key="W1" value="44.52910891660347" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9659464946501864" />
-      <entry key="MS500" value="1.13650567057964" />
-      <entry key="S2" value="3.0709289610697086" />
-      <entry key="S5" value="6.81987437115859" />
-      <entry key="S10" value="11.175339440961235" />
-      <entry key="S30" value="17.969233958305566" />
-      <entry key="S60" value="21.267250412555097" />
-      <entry key="M2" value="24.25592495923844" />
-      <entry key="M5" value="28.038197146856632" />
-      <entry key="M10" value="33.41492090849288" />
-      <entry key="M15" value="40.215894965667594" />
-      <entry key="M30" value="64.28031511072524" />
-      <entry key="H1" value="109.93127015009809" />
-      <entry key="H2" value="183.8260204691501" />
-      <entry key="H4" value="280.0172771309708" />
-      <entry key="D1" value="455.70995353671196" />
-      <entry key="W1" value="502.52856125940355" />
+      <entry key="MS100" value="0.9884577556672095" />
+      <entry key="MS500" value="1.8725397110276734" />
+      <entry key="S2" value="4.418635933572025" />
+      <entry key="S5" value="8.817104040485203" />
+      <entry key="S10" value="13.949880191489672" />
+      <entry key="S30" value="21.12998203561143" />
+      <entry key="S60" value="23.89974390979682" />
+      <entry key="M2" value="25.901370832779975" />
+      <entry key="M5" value="29.461714451110844" />
+      <entry key="M10" value="35.303696307518976" />
+      <entry key="M15" value="42.65552436905368" />
+      <entry key="M30" value="67.91502201209394" />
+      <entry key="H1" value="111.1218906680452" />
+      <entry key="H2" value="179.80511736787062" />
+      <entry key="H4" value="268.0846933101277" />
+      <entry key="D1" value="424.08542399822124" />
+      <entry key="W1" value="464.6899433061947" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -131,46 +210,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.AuthServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.MsvcEurekaApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.MsvcGatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.NotificationServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.OrderServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.PromotionServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ReviewServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.WarrantyServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;EA3__Update2&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/moa/IdeaProjects/GameHubStore_Grupo7/microservicios/notification-service/src/main/java/com/GameHubStore/notification_service/service&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.Application.executor": "Run",
+    "Spring Boot.NotificationServiceApplication.executor": "Run",
+    "Spring Boot.OrderServiceApplication.executor": "Run",
+    "Spring Boot.PromotionServiceApplication.executor": "Run",
+    "Spring Boot.ReviewServiceApplication.executor": "Run",
+    "Spring Boot.WarrantyServiceApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "EA3__Update2",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/moa/IdeaProjects/GameHubStore_Grupo7/microservicios/notification-service/src/main/java/com/GameHubStore/notification_service/service",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\notification-service\src\main\java\com\GameHubStore\notification_service\service" />
@@ -189,81 +262,12 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
-    <option name="configurationStatuses">
-      <map>
-        <entry key="SpringBootApplicationConfigurationType">
-          <value>
-            <map>
-              <entry key="Application" value="STOPPED" />
-              <entry key="AuthServiceApplication" value="STOPPED" />
-              <entry key="MsvcEurekaApplication" value="STOPPED" />
-              <entry key="MsvcGatewayApplication" value="FAILED" />
-              <entry key="NotificationServiceApplication" value="STOPPED" />
-              <entry key="OrderServiceApplication" value="STOPPED" />
-              <entry key="PromotionServiceApplication" value="STOPPED" />
-              <entry key="ReviewServiceApplication" value="STOPPED" />
-              <entry key="WarrantyServiceApplication" value="STOPPED" />
-            </map>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MsvcGatewayApplication">
+  <component name="RunManager" selected="Spring Boot.Application">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="inventory.service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.inventory.Application" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="auth-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.auth_service.AuthServiceApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.GameHubStore.auth_service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InventoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="inventory.service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.inventory.InventoryServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MsvcEurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
-      <module name="msvc-eureka" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.msvc_eureka.MsvcEurekaApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.GameHubStore.msvc_eureka.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MsvcGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
-      <module name="msvc-gateway" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.msvc_gateway.MsvcGatewayApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.GameHubStore.msvc_gateway.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -332,13 +336,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.MsvcGatewayApplication" />
-        <item itemvalue="Spring Boot.AuthServiceApplication" />
-        <item itemvalue="Spring Boot.MsvcEurekaApplication" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -365,8 +362,6 @@
       <workItem from="1779648448786" duration="122000" />
       <workItem from="1779654175148" duration="10452000" />
       <workItem from="1779760925793" duration="89000" />
-      <workItem from="1782185081599" duration="55000" />
-      <workItem from="1783548548126" duration="3989000" />
     </task>
     <task id="LOCAL-00001" summary="Se realizo la creacion de el micro servicio de promocion con sus respectivos, controller, repository,service, funciones etc">
       <option name="closed" value="true" />
@@ -432,15 +427,7 @@
       <option name="project" value="LOCAL" />
       <updated>1779648374325</updated>
     </task>
-    <task id="LOCAL-00009" summary="[Actualizacion] Implementacion Test promotion y notification , correccion de gateway">
-      <option name="closed" value="true" />
-      <created>1783552935944</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1783552935945</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -455,18 +442,6 @@
     <MESSAGE value="corregidos algunos errores" />
     <MESSAGE value="Se a comprobado la funcionalidad del crud de review y notification ademas de agregar ciertas funcionalidades para que presente mensaje en el body al eliminar una reseña en postman" />
     <MESSAGE value="Se a comprobado la funcionalidad del crud generall, se agregaron funciones para listar todo en cada microservicio y corregidos algunos errores" />
-    <MESSAGE value="[Actualizacion] Implementacion Test promotion y notification , correccion de gateway" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Actualizacion] Implementacion Test promotion y notification , correccion de gateway" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/microservicios/msvc-gateway/src/main/java/com/GameHubStore/msvc_gateway/MsvcGatewayApplication.java</url>
-          <line>7</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <option name="LAST_COMMIT_MESSAGE" value="Se a comprobado la funcionalidad del crud generall, se agregaron funciones para listar todo en cada microservicio y corregidos algunos errores" />
   </component>
 </project>

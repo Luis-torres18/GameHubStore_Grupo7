@@ -6,7 +6,7 @@ spring:
       server:
         webmvc:
           routes:
-            # ─── Rutas de negocio ───────────────────────────────────────────
+
             - id: auth-service
               uri: lb://auth-service
               predicates:
@@ -66,8 +66,8 @@ spring:
               uri: lb://notification-service
               predicates:
                 - Path=/api/notification/**
+            #-------- Rutas OpenApi(swagger)----------
 
-            # ─── Rutas OpenAPI (Swagger) ────────────────────────────────────
             - id: product-service-docs
               uri: lb://product-service
               predicates:

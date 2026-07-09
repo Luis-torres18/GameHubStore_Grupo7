@@ -26,7 +26,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 @RestController
-@RequestMapping("/api/shippings")
+@RequestMapping("/api/v2/shippings")
 @RequiredArgsConstructor
 @Tag(name="Shippings", description = "Operaciones relacionadas con el despacho de ordenes")
 public class ShippingControllerV2 {

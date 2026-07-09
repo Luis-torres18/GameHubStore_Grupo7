@@ -1,11 +1,14 @@
 package com.GameHubStore.shipping.service;
 
+import com.GameHubStore.shipping.client.OrderClient;
+import com.GameHubStore.shipping.client.Userclient;
 import com.GameHubStore.shipping.exception.ShippingNotFoundException;
 import com.GameHubStore.shipping.exception.ShippingValidationException;
 import com.GameHubStore.shipping.model.dto.ShippingRequest;
 import com.GameHubStore.shipping.model.dto.ShippingResponse;
 import com.GameHubStore.shipping.model.entities.Shipping;
 import com.GameHubStore.shipping.repository.ShippingRepository;
+import feign.FeignException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -22,25 +25,53 @@ import java.util.stream.Collectors;
 public class ShippingService {
 
     private final ShippingRepository shippingRepository;
+    private final OrderClient orderClient;   // ← client hacia order-service
+    private final Userclient userClient;     // ← client hacia user-service
 
-    // ─── Crear despacho ───────────────────────────────────────────────────────────
     @Transactional
     public ShippingResponse createShipping(ShippingRequest request) {
         log.info("[SHIPPING-SERVICE] Creating shipping for ordenId={}", request.getOrdenId());
 
-        // Regla: solo despachar órdenes pagadas
+        Object orden;
+        try {
+            orden = orderClient.getOrderById(request.getOrdenId());
+            if (orden == null) {
+                throw new ShippingValidationException("Order not found with ID: " + request.getOrdenId());
+            }
+            log.info("[SHIPPING-SERVICE] Order found id={}", request.getOrdenId());
+        } catch (FeignException.NotFound e) {
+            log.error("[SHIPPING-SERVICE] Order not found in order-service id={}", request.getOrdenId());
+            throw new ShippingValidationException("Order not found with ID: " + request.getOrdenId());
+        } catch (FeignException e) {
+            log.error("[SHIPPING-SERVICE] Error connecting to order-service: {}", e.getMessage());
+            throw new ShippingValidationException("Could not validate order. order-service unavailable.");
+        }
+
+        Object usuario;
+        try {
+            usuario = userClient.getUserById(request.getUsuarioId());
+            if (usuario == null) {
+                throw new ShippingValidationException("User not found with ID: " + request.getUsuarioId());
+            }
+            log.info("[SHIPPING-SERVICE] User found id={}", request.getUsuarioId());
+        } catch (FeignException.NotFound e) {
+            log.error("[SHIPPING-SERVICE] User not found in user-service id={}", request.getUsuarioId());
+            throw new ShippingValidationException("User not found with ID: " + request.getUsuarioId());
+        } catch (FeignException e) {
+            log.error("[SHIPPING-SERVICE] Error connecting to user-service: {}", e.getMessage());
+            throw new ShippingValidationException("Could not validate user. user-service unavailable.");
+        }
+
         if (!request.getEstadoOrden().equalsIgnoreCase("PAID")) {
             log.warn("[SHIPPING-SERVICE] Order is not paid. estadoOrden={}", request.getEstadoOrden());
             throw new ShippingValidationException("Only paid orders can be shipped. Current status: " + request.getEstadoOrden());
         }
 
-        // Regla: dirección válida obligatoria
         if (request.getDireccion() == null || request.getDireccion().isBlank()) {
             log.warn("[SHIPPING-SERVICE] Invalid address for ordenId={}", request.getOrdenId());
             throw new ShippingValidationException("A valid address is required for shipping");
         }
 
-        // Regla: tracking único generado automáticamente
         String tracking = UUID.randomUUID().toString();
 
         Shipping shipping = Shipping.builder()
@@ -58,7 +89,7 @@ public class ShippingService {
         return mapToResponse(saved);
     }
 
-    // ─── Listar despachos por orden o estado ──────────────────────────────────────
+
     public List<ShippingResponse> getShippings(Long ordenId, String estado) {
         log.info("[SHIPPING-SERVICE] Fetching shippings ordenId={}, estado={}", ordenId, estado);
 
@@ -77,7 +108,6 @@ public class ShippingService {
                 .collect(Collectors.toList());
     }
 
-    // ─── Buscar despacho por ID ───────────────────────────────────────────────────
     public ShippingResponse getShippingById(Long id) {
         log.info("[SHIPPING-SERVICE] Fetching shipping id={}", id);
         Shipping shipping = shippingRepository.findById(id)
@@ -87,8 +117,6 @@ public class ShippingService {
                 });
         return mapToResponse(shipping);
     }
-
-    // ─── Actualizar estado y tracking ─────────────────────────────────────────────
     @Transactional
     public ShippingResponse updateShippingStatus(Long id, String estado, String tracking) {
         log.info("[SHIPPING-SERVICE] Updating shipping id={} to estado={}", id, estado);
@@ -96,13 +124,11 @@ public class ShippingService {
         Shipping shipping = shippingRepository.findById(id)
                 .orElseThrow(() -> new ShippingNotFoundException("Shipping not found with ID: " + id));
 
-        // Regla: no cambiar a entregado sin fecha de entrega
         if (estado.equalsIgnoreCase("ENTREGADO") && shipping.getFechaEnvio() == null) {
             log.warn("[SHIPPING-SERVICE] Cannot set ENTREGADO without fechaEnvio id={}", id);
             throw new ShippingValidationException("Cannot set ENTREGADO without a valid shipping date");
         }
 
-        // Si pasa a ENTREGADO se registra la fecha de entrega
         if (estado.equalsIgnoreCase("ENTREGADO")) {
             shipping.setFechaEntrega(LocalDateTime.now());
             log.info("[SHIPPING-SERVICE] Setting fechaEntrega for id={}", id);
@@ -110,7 +136,6 @@ public class ShippingService {
 
         shipping.setEstado(estado);
 
-        // Regla: tracking único cuando exista
         if (tracking != null && !tracking.isBlank()) {
             if (shippingRepository.existsByTracking(tracking) &&
                     !tracking.equals(shipping.getTracking())) {
@@ -125,7 +150,7 @@ public class ShippingService {
         return mapToResponse(updated);
     }
 
-    // ─── Cancelar despacho si la orden fue anulada ────────────────────────────────
+
     @Transactional
     public void cancelShipping(Long id) {
         log.info("[SHIPPING-SERVICE] Cancelling shipping id={}", id);
@@ -133,7 +158,6 @@ public class ShippingService {
         Shipping shipping = shippingRepository.findById(id)
                 .orElseThrow(() -> new ShippingNotFoundException("Shipping not found with ID: " + id));
 
-        // Regla: no cancelar un despacho ya entregado
         if (shipping.getEstado().equalsIgnoreCase("ENTREGADO")) {
             log.warn("[SHIPPING-SERVICE] Cannot cancel a delivered shipping id={}", id);
             throw new ShippingValidationException("Cannot cancel a shipping that has already been delivered");
@@ -144,7 +168,7 @@ public class ShippingService {
         log.info("[SHIPPING-SERVICE] Shipping cancelled id={}", id);
     }
 
-    // ─── Helper: mapear entidad a response ───────────────────────────────────────
+
     private ShippingResponse mapToResponse(Shipping shipping) {
         return ShippingResponse.builder()
                 .id(shipping.getId())

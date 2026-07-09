@@ -11,12 +11,12 @@
         <option value="$PROJECT_DIR$/microservicios/pom.xml" />
         <option value="$PROJECT_DIR$/microservicios/warranty-service/pom.xml" />
         <option value="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/pom.xml" />
-        <option value="$PROJECT_DIR$/microservicios/shipping-service/pom.xml" />
         <option value="$PROJECT_DIR$/microservicios/payment-service/pom.xml" />
         <option value="$PROJECT_DIR$/microservicios/inventory-service/pom.xml" />
         <option value="$PROJECT_DIR$/microservicios/order-service/pom.xml" />
         <option value="$PROJECT_DIR$/microservicios/auth-service/pom.xml" />
         <option value="$PROJECT_DIR$/microservicios/notification-service/pom.xml" />
+        <option value="$PROJECT_DIR$/microservicios/shipping-service/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

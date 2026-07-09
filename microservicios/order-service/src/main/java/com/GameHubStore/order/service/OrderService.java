@@ -27,6 +27,7 @@ public class OrderService {
     private final ProductClient productClient;
     private final InventoryClient inventoryClient;
     private final PromotionClient promotionClient;
+
     public void createOrder(OrderRequest request) {
         try {
             UserResponse user = userClient.getUserById(request.getUserId());
@@ -87,12 +88,12 @@ public class OrderService {
         }
         Order newOrder = Order.builder()
                 .userId(request.getUserId())
-                .total(request.getTotal())
+                .total(total) // <--- CORRECCIÓN: Usamos la variable 'total' que ya tiene el descuento aplicado
                 .status("PENDING")
                 .createdAt(LocalDateTime.now())
                 .build();
         orderRepository.save(newOrder);
-        log.info("Orden creada para userId={} con total={}", request.getUserId(), request.getTotal());
+        log.info("Orden creada para userId={} con total={}", request.getUserId(), total);
     }
 
     // Obtener todas las órdenes

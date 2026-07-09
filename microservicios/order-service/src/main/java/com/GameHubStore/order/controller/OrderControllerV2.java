@@ -24,7 +24,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 
 @RestController
-@RequestMapping("/api/orders")
+@RequestMapping("/api/v2/orders")
 @RequiredArgsConstructor
 public class OrderControllerV2 {
 

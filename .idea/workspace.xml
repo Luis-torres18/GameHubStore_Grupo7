@@ -5,24 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d27f0370-2e83-410f-bd07-4d82294447fc" name="Changes" comment="[Actualizacion] Implementacion Test promotion y notification , correccion de gateway">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/auth-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/auth-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/category-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/category-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/inventory-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/inventory-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/msvc-gateway/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/msvc-gateway/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/notification-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/controller/OrderControllerV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/controller/OrderControllerV2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/order-service/src/main/java/com/GameHubStore/order/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/order-service/src/test/java/com/GameHubStore/order/service/service/OrderServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/order-service/src/test/java/com/GameHubStore/order/service/service/OrderServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/order-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/order-service/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/order-service/target/classes/com/GameHubStore/order/client/UserClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/order-service/target/classes/com/GameHubStore/order/client/UserClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/order-service/target/classes/com/GameHubStore/order/service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/order-service/target/classes/com/GameHubStore/order/service/OrderService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/shipping-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/shipping-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/controller/ShippingControllerV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/controller/ShippingControllerV2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/service/ShippingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/shipping-service/src/main/java/com/GameHubStore/shipping/service/ShippingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicios/shipping-service/src/test/java/com/GameHubStore/shipping/service/ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/notification-service/src/test/java/com/GameHubStore/notification_service/Service/NotificationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/notification-service/src/test/java/com/GameHubStore/notification_service/Service/NotificationServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/src/test/java/com/GameHubStore/promotion_service/Service/PromotionServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicios/promotion-service/promotion-service/src/test/java/com/GameHubStore/promotion_service/Service/PromotionServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,11 +46,6 @@
     &quot;accountId&quot;: &quot;5c16f476-85af-43c3-b5c7-3357370e665e&quot;
   }
 }</component>
-  <component name="JavaAutoRunManager">
-    <enabled-run-configurations>
-      <run-configuration type="JUnit" name="ShippingServiceApplicationTests" />
-    </enabled-run-configurations>
-  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -137,7 +117,7 @@
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8,
@@ -151,61 +131,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.ApplicationTests.executor": "Run",
-    "JUnit.OrderServiceApplicationTests.executor": "Debug",
-    "JUnit.OrderServiceTest.executor": "Run",
-    "JUnit.OrderServiceTest.shouldCancelOrder.executor": "Run",
-    "JUnit.OrderServiceTest.shouldCreateOrderSuccessfully.executor": "Run",
-    "JUnit.ShippingServiceApplicationTests.contextLoads.executor": "Run",
-    "JUnit.ShippingServiceApplicationTests.executor": "Debug",
-    "JUnit.ShippingServiceTest.shouldGetShippingById.executor": "Run",
-    "JUnit.ShippingServiceTest.shouldGetShippingsByEstado.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.Application.executor": "Run",
-    "Spring Boot.AuthServiceApplication.executor": "Run",
-    "Spring Boot.MsvcEurekaApplication.executor": "Run",
-    "Spring Boot.MsvcGatewayApplication.executor": "Run",
-    "Spring Boot.NotificationServiceApplication.executor": "Run",
-    "Spring Boot.OrderServiceApplication.executor": "Run",
-    "Spring Boot.PromotionServiceApplication.executor": "Run",
-    "Spring Boot.ReviewServiceApplication.executor": "Run",
-    "Spring Boot.ShippingServiceAplication.executor": "Run",
-    "Spring Boot.WarrantyServiceApplication.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "EA3__Update2",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/moa/IdeaProjects/GameHubStore_Grupo7/microservicios/notification-service/src/main/java/com/GameHubStore/notification_service/service",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.AuthServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MsvcEurekaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MsvcGatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.NotificationServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.OrderServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.PromotionServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ReviewServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.WarrantyServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;EA3__Update2&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/moa/IdeaProjects/GameHubStore_Grupo7/microservicios/notification-service/src/main/java/com/GameHubStore/notification_service/service&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="ReactorSettings">
-    <option name="notificationShown" value="true" />
-  </component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\moa\IdeaProjects\GameHubStore_Grupo7\microservicios\notification-service\src\main\java\com\GameHubStore\notification_service\service" />
@@ -230,13 +195,13 @@
           <value>
             <map>
               <entry key="Application" value="STOPPED" />
+              <entry key="AuthServiceApplication" value="STOPPED" />
               <entry key="MsvcEurekaApplication" value="STOPPED" />
-              <entry key="MsvcGatewayApplication" value="STOPPED" />
+              <entry key="MsvcGatewayApplication" value="FAILED" />
               <entry key="NotificationServiceApplication" value="STOPPED" />
               <entry key="OrderServiceApplication" value="STOPPED" />
               <entry key="PromotionServiceApplication" value="STOPPED" />
               <entry key="ReviewServiceApplication" value="STOPPED" />
-              <entry key="ShippingServiceAplication" value="STOPPED" />
               <entry key="WarrantyServiceApplication" value="STOPPED" />
             </map>
           </value>
@@ -244,70 +209,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.InventoryServiceApplication">
-    <configuration name="OrderServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="order.service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.GameHubStore.order.service.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.GameHubStore.order.service.service" />
-      <option name="MAIN_CLASS_NAME" value="com.GameHubStore.order.service.service.OrderServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderServiceTest.shouldCancelOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="order.service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.GameHubStore.order.service.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.GameHubStore.order.service.service" />
-      <option name="MAIN_CLASS_NAME" value="com.GameHubStore.order.service.service.OrderServiceTest" />
-      <option name="METHOD_NAME" value="shouldCancelOrder" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderServiceTest.shouldCreateOrderSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="order.service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.GameHubStore.order.service.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.GameHubStore.order.service.service" />
-      <option name="MAIN_CLASS_NAME" value="com.GameHubStore.order.service.service.OrderServiceTest" />
-      <option name="METHOD_NAME" value="shouldCreateOrderSuccessfully" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ShippingServiceTest.shouldGetShippingsByEstado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="shipping.service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.GameHubStore.shipping.service.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.GameHubStore.shipping.service.service" />
-      <option name="MAIN_CLASS_NAME" value="com.GameHubStore.shipping.service.service.ShippingServiceTest" />
-      <option name="METHOD_NAME" value="shouldGetShippingsByEstado" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.MsvcGatewayApplication">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="inventory.service" />
@@ -316,10 +218,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="auth-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.auth_service.AuthServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.GameHubStore.auth_service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -332,14 +240,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MsvcEurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="MsvcEurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
       <module name="msvc-eureka" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.msvc_eureka.MsvcEurekaApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.GameHubStore.msvc_eureka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="MsvcGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
       <module name="msvc-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.GameHubStore.msvc_gateway.MsvcGatewayApplication" />
       <extension name="coverage">
@@ -418,11 +334,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ShippingServiceTest.shouldGetShippingsByEstado" />
-        <item itemvalue="JUnit.OrderServiceTest.shouldCreateOrderSuccessfully" />
-        <item itemvalue="JUnit.OrderServiceTest" />
-        <item itemvalue="JUnit.OrderServiceTest.shouldCancelOrder" />
         <item itemvalue="Spring Boot.MsvcGatewayApplication" />
+        <item itemvalue="Spring Boot.AuthServiceApplication" />
+        <item itemvalue="Spring Boot.MsvcEurekaApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -551,11 +465,6 @@
           <url>file://$PROJECT_DIR$/microservicios/msvc-gateway/src/main/java/com/GameHubStore/msvc_gateway/MsvcGatewayApplication.java</url>
           <line>7</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/microservicios/order-service/src/test/java/com/GameHubStore/order/service/OrderServiceApplicationTests.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
